@@ -22,62 +22,62 @@ extension Text {
         switch style {
         case .h1:
             return
-                foregroundColor(Color.primary)
+                foregroundColor(Colors.fontStd)
             .font(.system(size: 36))
             .fontWeight(.bold)
         case .h2:
             return
-                foregroundColor(Color.primary)
+                foregroundColor(Colors.fontStd)
             .font(.system(size: 32))
             .fontWeight(.bold)
         case .h3:
             return
-                foregroundColor(Color.primary)
+                foregroundColor(Colors.fontStd)
             .font(.system(size: 30))
             .fontWeight(.bold)
         case .h4:
             return
-                foregroundColor(Color.primary)
+                foregroundColor(Colors.fontStd)
             .font(.system(size: 26))
             .fontWeight(.bold)
         case .h5:
             return
-                foregroundColor(Color.primary)
+                foregroundColor(Colors.fontStd)
             .font(.system(size: 22))
             .fontWeight(.bold)
         case .h6:
             return
-                foregroundColor(Color.primary)
+                foregroundColor(Colors.fontStd)
             .font(.system(size: 18))
             .fontWeight(.bold)
         case .s1:
             return
-                foregroundColor(Color.primary)
+                foregroundColor(Colors.fontStd)
             .font(.system(size: 15))
             .fontWeight(.semibold)
         case .s2:
             return
-                foregroundColor(Color.primary)
+                foregroundColor(Colors.fontStd)
             .font(.system(size: 13))
             .fontWeight(.semibold)
         case .p1:
             return
-                foregroundColor(Color.primary)
+                foregroundColor(Colors.primary)
             .font(.system(size: 15))
             .fontWeight(.regular)
         case .p2:
             return
-                foregroundColor(Color.primary)
+                foregroundColor(Colors.fontStd)
             .font(.system(size: 13))
             .fontWeight(.regular)
         case .c1:
             return
-                foregroundColor(Color.primary)
+                foregroundColor(Colors.fontStd)
             .font(.system(size: 12))
             .fontWeight(.regular)
         case .c2:
             return
-                foregroundColor(Color.primary)
+                foregroundColor(Colors.fontStd)
             .font(.system(size: 12))
             .fontWeight(.bold)
         }
