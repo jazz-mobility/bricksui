@@ -18,66 +18,66 @@ extension Text {
              c1, c2  // Captions
     }
 
-    func typo(_ style: Style) -> Text {
+    func typo(_ style: Style, _ color: Color = Colors.fontStd) -> Text {
         switch style {
         case .h1:
             return
-                foregroundColor(Colors.fontStd)
+                foregroundColor(color)
             .font(.system(size: 36))
             .fontWeight(.bold)
         case .h2:
             return
-                foregroundColor(Colors.fontStd)
+                foregroundColor(color)
             .font(.system(size: 32))
             .fontWeight(.bold)
         case .h3:
             return
-                foregroundColor(Colors.fontStd)
+                foregroundColor(color)
             .font(.system(size: 30))
             .fontWeight(.bold)
         case .h4:
             return
-                foregroundColor(Colors.fontStd)
+                foregroundColor(color)
             .font(.system(size: 26))
             .fontWeight(.bold)
         case .h5:
             return
-                foregroundColor(Colors.fontStd)
+                foregroundColor(color)
             .font(.system(size: 22))
             .fontWeight(.bold)
         case .h6:
             return
-                foregroundColor(Colors.fontStd)
+                foregroundColor(color)
             .font(.system(size: 18))
             .fontWeight(.bold)
         case .s1:
             return
-                foregroundColor(Colors.fontStd)
+                foregroundColor(color)
             .font(.system(size: 15))
             .fontWeight(.semibold)
         case .s2:
             return
-                foregroundColor(Colors.fontStd)
+                foregroundColor(color)
             .font(.system(size: 13))
             .fontWeight(.semibold)
         case .p1:
             return
-                foregroundColor(Colors.primary)
+                foregroundColor(color)
             .font(.system(size: 15))
             .fontWeight(.regular)
         case .p2:
             return
-                foregroundColor(Colors.fontStd)
+                foregroundColor(color)
             .font(.system(size: 13))
             .fontWeight(.regular)
         case .c1:
             return
-                foregroundColor(Colors.fontStd)
+                foregroundColor(color)
             .font(.system(size: 12))
             .fontWeight(.regular)
         case .c2:
             return
-                foregroundColor(Colors.fontStd)
+                foregroundColor(color)
             .font(.system(size: 12))
             .fontWeight(.bold)
         }
