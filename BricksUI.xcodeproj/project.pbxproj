@@ -15,6 +15,9 @@
 		1D34A6922445F9FF00882EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D34A6902445F9FF00882EEE /* LaunchScreen.storyboard */; };
 		1D34A69A2448CEA900882EEE /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34A6992448CEA900882EEE /* Typography.swift */; };
 		1DB2E0F5245830DD00FB1DE6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB2E0F4245830DD00FB1DE6 /* Colors.swift */; };
+		C8D15B8E245CB6FC004B1843 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B8D245CB6FC004B1843 /* Images.swift */; };
+		C8D15B90245CC7FA004B1843 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */; };
+		C8D15B93245CC8A1004B1843 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B92245CC8A1004B1843 /* Views.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		1D34A6932445F9FF00882EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D34A6992448CEA900882EEE /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		1DB2E0F4245830DD00FB1DE6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		C8D15B8D245CB6FC004B1843 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		C8D15B92245CC8A1004B1843 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,9 @@
 				1D34A6892445F9FC00882EEE /* ContentView.swift */,
 				1D34A6992448CEA900882EEE /* Typography.swift */,
 				1DB2E0F4245830DD00FB1DE6 /* Colors.swift */,
+				C8D15B8D245CB6FC004B1843 /* Images.swift */,
+				C8D15B92245CC8A1004B1843 /* Views.swift */,
+				C8D15B91245CC867004B1843 /* Helpers */,
 				1D34A68B2445F9FF00882EEE /* Assets.xcassets */,
 				1D34A6902445F9FF00882EEE /* LaunchScreen.storyboard */,
 				1D34A6932445F9FF00882EEE /* Info.plist */,
@@ -79,6 +88,14 @@
 				1D34A68E2445F9FF00882EEE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C8D15B91245CC867004B1843 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,10 +170,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D34A6862445F9FC00882EEE /* AppDelegate.swift in Sources */,
+				C8D15B8E245CB6FC004B1843 /* Images.swift in Sources */,
 				1D34A6882445F9FC00882EEE /* SceneDelegate.swift in Sources */,
 				1DB2E0F5245830DD00FB1DE6 /* Colors.swift in Sources */,
+				C8D15B93245CC8A1004B1843 /* Views.swift in Sources */,
 				1D34A69A2448CEA900882EEE /* Typography.swift in Sources */,
 				1D34A68A2445F9FC00882EEE /* ContentView.swift in Sources */,
+				C8D15B90245CC7FA004B1843 /* RoundedCorner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BricksUI/Preview Content\"";
-				DEVELOPMENT_TEAM = 5W9HJBWYM6;
+				DEVELOPMENT_TEAM = 64NY4V9RTQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BricksUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -314,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BricksUI/Preview Content\"";
-				DEVELOPMENT_TEAM = 5W9HJBWYM6;
+				DEVELOPMENT_TEAM = 64NY4V9RTQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BricksUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
