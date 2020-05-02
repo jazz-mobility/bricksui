@@ -112,32 +112,32 @@ struct Images_Previews_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             HStack {
-                Image("candy")
+                Image("paris")
                     .BSCircularAvatar()
-                Image("candy")
+                Image("paris")
                     .BSSquareAvatar()
-                Image("candy")
+                Image("paris")
                     .BSRoundedRectangleAvatar()
                 
             }.padding()
             
             HStack(spacing: 20) {
-                Image("candy")
+                Image("paris")
                     .BSCircularImage(width: 80)
-                Image("candy")
+                Image("paris")
                     .BSSquaredImage(width: 80)
-                Image("candy")
+                Image("paris")
                     .BSRoundedRectangle(width: 80)
             }.padding()
             
             HStack(spacing: 20) {
-                Image("candy")
+                Image("paris")
                     .BS_UpperRC(imageWidth: 80)
-                Image("candy")
+                Image("paris")
                     .BS_LowerRC(imageWidth: 80)
-                Image("candy")
+                Image("paris")
                     .BS_LeftRC(imageWidth: 80)
-                Image("candy")
+                Image("paris")
                     .BS_RightRC(imageWidth: 80)
             }.padding()
         }
