@@ -44,51 +44,81 @@ extension Button {
 
 struct FillButtonStyle: ButtonStyle {
     var color: Color
+    
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
-        configuration.label
-            .foregroundColor(.white)
-            .padding()
-            .frame(minHeight: 56)
-            .background(color)
-            .cornerRadius(10)
+        FillButton(color: color, configuration: configuration)
+    }
+    
+    struct FillButton: View {
+        var color: Color
+        let configuration: ButtonStyle.Configuration
+        @Environment(\.isEnabled) private var isEnabled: Bool
+        var body: some View {
+            configuration.label
+                .foregroundColor(.white)
+                .padding()
+                .frame(minHeight: 56)
+                .background(isEnabled ? color : .gray)
+                .cornerRadius(10)
+        }
     }
 }
 
 struct OutlineButtonStyle: ButtonStyle {
     var color: Color
+    
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
-        configuration.label
-            .font(.system(size: 17, weight: .heavy))
-            .foregroundColor(color)
-            .padding()
-            .frame(minHeight: 56)
-            .background(color.opacity(0.2))
-            .cornerRadius(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(color, lineWidth: 4)
-            )
+        OutlineButton(color: color, configuration: configuration)
+    }
+    
+    struct OutlineButton: View {
+        var color: Color
+        let configuration: ButtonStyle.Configuration
+        @Environment(\.isEnabled) private var isEnabled: Bool
+        var body: some View {
+            configuration.label
+                .font(.system(size: 17, weight: .heavy))
+                .foregroundColor(isEnabled ? color : .gray)
+                .padding()
+                .frame(minHeight: 56)
+                .background(isEnabled ? color.opacity(0.2) : Color.gray.opacity(0.2))
+                .cornerRadius(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(isEnabled ? color : .gray, lineWidth: 4)
+                )
+        }
     }
 }
 
 struct GhostButtonStyle: ButtonStyle {
     var color: Color
+    
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
-        configuration.label
-            .font(.system(size: 17, weight: .heavy))
-            .foregroundColor(color)
-            .padding()
-            .frame(minHeight: 56)
-            .background(Color.white)
-            .cornerRadius(10)
+        GhostButton(color: color, configuration: configuration)
+    }
+    
+    struct GhostButton: View {
+        var color: Color
+        let configuration: ButtonStyle.Configuration
+        @Environment(\.isEnabled) private var isEnabled: Bool
+        var body: some View {
+            configuration.label
+                .font(.system(size: 17, weight: .heavy))
+                .foregroundColor(isEnabled ? color : .gray)
+                .padding()
+                .frame(minHeight: 56)
+                .background(Color.white)
+                .cornerRadius(10)
+        }
     }
 }
 
 
 struct Input_Previews2: PreviewProvider {
     static var previews: some View {
-        VStack(spacing: 30) {
-            HStack(spacing: 30) {
+        VStack(spacing: 60) {
+            HStack(spacing: 20) {
                 Button(action: { print("click") }, label: { Text("Fill") })
                     .style(.fill)
                 Button(action: { print("click") }, label: { Text("Outline") })
@@ -96,21 +126,24 @@ struct Input_Previews2: PreviewProvider {
                 Button(action: { print("click") }, label: { Text("Ghost") })
                     .style(.ghost)
             }
-            HStack(spacing: 30) {
-                Button(action: { print("click") }, label: { Text("Fill") })
-                    .style(.fill, status: .warning)
-                Button(action: { print("click") }, label: { Text("Outline") })
+            HStack(spacing: 20) {
+                Button(action: { print("click") }, label: { Text("Danger") })
+                    .style(.outline, status: .danger)
+                Button(action: { print("click") }, label: { Text("Warning") })
                     .style(.outline, status: .warning)
-                Button(action: { print("click") }, label: { Text("Ghost") })
-                    .style(.ghost, status: .warning)
-            }
-            HStack(spacing: 30) {
-                Button(action: { print("click") }, label: { Text("Fill") })
-                    .style(.fill, status: .success)
-                Button(action: { print("click") }, label: { Text("Outline") })
+                Button(action: { print("click") }, label: { Text("Success") })
                     .style(.outline, status: .success)
-                Button(action: { print("click") }, label: { Text("Ghost") })
-                    .style(.ghost, status: .success)
+            }
+            HStack(spacing: 20) {
+                Button(action: { print("click") }, label: { Text("Disabled") })
+                    .style(.fill)
+                    .disabled(true)
+                Button(action: { print("click") }, label: { Text("Disabled") })
+                    .style(.outline)
+                    .disabled(true)
+                Button(action: { print("click") }, label: { Text("Disabled") })
+                    .style(.ghost)
+                    .disabled(true)
             }
         }
     }
