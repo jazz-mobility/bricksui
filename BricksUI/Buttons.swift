@@ -55,11 +55,12 @@ struct FillButtonStyle: ButtonStyle {
         @Environment(\.isEnabled) private var isEnabled: Bool
         var body: some View {
             configuration.label
-                .foregroundColor(.white)
+                .font(.system(size: 17, weight: .semibold))
+                .foregroundColor(isEnabled ? .white : Colors.fontDisabled)
                 .padding()
                 .frame(minHeight: 56)
-                .background(isEnabled ? color : .gray)
-                .cornerRadius(10)
+                .background(isEnabled ? color : Colors.basic.opacity(0.2))
+                .cornerRadius(4)
         }
     }
 }
@@ -77,15 +78,15 @@ struct OutlineButtonStyle: ButtonStyle {
         @Environment(\.isEnabled) private var isEnabled: Bool
         var body: some View {
             configuration.label
-                .font(.system(size: 17, weight: .heavy))
-                .foregroundColor(isEnabled ? color : .gray)
+                .font(.system(size: 17, weight: .semibold))
+                .foregroundColor(isEnabled ? color : Colors.fontDisabled)
                 .padding()
                 .frame(minHeight: 56)
-                .background(isEnabled ? color.opacity(0.2) : Color.gray.opacity(0.2))
-                .cornerRadius(10)
+                .background(isEnabled ? color.opacity(0.2) : Colors.basic.opacity(0.15))
+                .cornerRadius(4)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(isEnabled ? color : .gray, lineWidth: 4)
+                    RoundedRectangle(cornerRadius: 4)
+                        .stroke(isEnabled ? color : Colors.basic.opacity(0.5), lineWidth: 1)
                 )
         }
     }
@@ -105,11 +106,11 @@ struct GhostButtonStyle: ButtonStyle {
         var body: some View {
             configuration.label
                 .font(.system(size: 17, weight: .heavy))
-                .foregroundColor(isEnabled ? color : .gray)
+                .foregroundColor(isEnabled ? color : Colors.fontDisabled)
                 .padding()
                 .frame(minHeight: 56)
                 .background(Color.white)
-                .cornerRadius(10)
+                .cornerRadius(4)
         }
     }
 }
