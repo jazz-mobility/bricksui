@@ -18,7 +18,7 @@ extension Text {
              c1, c2  // Captions
     }
 
-    func typo(_ style: Style, _ color: Color = Colors.fontStd) -> Text {
+    func bsTypo(_ style: Style, _ color: Color = bsColors.fontStd) -> Text {
         switch style {
         case .h1:
             return
@@ -86,6 +86,6 @@ extension Text {
 
 struct Typography_Previews: PreviewProvider {
     static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/.typo(.h1)
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/.bsTypo(.h1)
     }
 }

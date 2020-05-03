@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 
-struct Colors {
+struct bsColors {
     
     // MARK: Basic Colors
     
@@ -47,8 +47,8 @@ struct Colors {
 struct Color_Previews: PreviewProvider {
     static var previews: some View {
         /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-            .foregroundColor(Colors.fontStd)
-            .background(Colors.background)
+            .foregroundColor(bsColors.fontStd)
+            .background(bsColors.background)
             .environment(\.colorScheme, .dark)
     }
     

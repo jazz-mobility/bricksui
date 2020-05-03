@@ -14,7 +14,7 @@ extension Image {
     //MARK: Avatars
     
     ///Turn image into a circular avatar
-    func BSCircularAvatar() -> some View {
+    func bsCircularAvatar() -> some View {
         self
             .resizable()
             .frame(width: 40, height: 40)
@@ -25,7 +25,7 @@ extension Image {
     }
     
     ///Turn image into a rectangular avatar
-    func BSSquareAvatar() -> some View {
+    func bsSquareAvatar() -> some View {
         self
             .resizable()
             .frame(width: 40, height: 40)
@@ -35,7 +35,7 @@ extension Image {
         
     }
     ///Turn image into a rounded rectangle avatar
-    func BSRoundedRectangleAvatar() -> some View {
+    func bsRoundedRectangleAvatar() -> some View {
         self
             .resizable()
             .frame(width: 40, height: 40)
@@ -48,7 +48,7 @@ extension Image {
     //MARK: Styled Images
     
     ///Modify image to fit a circular format
-    func BSCircularImage(width: CGFloat) -> some View {
+    func bsCircularImage(width: CGFloat) -> some View {
         self
             .resizable()
             .frame(width: width, height: width)
@@ -57,7 +57,7 @@ extension Image {
     }
     
     ///Modify image to fit a square format
-    func BSSquaredImage(width: CGFloat) -> some View {
+    func bsSquaredImage(width: CGFloat) -> some View {
         self
             .resizable()
             .frame(width: width, height: width)
@@ -65,7 +65,7 @@ extension Image {
     }
     
     ///Modify image to fit a rounded corners square format
-    func BSRoundedRectangle(width: CGFloat) -> some View {
+    func bsRoundedRectangle(width: CGFloat) -> some View {
         self
             .resizable()
             .frame(width: width, height: width)
@@ -73,7 +73,7 @@ extension Image {
             .aspectRatio(1.0, contentMode: .fit)
     }
     ///Modify image to have upper rounded corners in a square format
-    func BS_UpperRC(imageWidth: CGFloat) -> some View {
+    func bs_UpperRC(imageWidth: CGFloat) -> some View {
         self
             .resizable()
             .frame(width: imageWidth, height: imageWidth)
@@ -81,7 +81,7 @@ extension Image {
     }
     
     ///Modify image to have lower rounded corners in a square format
-    func BS_LowerRC(imageWidth: CGFloat) -> some View {
+    func bs_LowerRC(imageWidth: CGFloat) -> some View {
         self
             .resizable()
             .frame(width: imageWidth, height: imageWidth)
@@ -89,7 +89,7 @@ extension Image {
     }
     
     ///Modify image to have left-side rounded corners in a square format
-    func BS_LeftRC(imageWidth: CGFloat) -> some View {
+    func bs_LeftRC(imageWidth: CGFloat) -> some View {
         self
             .resizable()
             .frame(width: imageWidth, height: imageWidth)
@@ -97,7 +97,7 @@ extension Image {
     }
     
     ///Modify image to have right-side rounded corners in a square format
-    func BS_RightRC(imageWidth: CGFloat) -> some View {
+    func bs_RightRC(imageWidth: CGFloat) -> some View {
         self
             .resizable()
             .frame(width: imageWidth, height: imageWidth)
@@ -113,35 +113,35 @@ struct Images_Previews_Previews: PreviewProvider {
         VStack {
             HStack {
                 Image("goldfish")
-                    .BSCircularAvatar()
+                    .bsCircularAvatar()
                 Image("goldfish")
-                    .BSSquareAvatar()
+                    .bsSquareAvatar()
                 Image("goldfish")
-                    .BSRoundedRectangleAvatar()
+                    .bsRoundedRectangleAvatar()
                 
             }.padding()
             
             HStack(spacing: 20) {
                 Image("goldfish")
-                    .BSCircularImage(width: 90)
+                    .bsCircularImage(width: 90)
                 Image("goldfish")
-                    .BSSquaredImage(width: 90)
+                    .bsSquaredImage(width: 90)
                 Image("goldfish")
-                    .BSRoundedRectangle(width: 90)
+                    .bsRoundedRectangle(width: 90)
             }.padding()
             
             HStack(spacing: 20) {
                 Image("goldfish")
-                    .BS_UpperRC(imageWidth: 120)
+                    .bs_UpperRC(imageWidth: 120)
                 Image("goldfish")
-                    .BS_LowerRC(imageWidth: 120)
+                    .bs_LowerRC(imageWidth: 120)
             }.padding()
             
             HStack(spacing: 20) {
                 Image("goldfish")
-                    .BS_LeftRC(imageWidth: 120)
+                    .bs_LeftRC(imageWidth: 120)
                 Image("goldfish")
-                    .BS_RightRC(imageWidth: 120)
+                    .bs_RightRC(imageWidth: 120)
             }.padding()
             
             

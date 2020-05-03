@@ -19,11 +19,11 @@ extension Button {
         
         var color: Color {
             switch self {
-            case .primary: return Colors.primary
-            case .success: return Colors.success
-            case .warning: return Colors.warning
-            case .danger: return Colors.danger
-            case .info: return Colors.info
+            case .primary: return bsColors.primary
+            case .success: return bsColors.success
+            case .warning: return bsColors.warning
+            case .danger: return bsColors.danger
+            case .info: return bsColors.info
             }
         }
     }
@@ -32,17 +32,17 @@ extension Button {
     func style(_ style: Style, status: Status = .primary) -> some View {
         Group {
             if style == .fill {
-                self.buttonStyle(FillButtonStyle(color: status.color))
+                self.buttonStyle(bsFillButtonStyle(color: status.color))
             } else if style == .outline {
-                self.buttonStyle(OutlineButtonStyle(color: status.color))
+                self.buttonStyle(bsOutlineButtonStyle(color: status.color))
             } else {
-                self.buttonStyle(GhostButtonStyle(color: status.color))
+                self.buttonStyle(bsGhostButtonStyle(color: status.color))
             }
         }
     }
 }
 
-struct FillButtonStyle: ButtonStyle {
+struct bsFillButtonStyle: ButtonStyle {
     var color: Color
     
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
@@ -56,16 +56,16 @@ struct FillButtonStyle: ButtonStyle {
         var body: some View {
             configuration.label
                 .font(.system(size: 17, weight: .semibold))
-                .foregroundColor(isEnabled ? .white : Colors.fontDisabled)
+                .foregroundColor(isEnabled ? .white : bsColors.fontDisabled)
                 .padding()
                 .frame(minHeight: 56)
-                .background(isEnabled ? color : Colors.basic.opacity(0.2))
+                .background(isEnabled ? color : bsColors.basic.opacity(0.2))
                 .cornerRadius(4)
         }
     }
 }
 
-struct OutlineButtonStyle: ButtonStyle {
+struct bsOutlineButtonStyle: ButtonStyle {
     var color: Color
     
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
@@ -79,20 +79,20 @@ struct OutlineButtonStyle: ButtonStyle {
         var body: some View {
             configuration.label
                 .font(.system(size: 17, weight: .semibold))
-                .foregroundColor(isEnabled ? color : Colors.fontDisabled)
+                .foregroundColor(isEnabled ? color : bsColors.fontDisabled)
                 .padding()
                 .frame(minHeight: 56)
-                .background(isEnabled ? color.opacity(0.2) : Colors.basic.opacity(0.15))
+                .background(isEnabled ? color.opacity(0.2) : bsColors.basic.opacity(0.15))
                 .cornerRadius(4)
                 .overlay(
                     RoundedRectangle(cornerRadius: 4)
-                        .stroke(isEnabled ? color : Colors.basic.opacity(0.5), lineWidth: 1)
+                        .stroke(isEnabled ? color : bsColors.basic.opacity(0.5), lineWidth: 1)
                 )
         }
     }
 }
 
-struct GhostButtonStyle: ButtonStyle {
+struct bsGhostButtonStyle: ButtonStyle {
     var color: Color
     
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
@@ -106,7 +106,7 @@ struct GhostButtonStyle: ButtonStyle {
         var body: some View {
             configuration.label
                 .font(.system(size: 17, weight: .heavy))
-                .foregroundColor(isEnabled ? color : Colors.fontDisabled)
+                .foregroundColor(isEnabled ? color : bsColors.fontDisabled)
                 .padding()
                 .frame(minHeight: 56)
                 .background(Color.white)
