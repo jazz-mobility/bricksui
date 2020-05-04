@@ -18,6 +18,7 @@
 		1DED6064245F335600AD1122 /* Toggles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED6063245F335600AD1122 /* Toggles.swift */; };
 		1DED6066245F7A4E00AD1122 /* Checkboxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED6065245F7A4E00AD1122 /* Checkboxes.swift */; };
 		641DA567245E2C7C00B49043 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DA566245E2C7C00B49043 /* TextField.swift */; };
+		641DA569246028B100B49043 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DA568246028B100B49043 /* Selection.swift */; };
 		94F3F6B2245D9142000BC2C5 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3F6B1245D9142000BC2C5 /* Buttons.swift */; };
 		C8D15B8E245CB6FC004B1843 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B8D245CB6FC004B1843 /* Images.swift */; };
 		C8D15B90245CC7FA004B1843 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */; };
@@ -38,6 +39,7 @@
 		1DED6063245F335600AD1122 /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
 		1DED6065245F7A4E00AD1122 /* Checkboxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkboxes.swift; sourceTree = "<group>"; };
 		641DA566245E2C7C00B49043 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		641DA568246028B100B49043 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		94F3F6B1245D9142000BC2C5 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		C8D15B8D245CB6FC004B1843 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				1D34A6992448CEA900882EEE /* Typography.swift */,
 				94F3F6B1245D9142000BC2C5 /* Buttons.swift */,
 				641DA566245E2C7C00B49043 /* TextField.swift */,
+				641DA568246028B100B49043 /* Selection.swift */,
 				1DB2E0F4245830DD00FB1DE6 /* Colors.swift */,
 				1DED6063245F335600AD1122 /* Toggles.swift */,
 				1DED6065245F7A4E00AD1122 /* Checkboxes.swift */,
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				641DA569246028B100B49043 /* Selection.swift in Sources */,
 				1D34A6862445F9FC00882EEE /* AppDelegate.swift in Sources */,
 				C8D15B8E245CB6FC004B1843 /* Images.swift in Sources */,
 				1D34A6882445F9FC00882EEE /* SceneDelegate.swift in Sources */,
