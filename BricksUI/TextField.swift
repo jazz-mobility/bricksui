@@ -75,7 +75,7 @@ struct BSTextField: View {
             else { icon.imageScale(.large).foregroundColor(.bsBasic) }
         }
          .padding()
-        .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? Color.bsBasic.opacity(0) : Color.bsBasic.opacity(0.1)))
+        .background(RoundedRectangle(cornerRadius: 5).foregroundColor(Color.bsBasic.opacity(self.focused ? 0 : 0.1)))
         .overlay(RoundedRectangle(cornerRadius: 5).stroke(self.focused ? Color.bsPrimary : Color.bsBasic.opacity(0.4), lineWidth: 1))
     }
     
@@ -96,7 +96,7 @@ struct BSTextField: View {
             icon.imageScale(.large).foregroundColor(.bsSuccess)
          }
          .padding()
-         .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? Color.bsBasic.opacity(0) : Color.bsBasic.opacity(0.1)))
+         .background(RoundedRectangle(cornerRadius: 5).foregroundColor(Color.bsBasic.opacity(self.focused ? 0 : 0.1)))
          .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.bsSuccess, lineWidth: 1))
     }
     
@@ -117,7 +117,7 @@ struct BSTextField: View {
             icon.imageScale(.large).foregroundColor(.bsWarning)
          }
          .padding()
-         .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? Color.bsBasic.opacity(0) : Color.bsBasic.opacity(0.1)))
+         .background(RoundedRectangle(cornerRadius: 5).foregroundColor(Color.bsBasic.opacity(self.focused ? 0 : 0.1)))
          .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.bsWarning, lineWidth: 1))
     }
     
@@ -138,7 +138,7 @@ struct BSTextField: View {
                 icon.imageScale(.large).foregroundColor(.bsDanger)
             }
             .padding()
-            .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? Color.bsBasic.opacity(0) : Color.bsBasic.opacity(0.1)))
+            .background(RoundedRectangle(cornerRadius: 5).foregroundColor(Color.bsBasic.opacity(self.focused ? 0 : 0.1)))
             .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.bsDanger, lineWidth: 1))
     }
     
@@ -159,7 +159,7 @@ struct BSTextField: View {
                 icon.imageScale(.large).foregroundColor(.bsInfo)
             }
             .padding()
-            .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? Color.bsBasic.opacity(0) : Color.bsBasic.opacity(0.1)))
+            .background(RoundedRectangle(cornerRadius: 5).foregroundColor(Color.bsBasic.opacity(self.focused ? 0 : 0.1)))
             .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.bsInfo, lineWidth: 1))
     }
     
