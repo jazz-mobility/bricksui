@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-struct bsTextField: View {
+struct BSTextField: View {
     
     enum Style {
         case defaultStyle,
@@ -188,12 +188,12 @@ struct TextField_Previews: PreviewProvider {
     
     static var previews: some View {
         VStack(spacing: 20) {
-            bsTextField("Thats a default Textfield", onCommit: {print("party")})
-            bsTextField("Thats a default Textfield + Icon", icon: Image(systemName: "star.fill"), onCommit: {print("party")})
-            bsTextField("Success", style: .success, icon: Image(systemName: "star.fill"))
-            bsTextField("Warning", style: .warning, icon: Image(systemName: "star.fill"))
-            bsTextField("Danger", style: .danger, icon: Image(systemName: "star.fill"))
-            bsTextField("Info", style: .info, icon: Image(systemName: "star.fill"))
+            BSTextField("Thats a default Textfield", onCommit: {print("party")})
+            BSTextField("Thats a default Textfield + Icon", icon: Image(systemName: "star.fill"), onCommit: {print("party")})
+            BSTextField("Success", style: .success, icon: Image(systemName: "star.fill"))
+            BSTextField("Warning", style: .warning, icon: Image(systemName: "star.fill"))
+            BSTextField("Danger", style: .danger, icon: Image(systemName: "star.fill"))
+            BSTextField("Info", style: .info, icon: Image(systemName: "star.fill"))
         }
         .padding()
     }

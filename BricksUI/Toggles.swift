@@ -42,7 +42,7 @@ struct ColoredToggleStyle: ToggleStyle {
     }
 }
 
-struct bsTogglePrimary: View {
+struct BSTogglePrimary: View {
     @State private var toggleState: Bool = true
     
     var body: some View {
@@ -57,7 +57,7 @@ struct bsTogglePrimary: View {
     }
 }
 
-struct bsToggleSuccess: View {
+struct BSToggleSuccess: View {
     @State private var toggleState: Bool = true
     
     var body: some View {
@@ -72,7 +72,7 @@ struct bsToggleSuccess: View {
     }
 }
 
-struct bsToggleInfo: View {
+struct BSToggleInfo: View {
     @State private var toggleState: Bool = true
     
     var body: some View {
@@ -87,7 +87,7 @@ struct bsToggleInfo: View {
     }
 }
 
-struct bsToggleWarning: View {
+struct BSToggleWarning: View {
     @State private var toggleState: Bool = true
     
     var body: some View {
@@ -102,7 +102,7 @@ struct bsToggleWarning: View {
     }
 }
 
-struct bsToggleDanger: View {
+struct BSToggleDanger: View {
     @State private var toggleState: Bool = true
     
     var body: some View {
@@ -121,11 +121,11 @@ struct bsToggleDanger: View {
 struct Toggles_Previews: PreviewProvider {
     static var previews: some View {
         VStack{
-            bsTogglePrimary()
-            bsToggleSuccess()
-            bsToggleInfo()
-            bsToggleWarning()
-            bsToggleDanger()
+            BSTogglePrimary()
+            BSToggleSuccess()
+            BSToggleInfo()
+            BSToggleWarning()
+            BSToggleDanger()
         }
     }
 }

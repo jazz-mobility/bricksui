@@ -26,7 +26,7 @@ struct CheckboxToggleStyle: ToggleStyle {
 }
 
 
-struct bsCheckboxPrimary: View {
+struct BSCheckboxPrimary: View {
     @State private var toggleState: Bool = true
     
     var body: some View {
@@ -42,7 +42,7 @@ struct bsCheckboxPrimary: View {
 struct Checkboxes_Previews: PreviewProvider {
     static var previews: some View {
         VStack{
-            bsCheckboxPrimary()
+            BSCheckboxPrimary()
         }
     }
 }

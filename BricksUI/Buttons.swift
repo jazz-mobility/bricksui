@@ -32,17 +32,17 @@ extension Button {
     func style(_ style: Style, status: Status = .primary) -> some View {
         Group {
             if style == .fill {
-                self.buttonStyle(bsFillButtonStyle(color: status.color))
+                self.buttonStyle(BSFillButtonStyle(color: status.color))
             } else if style == .outline {
-                self.buttonStyle(bsOutlineButtonStyle(color: status.color))
+                self.buttonStyle(BSOutlineButtonStyle(color: status.color))
             } else {
-                self.buttonStyle(bsGhostButtonStyle(color: status.color))
+                self.buttonStyle(BSGhostButtonStyle(color: status.color))
             }
         }
     }
 }
 
-struct bsFillButtonStyle: ButtonStyle {
+struct BSFillButtonStyle: ButtonStyle {
     var color: Color
     
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
@@ -65,7 +65,7 @@ struct bsFillButtonStyle: ButtonStyle {
     }
 }
 
-struct bsOutlineButtonStyle: ButtonStyle {
+struct BSOutlineButtonStyle: ButtonStyle {
     var color: Color
     
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
@@ -92,7 +92,7 @@ struct bsOutlineButtonStyle: ButtonStyle {
     }
 }
 
-struct bsGhostButtonStyle: ButtonStyle {
+struct BSGhostButtonStyle: ButtonStyle {
     var color: Color
     
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
