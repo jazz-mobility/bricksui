@@ -188,12 +188,12 @@ struct TextField_Previews: PreviewProvider {
     
     static var previews: some View {
         VStack(spacing: 20) {
-            bsTextField.init("Thats a default Textfield", onCommit: {print("party")})
-            bsTextField.init("Thats a default Textfield + Icon", icon: Image(systemName: "star.fill"), onCommit: {print("party")})
-            bsTextField.init("Success", style: .success, icon: Image(systemName: "star.fill"))
-            bsTextField.init("Warning", style: .warning, icon: Image(systemName: "star.fill"))
-            bsTextField.init("Danger", style: .danger, icon: Image(systemName: "star.fill"))
-            bsTextField.init("Info", style: .info, icon: Image(systemName: "star.fill"))
+            bsTextField("Thats a default Textfield", onCommit: {print("party")})
+            bsTextField("Thats a default Textfield + Icon", icon: Image(systemName: "star.fill"), onCommit: {print("party")})
+            bsTextField("Success", style: .success, icon: Image(systemName: "star.fill"))
+            bsTextField("Warning", style: .warning, icon: Image(systemName: "star.fill"))
+            bsTextField("Danger", style: .danger, icon: Image(systemName: "star.fill"))
+            bsTextField("Info", style: .info, icon: Image(systemName: "star.fill"))
         }
         .padding()
     }
