@@ -60,7 +60,7 @@ struct bsTextField: View {
     fileprivate func defaultStyle() -> some View {
         HStack {
             ZStack(alignment: .leading) {
-                if input.isEmpty { Text(placeholder).foregroundColor(bsColors.basic) }
+                if input.isEmpty { Text(placeholder).foregroundColor(.bsBasic) }
                 TextField("", text: $input, onEditingChanged: { (editingChanged) in
                     if editingChanged {
                         print("TextField focused")
@@ -69,20 +69,20 @@ struct bsTextField: View {
                         print("TextField focus removed")
                         self.focused = false
                     }
-                }, onCommit: commit).foregroundColor(bsColors.fontStd)
+                }, onCommit: commit).foregroundColor(.bsFontStd)
             }
-            if focused { icon.imageScale(.large).foregroundColor(bsColors.primary) }
-            else { icon.imageScale(.large).foregroundColor(bsColors.basic) }
+            if focused { icon.imageScale(.large).foregroundColor(.bsPrimary) }
+            else { icon.imageScale(.large).foregroundColor(.bsBasic) }
         }
          .padding()
-         .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? bsColors.basic.opacity(0) : bsColors.basic.opacity(0.1)))
-         .overlay(RoundedRectangle(cornerRadius: 5).stroke(self.focused ? bsColors.primary : bsColors.basic.opacity(0.4), lineWidth: 1))
+        .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? Color.bsBasic.opacity(0) : Color.bsBasic.opacity(0.1)))
+        .overlay(RoundedRectangle(cornerRadius: 5).stroke(self.focused ? Color.bsPrimary : Color.bsBasic.opacity(0.4), lineWidth: 1))
     }
     
     fileprivate func success() -> some View {
          HStack {
             ZStack(alignment: .leading) {
-                if input.isEmpty { Text(placeholder).foregroundColor(bsColors.basic) }
+                if input.isEmpty { Text(placeholder).foregroundColor(.bsBasic) }
                 TextField("", text: $input, onEditingChanged: { (editingChanged) in
                     if editingChanged {
                         print("TextField focused")
@@ -91,19 +91,19 @@ struct bsTextField: View {
                         print("TextField focus removed")
                         self.focused = false
                     }
-                }, onCommit: commit).foregroundColor(bsColors.fontStd)
+                }, onCommit: commit).foregroundColor(.bsFontStd)
             }
-            icon.imageScale(.large).foregroundColor(bsColors.success)
+            icon.imageScale(.large).foregroundColor(.bsSuccess)
          }
          .padding()
-         .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? bsColors.basic.opacity(0) : bsColors.basic.opacity(0.1)))
-         .overlay(RoundedRectangle(cornerRadius: 5).stroke(bsColors.success, lineWidth: 1))
+         .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? Color.bsBasic.opacity(0) : Color.bsBasic.opacity(0.1)))
+         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.bsSuccess, lineWidth: 1))
     }
     
     fileprivate func warning() -> some View {
          HStack {
             ZStack(alignment: .leading) {
-                if input.isEmpty { Text(placeholder).foregroundColor(bsColors.basic) }
+                if input.isEmpty { Text(placeholder).foregroundColor(Color.bsBasic) }
                 TextField("", text: $input, onEditingChanged: { (editingChanged) in
                     if editingChanged {
                         print("TextField focused")
@@ -112,19 +112,19 @@ struct bsTextField: View {
                         print("TextField focus removed")
                         self.focused = false
                     }
-                }, onCommit: commit).foregroundColor(bsColors.fontStd)
+                }, onCommit: commit).foregroundColor(.bsFontStd)
             }
-            icon.imageScale(.large).foregroundColor(bsColors.warning)
+            icon.imageScale(.large).foregroundColor(.bsWarning)
          }
          .padding()
-         .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? bsColors.basic.opacity(0) : bsColors.basic.opacity(0.1)))
-         .overlay(RoundedRectangle(cornerRadius: 5).stroke(bsColors.warning, lineWidth: 1))
+         .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? Color.bsBasic.opacity(0) : Color.bsBasic.opacity(0.1)))
+         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.bsWarning, lineWidth: 1))
     }
     
     fileprivate func danger() -> some View {
             HStack {
                ZStack(alignment: .leading) {
-                   if input.isEmpty { Text(placeholder).foregroundColor(bsColors.basic) }
+                if input.isEmpty { Text(placeholder).foregroundColor(.bsBasic) }
                    TextField("", text: $input, onEditingChanged: { (editingChanged) in
                        if editingChanged {
                            print("TextField focused")
@@ -133,19 +133,19 @@ struct bsTextField: View {
                            print("TextField focus removed")
                            self.focused = false
                        }
-                   }, onCommit: commit).foregroundColor(bsColors.fontStd)
+                   }, onCommit: commit).foregroundColor(.bsFontStd)
                }
-               icon.imageScale(.large).foregroundColor(bsColors.danger)
+                icon.imageScale(.large).foregroundColor(.bsDanger)
             }
             .padding()
-            .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? bsColors.basic.opacity(0) : bsColors.basic.opacity(0.1)))
-            .overlay(RoundedRectangle(cornerRadius: 5).stroke(bsColors.danger, lineWidth: 1))
+            .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? Color.bsBasic.opacity(0) : Color.bsBasic.opacity(0.1)))
+            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.bsDanger, lineWidth: 1))
     }
     
     fileprivate func info() -> some View {
             HStack {
                ZStack(alignment: .leading) {
-                   if input.isEmpty { Text(placeholder).foregroundColor(bsColors.basic) }
+                if input.isEmpty { Text(placeholder).foregroundColor(.bsBasic) }
                    TextField("", text: $input, onEditingChanged: { (editingChanged) in
                        if editingChanged {
                            print("TextField focused")
@@ -154,13 +154,13 @@ struct bsTextField: View {
                            print("TextField focus removed")
                            self.focused = false
                        }
-                   }, onCommit: commit).foregroundColor(bsColors.fontStd)
+                   }, onCommit: commit).foregroundColor(.bsFontStd)
                }
-               icon.imageScale(.large).foregroundColor(bsColors.info)
+                icon.imageScale(.large).foregroundColor(.bsInfo)
             }
             .padding()
-            .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? bsColors.basic.opacity(0) : bsColors.basic.opacity(0.1)))
-            .overlay(RoundedRectangle(cornerRadius: 5).stroke(bsColors.info, lineWidth: 1))
+            .background(RoundedRectangle(cornerRadius: 5).foregroundColor(self.focused ? Color.bsBasic.opacity(0) : Color.bsBasic.opacity(0.1)))
+            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.bsInfo, lineWidth: 1))
     }
     
     // MARK:  Body

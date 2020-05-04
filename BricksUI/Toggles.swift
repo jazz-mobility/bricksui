@@ -10,8 +10,8 @@ import SwiftUI
 
 
 struct ColoredToggleStyle: ToggleStyle {
-    var onColor = bsColors.primary
-    var offColor = bsColors.danger
+    var onColor = Color.bsPrimary
+    var offColor = Color.bsDanger
     var thumbColor = Color.white
     
     func makeBody(configuration: Self.Configuration) -> some View {
@@ -50,9 +50,9 @@ struct bsTogglePrimary: View {
             Toggle("", isOn: $toggleState)
                 .toggleStyle(
                     ColoredToggleStyle(
-                        onColor: bsColors.primary,
-                        offColor: bsColors.primary.opacity(0.1),
-                        thumbColor: Color(UIColor.white)))
+                        onColor: .bsPrimary,
+                        offColor: Color.bsPrimary.opacity(0.1),
+                        thumbColor: .white))
         }
     }
 }
@@ -65,9 +65,9 @@ struct bsToggleSuccess: View {
             Toggle("", isOn: $toggleState)
                 .toggleStyle(
                     ColoredToggleStyle(
-                        onColor: bsColors.success,
-                        offColor: bsColors.success.opacity(0.1),
-                        thumbColor: Color(UIColor.white)))
+                        onColor: .bsSuccess,
+                        offColor: Color.bsSuccess.opacity(0.1),
+                        thumbColor: .white))
         }
     }
 }
@@ -80,9 +80,9 @@ struct bsToggleInfo: View {
             Toggle("", isOn: $toggleState)
                 .toggleStyle(
                     ColoredToggleStyle(
-                        onColor: bsColors.info,
-                        offColor: bsColors.info.opacity(0.1),
-                        thumbColor: Color(UIColor.white)))
+                        onColor: .bsInfo,
+                        offColor: Color.bsInfo.opacity(0.1),
+                        thumbColor: .white))
         }
     }
 }
@@ -95,9 +95,9 @@ struct bsToggleWarning: View {
             Toggle("", isOn: $toggleState)
                 .toggleStyle(
                     ColoredToggleStyle(
-                        onColor: bsColors.warning,
-                        offColor: bsColors.warning.opacity(0.1),
-                        thumbColor: Color(UIColor.white)))
+                        onColor: .bsWarning,
+                        offColor: Color.bsWarning.opacity(0.1),
+                        thumbColor: .white))
         }
     }
 }
@@ -110,9 +110,9 @@ struct bsToggleDanger: View {
             Toggle("", isOn: $toggleState)
                 .toggleStyle(
                     ColoredToggleStyle(
-                        onColor: bsColors.danger,
-                        offColor: bsColors.danger.opacity(0.1),
-                        thumbColor: Color(UIColor.white)))
+                        onColor: .bsDanger,
+                        offColor: Color.bsDanger.opacity(0.1),
+                        thumbColor: .white))
         }
     }
 }

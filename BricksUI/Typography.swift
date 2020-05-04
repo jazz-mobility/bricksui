@@ -18,7 +18,7 @@ extension Text {
              c1, c2  // Captions
     }
 
-    func bsTypo(_ style: Style, _ color: Color = bsColors.fontStd) -> Text {
+    func bsTypo(_ style: Style, _ color: Color = .bsFontStd) -> Text {
         switch style {
         case .h1:
             return

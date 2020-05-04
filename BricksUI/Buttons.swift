@@ -19,11 +19,11 @@ extension Button {
         
         var color: Color {
             switch self {
-            case .primary: return bsColors.primary
-            case .success: return bsColors.success
-            case .warning: return bsColors.warning
-            case .danger: return bsColors.danger
-            case .info: return bsColors.info
+            case .primary: return .bsPrimary
+            case .success: return .bsSuccess
+            case .warning: return .bsWarning
+            case .danger: return .bsDanger
+            case .info: return .bsInfo
             }
         }
     }
@@ -56,10 +56,10 @@ struct bsFillButtonStyle: ButtonStyle {
         var body: some View {
             configuration.label
                 .font(.system(size: 17, weight: .semibold))
-                .foregroundColor(isEnabled ? .white : bsColors.fontDisabled)
+                .foregroundColor(isEnabled ? .white : .bsFontDisabled)
                 .padding()
                 .frame(minHeight: 56)
-                .background(isEnabled ? color : bsColors.basic.opacity(0.2))
+                .background(isEnabled ? color : Color.bsBasic.opacity(0.2))
                 .cornerRadius(4)
         }
     }
@@ -79,14 +79,14 @@ struct bsOutlineButtonStyle: ButtonStyle {
         var body: some View {
             configuration.label
                 .font(.system(size: 17, weight: .semibold))
-                .foregroundColor(isEnabled ? color : bsColors.fontDisabled)
+                .foregroundColor(isEnabled ? color : .bsFontDisabled)
                 .padding()
                 .frame(minHeight: 56)
-                .background(isEnabled ? color.opacity(0.2) : bsColors.basic.opacity(0.15))
+                .background(isEnabled ? color.opacity(0.2) : Color.bsBasic.opacity(0.15))
                 .cornerRadius(4)
                 .overlay(
                     RoundedRectangle(cornerRadius: 4)
-                        .stroke(isEnabled ? color : bsColors.basic.opacity(0.5), lineWidth: 1)
+                        .stroke(isEnabled ? color : Color.bsBasic.opacity(0.5), lineWidth: 1)
                 )
         }
     }
@@ -106,7 +106,7 @@ struct bsGhostButtonStyle: ButtonStyle {
         var body: some View {
             configuration.label
                 .font(.system(size: 17, weight: .heavy))
-                .foregroundColor(isEnabled ? color : bsColors.fontDisabled)
+                .foregroundColor(isEnabled ? color : .bsFontDisabled)
                 .padding()
                 .frame(minHeight: 56)
                 .background(Color.white)

@@ -9,46 +9,45 @@
 import Foundation
 import SwiftUI
 
-
-struct bsColors {
+extension Color {
     
     // MARK: Basic Colors
     
     /// Background Color
-    static let background = Color("background")
+    static let bsBackground = Color("background")
     /// Basic Color
-    static let basic = Color("basic")
+    static let bsBasic = Color("basic")
     /// Primary Color
-    static let primary = Color("primary")
+    static let bsPrimary = Color("primary")
     
     // MARK: Font Colors
     
     /// Standard Font Color
-    static let fontStd = Color("font_std")
+    static let bsFontStd = Color("font_std")
     /// Font Hint
-    static let fontHint = Color("font_hint")
+    static let bsFontHint = Color("font_hint")
     /// Font Disabled
-    static let fontDisabled = Color("font_disabled")
+    static let bsFontDisabled = Color("font_disabled")
     /// Font Button
-    static let fontBtn = Color("font_button")
+    static let bsFontBtn = Color("font_button")
     
     // MARK: Semantic Colors
     
     /// Danger Color
-    static let danger = Color("danger")
+    static let bsDanger = Color("danger")
     /// Info Color
-    static let info = Color("info")
+    static let bsInfo = Color("info")
     /// Success Color
-    static let success = Color("success")
+    static let bsSuccess = Color("success")
     /// Warning Color
-    static let warning = Color("warning")
+    static let bsWarning = Color("warning")
 }
 
 struct Color_Previews: PreviewProvider {
     static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-            .foregroundColor(bsColors.fontStd)
-            .background(bsColors.background)
+        Text("Hello, World!")
+            .foregroundColor(.bsFontStd)
+            .background(Color.bsBackground)
             .environment(\.colorScheme, .dark)
     }
     
