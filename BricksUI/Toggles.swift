@@ -8,44 +8,72 @@
 
 import SwiftUI
 
-
-struct ColoredToggleStyle: ToggleStyle {
-    var onColor = Color.bsPrimary
-    var offColor = Color.bsDanger
-    var thumbColor = Color.white
+struct BSToggle: View {
     
-    func makeBody(configuration: Self.Configuration) -> some View {
-        VStack {
-            Button(action: { configuration.isOn.toggle() } )
-            {
-                RoundedRectangle(cornerRadius: 16, style: .circular)
-                    .fill(configuration.isOn ? onColor : offColor)
-                    .frame(width: 50, height: 29)
-                    .overlay(
-                        ZStack{
-                            Circle()
-                                .fill(thumbColor)
-                                .shadow(radius: 1, x: 0, y: 1)
-                                .padding(1.5)
-                                .offset(x: configuration.isOn ? 10 : -10)
-                            Image(systemName: configuration.isOn ? "checkmark" : "")
-                                .font(.system(size: 12, weight: .black))
-                                .foregroundColor(onColor)
-                                .offset(x: configuration.isOn ? 10 : -10)
-                            
-                    })
-                    .animation(Animation.easeInOut(duration: 0.1))
-            }
-        }
-        .font(.title)
-        .padding(.horizontal)
+    enum Style {
+        case defaultStyle,
+        disabled,
+        success,
+        warning,
+        danger,
+        info
     }
-}
-
-struct BSTogglePrimary: View {
-    @State private var toggleState: Bool = true
+    
+    @State var toggleState: Bool = true
+    var style: Style
+    
+    struct ColoredToggleStyle: ToggleStyle {
+        var onColor = Color.bsPrimary
+        var offColor = Color.bsDanger
+        var thumbColor = Color.white
+        
+        func makeBody(configuration: Self.Configuration) -> some View {
+            VStack {
+                Button(action: { configuration.isOn.toggle() } )
+                {
+                    RoundedRectangle(cornerRadius: 16, style: .circular)
+                        .fill(configuration.isOn ? onColor : offColor)
+                        .frame(width: 50, height: 29)
+                        .overlay(
+                            ZStack{
+                                Circle()
+                                    .fill(thumbColor)
+                                    .shadow(radius: 1, x: 0, y: 1)
+                                    .padding(1.5)
+                                    .offset(x: configuration.isOn ? 10 : -10)
+                                Image(systemName: configuration.isOn ? "checkmark" : "")
+                                    .font(.system(size: 12, weight: .black))
+                                    .foregroundColor(onColor)
+                                    .offset(x: configuration.isOn ? 10 : -10)
+                                
+                        })
+                        .animation(Animation.easeInOut(duration: 0.1))
+                }
+            }
+            .font(.title)
+            .padding(.horizontal)
+        }
+    }
+    
     
     var body: some View {
+        switch style {
+        case .success:
+            return AnyView(success())
+        case .warning:
+            return AnyView(warning())
+        case .danger:
+            return AnyView(danger())
+        case .info:
+            return AnyView(info())
+        default:
+            return AnyView(defaultStyle())
+        }
+    }
+    
+    
+    
+    fileprivate func defaultStyle() -> some View {
         VStack{
             Toggle("", isOn: $toggleState)
                 .toggleStyle(
@@ -55,12 +83,8 @@ struct BSTogglePrimary: View {
                         thumbColor: .white))
         }
     }
-}
-
-struct BSToggleSuccess: View {
-    @State private var toggleState: Bool = true
     
-    var body: some View {
+    fileprivate func success() -> some View {
         VStack{
             Toggle("", isOn: $toggleState)
                 .toggleStyle(
@@ -70,12 +94,8 @@ struct BSToggleSuccess: View {
                         thumbColor: .white))
         }
     }
-}
-
-struct BSToggleInfo: View {
-    @State private var toggleState: Bool = true
     
-    var body: some View {
+    fileprivate func info() -> some View {
         VStack{
             Toggle("", isOn: $toggleState)
                 .toggleStyle(
@@ -85,12 +105,9 @@ struct BSToggleInfo: View {
                         thumbColor: .white))
         }
     }
-}
-
-struct BSToggleWarning: View {
-    @State private var toggleState: Bool = true
     
-    var body: some View {
+    
+    fileprivate func warning() -> some View {
         VStack{
             Toggle("", isOn: $toggleState)
                 .toggleStyle(
@@ -100,12 +117,9 @@ struct BSToggleWarning: View {
                         thumbColor: .white))
         }
     }
-}
-
-struct BSToggleDanger: View {
-    @State private var toggleState: Bool = true
     
-    var body: some View {
+    
+    fileprivate func danger() -> some View {
         VStack{
             Toggle("", isOn: $toggleState)
                 .toggleStyle(
@@ -115,17 +129,19 @@ struct BSToggleDanger: View {
                         thumbColor: .white))
         }
     }
+    
+    
 }
-
 
 struct Toggles_Previews: PreviewProvider {
     static var previews: some View {
         VStack{
-            BSTogglePrimary()
-            BSToggleSuccess()
-            BSToggleInfo()
-            BSToggleWarning()
-            BSToggleDanger()
+            BSToggle(style: .defaultStyle)
+            BSToggle(style: .success)
+            BSToggle(style: .info)
+            BSToggle(style: .warning)
+            BSToggle(style: .danger)
+            
         }
     }
 }
