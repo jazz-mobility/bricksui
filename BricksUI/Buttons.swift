@@ -8,39 +8,7 @@
 
 import SwiftUI
 
-extension Button {
-    
-    enum Style {
-        case fill, outline, ghost
-    }
-    
-    enum Status {
-        case primary, success, warning, danger, info
-        
-        var color: Color {
-            switch self {
-            case .primary: return .bsPrimary
-            case .success: return .bsSuccess
-            case .warning: return .bsWarning
-            case .danger: return .bsDanger
-            case .info: return .bsInfo
-            }
-        }
-    }
-    
-    /// Changes the appearance of the button
-    func style(_ style: Style, status: Status = .primary) -> some View {
-        Group {
-            if style == .fill {
-                self.buttonStyle(BSFillButtonStyle(color: status.color))
-            } else if style == .outline {
-                self.buttonStyle(BSOutlineButtonStyle(color: status.color))
-            } else {
-                self.buttonStyle(BSGhostButtonStyle(color: status.color))
-            }
-        }
-    }
-}
+// MARK: - Custom Button Styles
 
 struct BSFillButtonStyle: ButtonStyle {
     var color: Color
@@ -116,36 +84,80 @@ struct BSGhostButtonStyle: ButtonStyle {
 }
 
 
-struct Input_Previews2: PreviewProvider {
+// MARK: - Usage
+
+extension Button {
+    /// Changes the appearance of the button
+    func style(_ style: BSButton.Style, color: Color) -> some View {
+        Group {
+            if style == .fill {
+                self.buttonStyle(BSFillButtonStyle(color: color))
+            } else if style == .outline {
+                self.buttonStyle(BSOutlineButtonStyle(color: color))
+            } else {
+                self.buttonStyle(BSGhostButtonStyle(color: color))
+            }
+        }
+    }
+}
+
+struct BSButton: View {
+    enum Style { case fill, outline, ghost }
+    
+    var text: String?
+    var image: Image?
+    var style: Style = .fill
+    var color: Color = .bsPrimary
+    var action: () -> Void
+    
+    var body: some View {
+        Button(action: action, label: {
+            HStack() {
+                Text(text ?? "")
+                image
+            }
+        }).style(style, color: color)
+    }
+}
+
+
+// MARK: - Preview
+
+struct Input_Previews: PreviewProvider {
+    static let cloudImg = Image(systemName: "cloud.sun")
+    
     static var previews: some View {
-        VStack(spacing: 60) {
+        VStack(spacing: 40) {
+            
             HStack(spacing: 20) {
-                Button(action: { print("click") }, label: { Text("Fill") })
-                    .style(.fill)
-                Button(action: { print("click") }, label: { Text("Outline") })
-                    .style(.outline)
-                Button(action: { print("click") }, label: { Text("Ghost") })
-                    .style(.ghost)
+                BSButton(text: "Fill", style: .fill, action: { print("click") })
+                BSButton(text: "Outline", style: .outline, action: { print("click") })
+                BSButton(text: "Ghost", style: .ghost, action: { print("click") })
             }
+            
             HStack(spacing: 20) {
-                Button(action: { print("click") }, label: { Text("Danger") })
-                    .style(.outline, status: .danger)
-                Button(action: { print("click") }, label: { Text("Warning") })
-                    .style(.outline, status: .warning)
-                Button(action: { print("click") }, label: { Text("Success") })
-                    .style(.outline, status: .success)
+                BSButton(text: "Danger", color: .bsDanger, action: { print("click") })
+                BSButton(text: "Warning", color: .bsWarning, action: { print("click") })
+                BSButton(text: "Success", color: .bsSuccess, action: { print("click") })
             }
+            
             HStack(spacing: 20) {
-                Button(action: { print("click") }, label: { Text("Disabled") })
-                    .style(.fill)
+                BSButton(text: "Disabled", style: .fill, action: { print("click") })
                     .disabled(true)
-                Button(action: { print("click") }, label: { Text("Disabled") })
-                    .style(.outline)
+                BSButton(text: "Disabled", style: .outline, action: { print("click") })
                     .disabled(true)
-                Button(action: { print("click") }, label: { Text("Disabled") })
-                    .style(.ghost)
+                BSButton(text: "Disabled", style: .ghost, action: { print("click") })
                     .disabled(true)
             }
+            
+            HStack(spacing: 20) {
+                BSButton(text: "Text", action: { print("click") })
+                BSButton(text: "Text", image: cloudImg, action: { print("click") })
+                BSButton(image: cloudImg, action: { print("click") })
+            }
+            
+            Button(action: { print("click") }, label: { Text("Very Custom") })
+                .style(.outline, color: .black)
         }
     }
 }
