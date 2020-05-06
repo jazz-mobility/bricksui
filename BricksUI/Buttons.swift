@@ -109,10 +109,11 @@ struct BSButton: View {
     var style: Style = .fill
     var color: Color = .bsPrimary
     var action: () -> Void
+    var textAndImage: Bool { text != nil && image != nil }
     
     var body: some View {
         Button(action: action, label: {
-            HStack() {
+            HStack(spacing: textAndImage ? 12 : 0) {
                 Text(text ?? "")
                 image
             }
