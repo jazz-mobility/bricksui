@@ -29,6 +29,7 @@ struct BSFillButtonStyle: ButtonStyle {
                 .frame(minHeight: 56)
                 .background(isEnabled ? color : Color.bsBasic.opacity(0.2))
                 .cornerRadius(4)
+                .opacity(configuration.isPressed ? 0.7 : 1)
         }
     }
 }
@@ -56,6 +57,7 @@ struct BSOutlineButtonStyle: ButtonStyle {
                     RoundedRectangle(cornerRadius: 4)
                         .stroke(isEnabled ? color : Color.bsBasic.opacity(0.5), lineWidth: 1)
                 )
+                .opacity(configuration.isPressed ? 0.7 : 1)
         }
     }
 }
@@ -79,6 +81,7 @@ struct BSGhostButtonStyle: ButtonStyle {
                 .frame(minHeight: 56)
                 .background(Color.white)
                 .cornerRadius(4)
+                .opacity(configuration.isPressed ? 0.7 : 1)
         }
     }
 }
