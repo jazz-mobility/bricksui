@@ -5,40 +5,32 @@
 //  Copyright © 2020 by a cool group. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 
 extension Color {
     
     // MARK: Basic Colors
     
-    /// Background Color
     static let bsBackground = Color("background")
-    /// Basic Color
     static let bsBasic = Color("basic")
-    /// Primary Color
     static let bsPrimary = Color("primary")
     
     // MARK: Font Colors
     
     /// Standard Font Color
     static let bsFontStd = Color("font_std")
-    /// Font Hint
+    /// Hint Font Color
     static let bsFontHint = Color("font_hint")
-    /// Font Disabled
+    /// Disabled Font Color
     static let bsFontDisabled = Color("font_disabled")
-    /// Font Button
+    /// Button Font Color
     static let bsFontBtn = Color("font_button")
     
     // MARK: Semantic Colors
     
-    /// Danger Color
     static let bsDanger = Color("danger")
-    /// Info Color
     static let bsInfo = Color("info")
-    /// Success Color
     static let bsSuccess = Color("success")
-    /// Warning Color
     static let bsWarning = Color("warning")
     
     // MARK: State Colors
@@ -64,5 +56,4 @@ struct Color_Previews: PreviewProvider {
                 .environment(\.colorScheme, .dark)
         }
     }
-    
 }
