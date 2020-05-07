@@ -2,13 +2,12 @@
 //  Toggles.swift
 //  BricksUI
 //
-//  Created by Fabio Staiano on 03/05/2020.
-//  Copyright © 2020 Fabio Staiano. All rights reserved.
+//  Copyright © 2020 by a cool group. All rights reserved.
 //
 
 import SwiftUI
 
-struct BSToggle: View {
+public struct BSToggle: View {
     
     enum Style {
         case defaultStyle,
@@ -56,7 +55,7 @@ struct BSToggle: View {
     }
     
     
-    var body: some View {
+    public var body: some View {
         switch style {
         case .success:
             return AnyView(success())

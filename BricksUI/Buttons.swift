@@ -2,8 +2,7 @@
 //  Buttons.swift
 //  BricksUI
 //
-//  Created by Samuel Kebis on 02/05/2020.
-//  Copyright © 2020 Fabio Staiano. All rights reserved.
+//  Copyright © 2020 by a cool group. All rights reserved.
 //
 
 import SwiftUI
@@ -127,10 +126,10 @@ struct BSButton: View {
 
 // MARK: - Preview
 
-struct Input_Previews: PreviewProvider {
+public struct Input_Previews: PreviewProvider {
     static let cloudImg = Image(systemName: "cloud.sun")
     
-    static var previews: some View {
+    public static var previews: some View {
         VStack(spacing: 40) {
             
             HStack(spacing: 20) {

@@ -2,14 +2,13 @@
 //  TextField.swift
 //  BricksUI
 //
-//  Created by Carlos Bystron on 01.05.20.
-//  Copyright © 2020 Fabio Staiano. All rights reserved.
+//  Copyright © 2020 by a cool group. All rights reserved.
 //
 
 import Foundation
 import SwiftUI
 
-struct BSTextField: View {
+public struct BSTextField: View {
     
     enum Style {
         case defaultStyle,
@@ -165,7 +164,7 @@ struct BSTextField: View {
     
     // MARK:  Body
     
-    var body: some View {
+    public var body: some View {
         
         switch style {
         case .success:
