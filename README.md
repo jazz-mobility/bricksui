@@ -14,5 +14,5 @@ A detailed project documentation can be found on [Medium](https://medium.com/@fa
 
 To start a new App with Bricks components just download the project and open it in xcode. In the BricksUI folder you can find the the prebuild elements. Each file contains a preview showing you how to use the specific component. Most of the components are views you can create intances of using diferent initializers depending on your needs. You can start your project in the "YourProject" folder that you can rename fitting to your needs. The same you can do with the xcodeproj file.
 
-© Fabio Staiano, Mica Cavallo, Carlos Bystron, Samuel Kebis - 
+© Fabio Staiano, Micaela Cavallo, Carlos Bystron, Samuel Kebis - 
 _Project as part of the enterprise class at the Apple Developer Academy Naples - 2020_
