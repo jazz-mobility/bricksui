@@ -353,7 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"BricksUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"YourProject/Preview Content\"";
 				DEVELOPMENT_TEAM = 64NY4V9RTQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = YourProject/Info.plist;
@@ -374,7 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"BricksUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"YourProject/Preview Content\"";
 				DEVELOPMENT_TEAM = 64NY4V9RTQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = YourProject/Info.plist;
