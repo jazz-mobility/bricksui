@@ -41,14 +41,29 @@ extension Color {
     static let bsSuccess = Color("success")
     /// Warning Color
     static let bsWarning = Color("warning")
+    
+    // MARK: State Colors
+    
+    /// Active State Color - Primary Style
+    static let bsActivePrimary = Color("activePrimary")
+    /// Active State Color - Basic Style
+    static let bsActiveBasic = Color("activeBasic")
 }
 
 struct Color_Previews: PreviewProvider {
     static var previews: some View {
-        Text("Hello, World!")
-            .foregroundColor(.bsFontStd)
-            .background(Color.bsBackground)
-            .environment(\.colorScheme, .dark)
+        VStack {
+            Text("Hello, World!")
+                      .foregroundColor(.bsFontStd)
+                      .background(Color.bsBackground)
+                      .environment(\.colorScheme, .dark)
+            .padding()
+            
+            Text("Hello, World!")
+                      .foregroundColor(.bsActivePrimary)
+                      .background(Color.bsActiveBasic)
+                      .environment(\.colorScheme, .dark)
+        }
     }
     
 }
