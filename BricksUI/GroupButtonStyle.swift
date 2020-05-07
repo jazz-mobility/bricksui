@@ -26,6 +26,7 @@ public struct GroupButtonStyle: ButtonStyle {
             .foregroundColor(isActive ? colorStyle.activeForeground : colorStyle.defaultForeground)
             .background(isActive ? colorStyle.activeBackground : colorStyle.defaultBackground)
             .border(colorStyle.defaultForeground, width: (colorStyle == .outline && !isActive) ? 1 : 0)
+            .opacity(configuration.isPressed ? 0.7 : 1)
     }
 }
 
