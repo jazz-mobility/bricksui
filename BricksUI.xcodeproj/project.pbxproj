@@ -10,7 +10,7 @@
 		1D34A6862445F9FC00882EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34A6852445F9FC00882EEE /* AppDelegate.swift */; };
 		1D34A6882445F9FC00882EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34A6872445F9FC00882EEE /* SceneDelegate.swift */; };
 		1D34A68A2445F9FC00882EEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34A6892445F9FC00882EEE /* ContentView.swift */; };
-		1D34A68C2445F9FF00882EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D34A68B2445F9FF00882EEE /* Assets.xcassets */; };
+		1D34A68C2445F9FF00882EEE /* BricksAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D34A68B2445F9FF00882EEE /* BricksAssets.xcassets */; };
 		1D34A68F2445F9FF00882EEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D34A68E2445F9FF00882EEE /* Preview Assets.xcassets */; };
 		1D34A6922445F9FF00882EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D34A6902445F9FF00882EEE /* LaunchScreen.storyboard */; };
 		1D34A69A2448CEA900882EEE /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34A6992448CEA900882EEE /* Typography.swift */; };
@@ -18,6 +18,7 @@
 		1DED6064245F335600AD1122 /* Toggles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED6063245F335600AD1122 /* Toggles.swift */; };
 		1DED6066245F7A4E00AD1122 /* Checkboxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED6065245F7A4E00AD1122 /* Checkboxes.swift */; };
 		641DA567245E2C7C00B49043 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DA566245E2C7C00B49043 /* TextField.swift */; };
+		64DF075924646C8700EB2879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DF075824646C8700EB2879 /* Assets.xcassets */; };
 		94812A8D2462B25C00E3D105 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94812A8C2462B25C00E3D105 /* RadioButton.swift */; };
 		94F3F6B2245D9142000BC2C5 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3F6B1245D9142000BC2C5 /* Buttons.swift */; };
 		C81C44722463EA7E0037B0B2 /* GroupButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C44712463EA7E0037B0B2 /* GroupButtonStyle.swift */; };
@@ -32,7 +33,7 @@
 		1D34A6852445F9FC00882EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D34A6872445F9FC00882EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1D34A6892445F9FC00882EEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1D34A68B2445F9FF00882EEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D34A68B2445F9FF00882EEE /* BricksAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BricksAssets.xcassets; sourceTree = "<group>"; };
 		1D34A68E2445F9FF00882EEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D34A6912445F9FF00882EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D34A6932445F9FF00882EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +42,7 @@
 		1DED6063245F335600AD1122 /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
 		1DED6065245F7A4E00AD1122 /* Checkboxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkboxes.swift; sourceTree = "<group>"; };
 		641DA566245E2C7C00B49043 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		64DF075824646C8700EB2879 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94812A8C2462B25C00E3D105 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		94F3F6B1245D9142000BC2C5 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		C81C44712463EA7E0037B0B2 /* GroupButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupButtonStyle.swift; sourceTree = "<group>"; };
@@ -91,9 +93,8 @@
 				C8D15B8D245CB6FC004B1843 /* Images.swift */,
 				C8D15B92245CC8A1004B1843 /* Views.swift */,
 				C81C44712463EA7E0037B0B2 /* GroupButtonStyle.swift */,
-				1D34A68B2445F9FF00882EEE /* Assets.xcassets */,
+				1D34A68B2445F9FF00882EEE /* BricksAssets.xcassets */,
 				C8D15B91245CC867004B1843 /* Helpers */,
-				1D34A68D2445F9FF00882EEE /* Preview Content */,
 			);
 			path = BricksUI;
 			sourceTree = "<group>";
@@ -114,6 +115,8 @@
 				1D34A6892445F9FC00882EEE /* ContentView.swift */,
 				1D34A6932445F9FF00882EEE /* Info.plist */,
 				1D34A6902445F9FF00882EEE /* LaunchScreen.storyboard */,
+				64DF075824646C8700EB2879 /* Assets.xcassets */,
+				1D34A68D2445F9FF00882EEE /* Preview Content */,
 			);
 			path = YourProject;
 			sourceTree = "<group>";
@@ -187,7 +190,8 @@
 			files = (
 				1D34A6922445F9FF00882EEE /* LaunchScreen.storyboard in Resources */,
 				1D34A68F2445F9FF00882EEE /* Preview Assets.xcassets in Resources */,
-				1D34A68C2445F9FF00882EEE /* Assets.xcassets in Resources */,
+				64DF075924646C8700EB2879 /* Assets.xcassets in Resources */,
+				1D34A68C2445F9FF00882EEE /* BricksAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
