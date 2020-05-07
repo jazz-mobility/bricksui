@@ -27,18 +27,18 @@ extension GroupButtonStyle {
             }
         }
         
-        var iconScale : CGSize {
+        var iconScale : CGFloat {
             switch self {
             case .giant:
-                return CGSize(width: 36, height: 36)
+                return 26
             case .large:
-                return CGSize(width: 32, height: 32)
+                return 22
             case .medium:
-                return CGSize(width: 24, height: 24)
+                return 18
             case.small:
-                return CGSize(width: 20, height: 20)
+                return 14
             case .tiny:
-                return CGSize(width: 16, height: 16)
+                return 10
                 
             }
         }
@@ -58,7 +58,7 @@ extension GroupButtonStyle {
                 
             }
         }
-
+        
     }
     
     enum Style { case primary, basic, outline
@@ -104,6 +104,6 @@ extension GroupButtonStyle {
                 return Color.white
             }
         }
-
+        
     }
 }
