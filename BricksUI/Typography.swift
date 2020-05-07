@@ -40,14 +40,17 @@ public struct BSTypography: ViewModifier {
             .font(.system(size: 22, weight: .bold))
         case .h6: return content
             .font(.system(size: 18, weight: .bold))
+            
         case .s1: return content
             .font(.system(size: 15, weight: .semibold))
         case .s2: return content
             .font(.system(size: 13, weight: .semibold))
+            
         case .p1: return content
             .font(.system(size: 15, weight: .regular))
         case .p2: return content
             .font(.system(size: 13, weight: .regular))
+            
         case .c1: return content
             .font(.system(size: 12, weight: .regular))
         case .c2: return content

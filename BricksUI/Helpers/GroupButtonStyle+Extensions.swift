@@ -6,104 +6,75 @@
 //  Copyright © 2020 Fabio Staiano. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 
 extension GroupButtonStyle {
-    enum SizeStyle { case giant, large, medium, small, tiny
+    enum SizeStyle {
+        case giant, large, medium, small, tiny
         
         var frameWidth: CGFloat {
             switch self {
-            case .giant:
-                return 56
-            case .large:
-                return 48
-            case .medium:
-                return 40
-            case .small:
-                return 32
-            case .tiny:
-                return 24
+            case .giant: return 56
+            case .large: return 48
+            case .medium: return 40
+            case .small: return 32
+            case .tiny: return 24
             }
         }
         
-        var iconScale : CGFloat {
+        var iconScale: CGFloat {
             switch self {
-            case .giant:
-                return 26
-            case .large:
-                return 22
-            case .medium:
-                return 18
-            case.small:
-                return 14
-            case .tiny:
-                return 10
-                
+            case .giant: return 26
+            case .large: return 22
+            case .medium: return 18
+            case.small: return 14
+            case .tiny: return 10
             }
         }
         
-        var fontSize : CGFloat {
+        var fontSize: CGFloat {
             switch self {
-            case .giant:
-                return 36
-            case .large:
-                return 32
-            case .medium:
-                return 24
-            case.small:
-                return 20
-            case .tiny:
-                return 16
-                
+            case .giant: return 36
+            case .large: return 32
+            case .medium: return 24
+            case.small: return 20
+            case .tiny: return 16
             }
         }
-        
     }
     
-    enum Style { case primary, basic, outline
+    enum Style {
+        case primary, basic, outline
         
-        var defaultBackground : Color {
+        var defaultBackground: Color {
             switch self {
-            case .primary:
-                return Color.bsPrimary
-            case .basic:
-                return Color.bsBasic
-            case .outline:
-                return Color.white
+            case .primary: return .bsPrimary
+            case .basic: return .bsBasic
+            case .outline: return .white
             }
         }
         
-        var activeBackground : Color {
+        var activeBackground: Color {
             switch self {
-            case .primary:
-                return Color.bsActivePrimary
-            case .basic:
-                return Color.bsActiveBasic
-            case .outline:
-                return Color.bsPrimary
+            case .primary: return .bsActivePrimary
+            case .basic: return .bsActiveBasic
+            case .outline: return .bsPrimary
             }
         }
         
-        var defaultForeground : Color {
+        var defaultForeground: Color {
             switch self {
-            case .primary:
-                return Color.white
-            case .basic:
-                return Color.black
-            case .outline:
-                return Color.bsActiveBasic
+            case .primary: return .white
+            case .basic: return .black
+            case .outline: return .bsActiveBasic
             }
         }
         
-        var activeForeground : Color {
+        var activeForeground: Color {
             switch self {
-            case .basic:
-                return Color.black
-            default:
-                return Color.white
+            case .basic: return .black
+            default: return .white
             }
         }
-        
     }
 }

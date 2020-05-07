@@ -104,7 +104,10 @@ extension Button {
 }
 
 struct BSButton: View {
-    enum Style { case fill, outline, ghost }
+    
+    enum Style {
+        case fill, outline, ghost
+    }
     
     var text: String?
     var image: Image?

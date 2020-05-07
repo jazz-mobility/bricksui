@@ -5,17 +5,16 @@
 //  Copyright © 2020 by a cool group. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 
 public struct GroupButtonStyle: ButtonStyle {
     
-    var sizesStyle : SizeStyle
-    var colorStyle : Style
-    var icon : Image? = nil
-    var text : String = ""
+    var sizesStyle: SizeStyle
+    var colorStyle: Style
+    var icon: Image? = nil
+    var text: String = ""
     var action: ()->() = {}
-    @State var isActive : Bool = false
+    @State var isActive: Bool = false
     
     
     public func makeBody(configuration: Configuration) -> some View {
@@ -28,7 +27,6 @@ public struct GroupButtonStyle: ButtonStyle {
             .border(colorStyle.defaultForeground, width: (colorStyle == .outline && !isActive) ? 1 : 0)
     }
 }
-
 
 
 struct ButtonGroup_Previews: PreviewProvider {
@@ -90,8 +88,6 @@ struct ButtonGroup_Previews: PreviewProvider {
                         .buttonStyle(GroupButtonStyle(sizesStyle: .tiny, colorStyle: .primary))
                 }
             }
-            
         }
     }
 }
-

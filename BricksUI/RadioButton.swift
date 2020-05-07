@@ -28,9 +28,15 @@ private struct CheckedButton: View {
     
     var body: some View {
         ZStack {
-            Circle().fill(color).frame(width: 20, height: 20)
-            Circle().fill(Color.white).frame(width: 18, height: 18)
-            Circle().fill(color).frame(width: 12, height: 12)
+            Circle()
+                .fill(color)
+                .frame(width: 20, height: 20)
+            Circle()
+                .fill(Color.white)
+                .frame(width: 18, height: 18)
+            Circle()
+                .fill(color)
+                .frame(width: 12, height: 12)
         }
     }
 }
@@ -40,9 +46,15 @@ private struct UncheckedButton: View {
     
     var body: some View {
         ZStack {
-            Circle().fill(color).frame(width: 20, height: 20)
-            Circle().fill(Color.white).frame(width: 18, height: 18)
-            Circle().fill(color.opacity(0.1)).frame(width: 18, height: 18)
+            Circle()
+                .fill(color)
+                .frame(width: 20, height: 20)
+            Circle()
+                .fill(Color.white)
+                .frame(width: 18, height: 18)
+            Circle()
+                .fill(color.opacity(0.1))
+                .frame(width: 18, height: 18)
         }
     }
 }
