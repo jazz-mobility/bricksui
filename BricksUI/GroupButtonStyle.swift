@@ -2,14 +2,13 @@
 //  ButtonGroup.swift
 //  BricksUI
 //
-//  Created by Micaela Cavallo on 06/05/2020.
-//  Copyright © 2020 Fabio Staiano. All rights reserved.
+//  Copyright © 2020 by a cool group. All rights reserved.
 //
 
 import Foundation
 import SwiftUI
 
-struct GroupButtonStyle: ButtonStyle {
+public struct GroupButtonStyle: ButtonStyle {
     
     var sizesStyle : SizeStyle
     var colorStyle : Style
@@ -19,7 +18,7 @@ struct GroupButtonStyle: ButtonStyle {
     @State var isActive : Bool = false
     
     
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             
             .font(.system(size: sizesStyle.fontSize, weight: .bold))

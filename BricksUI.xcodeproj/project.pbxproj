@@ -64,6 +64,7 @@
 		1D34A6792445F9FC00882EEE = {
 			isa = PBXGroup;
 			children = (
+				64873907246466500092ED5D /* YourProject */,
 				1D34A6842445F9FC00882EEE /* BricksUI */,
 				1D34A6832445F9FC00882EEE /* Products */,
 			);
@@ -80,9 +81,6 @@
 		1D34A6842445F9FC00882EEE /* BricksUI */ = {
 			isa = PBXGroup;
 			children = (
-				1D34A6852445F9FC00882EEE /* AppDelegate.swift */,
-				1D34A6872445F9FC00882EEE /* SceneDelegate.swift */,
-				1D34A6892445F9FC00882EEE /* ContentView.swift */,
 				1D34A6992448CEA900882EEE /* Typography.swift */,
 				94F3F6B1245D9142000BC2C5 /* Buttons.swift */,
 				94812A8C2462B25C00E3D105 /* RadioButton.swift */,
@@ -93,10 +91,8 @@
 				C8D15B8D245CB6FC004B1843 /* Images.swift */,
 				C8D15B92245CC8A1004B1843 /* Views.swift */,
 				C81C44712463EA7E0037B0B2 /* GroupButtonStyle.swift */,
-				C8D15B91245CC867004B1843 /* Helpers */,
 				1D34A68B2445F9FF00882EEE /* Assets.xcassets */,
-				1D34A6902445F9FF00882EEE /* LaunchScreen.storyboard */,
-				1D34A6932445F9FF00882EEE /* Info.plist */,
+				C8D15B91245CC867004B1843 /* Helpers */,
 				1D34A68D2445F9FF00882EEE /* Preview Content */,
 			);
 			path = BricksUI;
@@ -108,6 +104,18 @@
 				1D34A68E2445F9FF00882EEE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		64873907246466500092ED5D /* YourProject */ = {
+			isa = PBXGroup;
+			children = (
+				1D34A6852445F9FC00882EEE /* AppDelegate.swift */,
+				1D34A6872445F9FC00882EEE /* SceneDelegate.swift */,
+				1D34A6892445F9FC00882EEE /* ContentView.swift */,
+				1D34A6932445F9FF00882EEE /* Info.plist */,
+				1D34A6902445F9FF00882EEE /* LaunchScreen.storyboard */,
+			);
+			path = YourProject;
 			sourceTree = "<group>";
 		};
 		C8D15B91245CC867004B1843 /* Helpers */ = {
@@ -344,7 +352,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BricksUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 64NY4V9RTQ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = BricksUI/Info.plist;
+				INFOPLIST_FILE = YourProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -365,7 +373,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BricksUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 64NY4V9RTQ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = BricksUI/Info.plist;
+				INFOPLIST_FILE = YourProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

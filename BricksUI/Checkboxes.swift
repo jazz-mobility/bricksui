@@ -2,8 +2,7 @@
 //  Toggles.swift
 //  BricksUI
 //
-//  Created by Fabio Staiano on 03/05/2020.
-//  Copyright © 2020 Fabio Staiano. All rights reserved.
+//  Copyright © 2020 by a cool group. All rights reserved.
 //
 
 import SwiftUI
@@ -12,8 +11,8 @@ import SwiftUI
 // STILL WORKING ON IT - NOT FINISHED
 
 
-struct CheckboxToggleStyle: ToggleStyle {
-    func makeBody(configuration: Configuration) -> some View {
+public struct CheckboxToggleStyle: ToggleStyle {
+    public func makeBody(configuration: Configuration) -> some View {
         return HStack {
             configuration.label
             Spacer()

@@ -2,9 +2,7 @@
 //  AppDelegate.swift
 //  BricksUI
 //
-//  Created by Fabio Staiano on 14/04/2020.
-//  Copyright © 2020 Fabio Staiano. All rights reserved.
-//
+
 
 import UIKit
 

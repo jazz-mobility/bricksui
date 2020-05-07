@@ -2,8 +2,7 @@
 //  Views.swift
 //  BricksUI
 //
-//  Created by Micaela Cavallo on 01/05/2020.
-//  Copyright © 2020 Fabio Staiano. All rights reserved.
+//  Copyright © 2020 by a cool group. All rights reserved.
 //
 
 import Foundation

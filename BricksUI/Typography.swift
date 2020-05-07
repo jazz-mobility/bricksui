@@ -2,13 +2,12 @@
 //  Typography.swift
 //  BricksUI
 //
-//  Created by Fabio Staiano on 16/04/2020.
-//  Copyright © 2020 Fabio Staiano. All rights reserved.
+//  Copyright © 2020 by a cool group. All rights reserved.
 //
 
 import SwiftUI
 
-struct BSTypography: ViewModifier {
+public struct BSTypography: ViewModifier {
     
     enum Style {
         
@@ -27,7 +26,7 @@ struct BSTypography: ViewModifier {
     
     var style: Style
     
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         switch style {
         case .h1: return content
             .font(.system(size: 36, weight: .bold))

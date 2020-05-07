@@ -2,13 +2,12 @@
 //  RadioButton.swift
 //  BricksUI
 //
-//  Created by Samuel Kebis on 06/05/2020.
-//  Copyright © 2020 Fabio Staiano. All rights reserved.
+//  Copyright © 2020 by a cool group. All rights reserved.
 //
 
 import SwiftUI
 
-struct BSRadioButton: View {
+public struct BSRadioButton: View {
     var isChecked: Bool
     var color: Color?
     var text: String = ""
@@ -16,7 +15,7 @@ struct BSRadioButton: View {
     private var colorToUse: Color? { isEnabled ? color : .bsFontDisabled }
     @Environment(\.isEnabled) private var isEnabled: Bool
     
-    var body: some View {
+    public var body: some View {
         HStack(spacing: text.isEmpty ? 0 : 6) {
             isChecked ? AnyView(CheckedButton(color: colorToUse ?? .bsPrimary)) : AnyView(UncheckedButton(color: colorToUse ?? .bsBasic))
             Text(text)
