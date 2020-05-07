@@ -9,10 +9,6 @@
 import Foundation
 import SwiftUI
 
-
-enum ButtonSizes { case large, medium, small}
-enum ColorStyles { case primary, basic, outline}
-
 struct GroupButtonStyle: ButtonStyle {
     
     var sizesStyle : SizeStyle
