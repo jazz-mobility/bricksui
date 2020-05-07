@@ -20,7 +20,7 @@ struct GroupButtonStyle: ButtonStyle {
     var icon : Image? = nil
     var text : String = ""
     var action: ()->() = {}
-    @State var isActive : Bool = false
+    @State var isActive : Bool = true
     
     
     func makeBody(configuration: Configuration) -> some View {
@@ -48,35 +48,39 @@ struct ButtonGroup_Previews: PreviewProvider {
                     .buttonStyle(GroupButtonStyle(sizesStyle: .giant, colorStyle: .primary ))
                 
                 Button(action : {}, label: {Text("L")})
-                    .buttonStyle(GroupButtonStyle(sizesStyle: .large, colorStyle: .primary ))
+                    .buttonStyle(GroupButtonStyle(sizesStyle: .large, colorStyle: .basic ))
                 Button(action : {}, label: {Text("M")})
                     .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .primary ))
                 
                 Button(action : {}, label: {Text("S")})
-                    .buttonStyle(GroupButtonStyle(sizesStyle: .small, colorStyle: .primary ))
+                    .buttonStyle(GroupButtonStyle(sizesStyle: .small, colorStyle: .basic ))
                 Button(action : {}, label: {Text("T")})
                     .buttonStyle(GroupButtonStyle(sizesStyle: .tiny, colorStyle: .primary ))
                 
             }
             
-            
-            
-            
-            Button(action : {}, label: {Image(systemName: "star.fill")})
-                .buttonStyle(GroupButtonStyle(sizesStyle: .large, colorStyle: .outline))
-            
-            
             HStack(spacing: 2){
                 ForEach(0..<3) {_ in
-                    Button(action : {}, label: {Image(systemName: "heart.fill").scaleEffect(0.75)})
-                        .buttonStyle(GroupButtonStyle(sizesStyle: .small, colorStyle: .basic, icon: Image(systemName: "star.fill"), text: "hello", action: {
-                            print("tapped button")
-                        }))
+                    Button(action : {}, label: {Image(systemName: "star.fill")})
+                        .buttonStyle(GroupButtonStyle(sizesStyle: .giant, colorStyle: .outline))
                 }
             }
+                
+            HStack(spacing: 2){
+                ForEach(0..<3) {_ in
+                    Button(action : {}, label: {Image(systemName: "star.fill")})
+                        .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .primary))
+                }
+            }
+            HStack(spacing: 2){
+                ForEach(0..<3) {_ in
+                    Button(action : {}, label: {Image(systemName: "star.fill")})
+                        .buttonStyle(GroupButtonStyle(sizesStyle: .tiny, colorStyle: .basic))
+                }
+            }
+
 //            .cornerRadius(5)
 //            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.black, lineWidth: 1))
-            .padding()
             
         }
     }

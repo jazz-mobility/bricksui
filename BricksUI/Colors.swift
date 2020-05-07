@@ -54,15 +54,15 @@ struct Color_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             Text("Hello, World!")
-                      .foregroundColor(.bsFontStd)
-                      .background(Color.bsBackground)
-                      .environment(\.colorScheme, .dark)
-            .padding()
+                .foregroundColor(.bsFontStd)
+                .background(Color.bsBackground)
+                .environment(\.colorScheme, .dark)
+                .padding()
             
             Text("Hello, World!")
-                      .foregroundColor(.bsActivePrimary)
-                      .background(Color.bsActiveBasic)
-                      .environment(\.colorScheme, .dark)
+                .foregroundColor(.bsActivePrimary)
+                .background(Color.bsActiveBasic)
+                .environment(\.colorScheme, .dark)
         }
     }
     
