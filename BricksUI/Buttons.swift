@@ -23,7 +23,7 @@ struct BSFillButtonStyle: ButtonStyle {
         @Environment(\.isEnabled) private var isEnabled: Bool
         var body: some View {
             configuration.label
-                .font(.system(size: 17, weight: .semibold))
+                .bsTypo(.s1)
                 .foregroundColor(isEnabled ? .white : .bsFontDisabled)
                 .padding()
                 .frame(minHeight: 56)
@@ -47,7 +47,7 @@ struct BSOutlineButtonStyle: ButtonStyle {
         @Environment(\.isEnabled) private var isEnabled: Bool
         var body: some View {
             configuration.label
-                .font(.system(size: 17, weight: .semibold))
+                .bsTypo(.s1)
                 .foregroundColor(isEnabled ? color : .bsFontDisabled)
                 .padding()
                 .frame(minHeight: 56)
@@ -75,7 +75,7 @@ struct BSGhostButtonStyle: ButtonStyle {
         @Environment(\.isEnabled) private var isEnabled: Bool
         var body: some View {
             configuration.label
-                .font(.system(size: 17, weight: .heavy))
+                .bsTypo(.s1)
                 .foregroundColor(isEnabled ? color : .bsFontDisabled)
                 .padding()
                 .frame(minHeight: 56)
