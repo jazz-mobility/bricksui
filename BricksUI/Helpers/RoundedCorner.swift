@@ -6,11 +6,16 @@
 //  Copyright © 2020 Fabio Staiano. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 
-// Custom shape with independently rounded corners
+extension View {
+    // function for CornerRadius struct
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner(radius: radius, corners: corners) )
+    }
+}
 
+/// Custom shape with independently rounded corners
 struct RoundedCorner: Shape {
 
     var radius: CGFloat = .infinity
