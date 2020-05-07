@@ -25,7 +25,6 @@
 		C81C44742463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C44732463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift */; };
 		C8D15B8E245CB6FC004B1843 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B8D245CB6FC004B1843 /* Images.swift */; };
 		C8D15B90245CC7FA004B1843 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */; };
-		C8D15B93245CC8A1004B1843 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B92245CC8A1004B1843 /* Views.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +48,6 @@
 		C81C44732463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupButtonStyle+Extensions.swift"; sourceTree = "<group>"; };
 		C8D15B8D245CB6FC004B1843 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
-		C8D15B92245CC8A1004B1843 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +205,6 @@
 				1D34A6882445F9FC00882EEE /* SceneDelegate.swift in Sources */,
 				641DA567245E2C7C00B49043 /* TextField.swift in Sources */,
 				1DB2E0F5245830DD00FB1DE6 /* Colors.swift in Sources */,
-				C8D15B93245CC8A1004B1843 /* Views.swift in Sources */,
 				94F3F6B2245D9142000BC2C5 /* Buttons.swift in Sources */,
 				94812A8D2462B25C00E3D105 /* RadioButton.swift in Sources */,
 				1DED6064245F335600AD1122 /* Toggles.swift in Sources */,
