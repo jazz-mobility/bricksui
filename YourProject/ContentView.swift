@@ -8,7 +8,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Welcome to BricksUI").bsTypo(.h2, color: .bsPrimary)
+        VStack{
+            Text("Welcome to BricksUI").bsTypo(.h2, color: .bsPrimary)
+        }
     }
 }
 
