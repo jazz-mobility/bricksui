@@ -84,15 +84,15 @@
 			isa = PBXGroup;
 			children = (
 				1D34A6992448CEA900882EEE /* Typography.swift */,
-				94F3F6B1245D9142000BC2C5 /* Buttons.swift */,
-				94812A8C2462B25C00E3D105 /* RadioButton.swift */,
-				641DA566245E2C7C00B49043 /* TextField.swift */,
 				1DB2E0F4245830DD00FB1DE6 /* Colors.swift */,
-				1DED6063245F335600AD1122 /* Toggles.swift */,
+				94F3F6B1245D9142000BC2C5 /* Buttons.swift */,
+				C81C44712463EA7E0037B0B2 /* GroupButtonStyle.swift */,
+				94812A8C2462B25C00E3D105 /* RadioButton.swift */,
 				1DED6065245F7A4E00AD1122 /* Checkboxes.swift */,
+				1DED6063245F335600AD1122 /* Toggles.swift */,
+				641DA566245E2C7C00B49043 /* TextField.swift */,
 				C8D15B8D245CB6FC004B1843 /* Images.swift */,
 				C8D15B92245CC8A1004B1843 /* Views.swift */,
-				C81C44712463EA7E0037B0B2 /* GroupButtonStyle.swift */,
 				1D34A68B2445F9FF00882EEE /* BricksAssets.xcassets */,
 				C8D15B91245CC867004B1843 /* Helpers */,
 			);
