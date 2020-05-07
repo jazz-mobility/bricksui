@@ -58,7 +58,12 @@ struct BSTypography: ViewModifier {
 }
 
 extension View {
-    func bsTypo(_ style: BSTypography.Style, color: Color = .bsFontStd) -> some View {
+    func bsTypo(_ style: BSTypography.Style) -> some View {
+        self
+            .modifier(BSTypography(style: style))
+    }
+    
+    func bsTypo(_ style: BSTypography.Style, color: Color) -> some View {
         self
             .modifier(BSTypography(style: style))
             .foregroundColor(color)
