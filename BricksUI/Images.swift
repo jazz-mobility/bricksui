@@ -103,7 +103,7 @@ extension Image {
             .clipShape(RoundedCorner(radius: imageWidth/10.0, corners: [.bottomRight, .topRight]))
     }
     
-
+    
 }
 
 
@@ -111,39 +111,37 @@ struct Images_Previews_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             HStack {
-                Image("goldfish")
+                Image("bricks_logo")
                     .bsAvatarCircle()
-                Image("goldfish")
+                Image("bricks_logo")
                     .bsAvatarSquare()
-                Image("goldfish")
+                Image("bricks_logo")
                     .bsAvatarRoundedSquare()
                 
             }.padding()
             
             HStack(spacing: 20) {
-                Image("goldfish")
+                Image("bricks_logo")
                     .bsCircle(width: 90)
-                Image("goldfish")
+                Image("bricks_logo")
                     .bsSquare(width: 90)
-                Image("goldfish")
+                Image("bricks_logo")
                     .bsRoundedCorners(width: 90)
             }.padding()
             
             HStack(spacing: 20) {
-                Image("goldfish")
+                Image("bricks_logo")
                     .bsTopRoundedCorners(imageWidth: 120)
-                Image("goldfish")
+                Image("bricks_logo")
                     .bsBottomRoundedCorners(imageWidth: 120)
             }.padding()
             
             HStack(spacing: 20) {
-                Image("goldfish")
+                Image("bricks_logo")
                     .bsLeftRoundedCorners(imageWidth: 120)
-                Image("goldfish")
+                Image("bricks_logo")
                     .bsRightRoundedCorners(imageWidth: 120)
             }.padding()
-            
-            
         }
     }
 }
