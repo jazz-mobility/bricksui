@@ -33,7 +33,7 @@ extension Image {
         
     }
     ///Turn image into a rounded rectangle avatar
-    func bsAvatarRoundedSquare() -> some View {
+    func bsAvatarRounded() -> some View {
         self
             .resizable()
             .frame(width: 40, height: 40)
@@ -63,7 +63,7 @@ extension Image {
     }
     
     ///Modify image to fit a rounded corners square format
-    func bsRoundedCorners(width: CGFloat) -> some View {
+    func bsRounded(width: CGFloat) -> some View {
         self
             .resizable()
             .frame(width: width, height: width)
@@ -71,7 +71,7 @@ extension Image {
             .aspectRatio(1.0, contentMode: .fit)
     }
     ///Modify image to have upper rounded corners in a square format
-    func bsTopRoundedCorners(imageWidth: CGFloat) -> some View {
+    func bsTopRounded(imageWidth: CGFloat) -> some View {
         self
             .resizable()
             .frame(width: imageWidth, height: imageWidth)
@@ -79,7 +79,7 @@ extension Image {
     }
     
     ///Modify image to have lower rounded corners in a square format
-    func bsBottomRoundedCorners(imageWidth: CGFloat) -> some View {
+    func bsBottomRounded(imageWidth: CGFloat) -> some View {
         self
             .resizable()
             .frame(width: imageWidth, height: imageWidth)
@@ -87,7 +87,7 @@ extension Image {
     }
     
     ///Modify image to have left-side rounded corners in a square format
-    func bsLeftRoundedCorners(imageWidth: CGFloat) -> some View {
+    func bsLeftRounded(imageWidth: CGFloat) -> some View {
         self
             .resizable()
             .frame(width: imageWidth, height: imageWidth)
@@ -95,7 +95,7 @@ extension Image {
     }
     
     ///Modify image to have right-side rounded corners in a square format
-    func bsRightRoundedCorners(imageWidth: CGFloat) -> some View {
+    func bsRightRounded(imageWidth: CGFloat) -> some View {
         self
             .resizable()
             .frame(width: imageWidth, height: imageWidth)
@@ -115,7 +115,7 @@ struct Images_Previews_Previews: PreviewProvider {
                 Image("bricks_logo")
                     .bsAvatarSquare()
                 Image("bricks_logo")
-                    .bsAvatarRoundedSquare()
+                    .bsAvatarRounded()
                 
             }.padding()
             
@@ -125,21 +125,21 @@ struct Images_Previews_Previews: PreviewProvider {
                 Image("bricks_logo")
                     .bsSquare(width: 90)
                 Image("bricks_logo")
-                    .bsRoundedCorners(width: 90)
+                    .bsRounded(width: 90)
             }.padding()
             
             HStack(spacing: 20) {
                 Image("bricks_logo")
-                    .bsTopRoundedCorners(imageWidth: 120)
+                    .bsTopRounded(imageWidth: 120)
                 Image("bricks_logo")
-                    .bsBottomRoundedCorners(imageWidth: 120)
+                    .bsBottomRounded(imageWidth: 120)
             }.padding()
             
             HStack(spacing: 20) {
                 Image("bricks_logo")
-                    .bsLeftRoundedCorners(imageWidth: 120)
+                    .bsLeftRounded(imageWidth: 120)
                 Image("bricks_logo")
-                    .bsRightRoundedCorners(imageWidth: 120)
+                    .bsRightRounded(imageWidth: 120)
             }.padding()
         }
     }
