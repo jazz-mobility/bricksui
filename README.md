@@ -1,3 +1,5 @@
+<img src=/BricksUI/BricksAssets.xcassets/Placeholder/bricks_banner.imageset/cover.png width=100%>
+
 # Bricks — a Design System for SwiftUI
 
 Bricks is an open source Design System  built for SwiftUI, based on [Eva Design System](http://eva.design/), [kittenTricks](https://github.com/akveo/kittenTricks) and, of course, [SwiftUI native components](https://developer.apple.com/documentation/swiftui/).
