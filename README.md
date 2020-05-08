@@ -1,4 +1,4 @@
-<img src=/BricksUI/BricksAssets.xcassets/Placeholder/bricks_banner.imageset/banner.png width=100%>
+<img src=/BricksUI/BricksAssets.xcassets/Placeholder/bricks_banner.imageset/banner.jpg width=100%>
 
 # Bricks — a Design System for SwiftUI
 
