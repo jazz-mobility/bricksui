@@ -32,7 +32,7 @@ struct GroupButtonContainer: View {
                     Button(action: {}, label: {
                         Group {
                             if self.icon != nil {
-                                self.icon!.bsSquare(width: self.size.frameWidth / 2)
+                                self.icon!.bsSquare(width: self.size.iconScale)
                             } else {
                                 Text(self.text)
                             }
@@ -67,7 +67,7 @@ struct ButtonGroup_Previews: PreviewProvider {
             
             GroupButtonContainer(icon: nil, buttonItems: 4, text: "🥑", colorStyle: .outline, size: .medium)
             
-            GroupButtonContainer(icon: Image(systemName: "umbrella.fill"), buttonItems: 4, text: "X", colorStyle: .primary, size: .small)
+            GroupButtonContainer(icon: Image(systemName: "umbrella.fill"), buttonItems: 4, colorStyle: .primary, size: .small)
             
             GroupButtonContainer(icon: nil, buttonItems: 4, text: "T", colorStyle: .outline, size: .tiny)
             
