@@ -29,7 +29,8 @@ public struct GroupButtonStyle: ButtonStyle {
 }
 
 
-struct ButtonGroup_Previews: PreviewProvider {
+
+struct GroupButton_Previews: PreviewProvider {
     typealias bsSize = GroupButtonStyle.SizeStyle
     
     static var previews: some View {
@@ -57,34 +58,34 @@ struct ButtonGroup_Previews: PreviewProvider {
             
             HStack(spacing: 2){
                 ForEach(0..<3) {_ in
-                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquaredImage(width: bsSize.giant.iconScale)})
+                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.giant.iconScale)})
                         .buttonStyle(GroupButtonStyle(sizesStyle: .giant, colorStyle: .outline))
                 }
             }
             
             HStack(spacing: 2){
                 ForEach(0..<3) {_ in
-                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquaredImage(width: bsSize.large.iconScale)})
+                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.large.iconScale)})
                         .buttonStyle(GroupButtonStyle(sizesStyle: .large, colorStyle: .basic))
                 }
             }
             
             HStack(spacing: 2){
                 ForEach(0..<3) {_ in
-                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquaredImage(width: bsSize.medium.iconScale)})
+                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.medium.iconScale)})
                         .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .primary))
                 }
             }
             
             HStack(spacing: 2){
                 ForEach(0..<3) {_ in
-                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquaredImage(width: bsSize.small.iconScale)})
+                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.small.iconScale)})
                         .buttonStyle(GroupButtonStyle(sizesStyle: .small, colorStyle: .basic))
                 }
             }
             HStack(spacing: 2){
                 ForEach(0..<3) {_ in
-                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquaredImage(width: bsSize.tiny.iconScale)})
+                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.tiny.iconScale)})
                         .buttonStyle(GroupButtonStyle(sizesStyle: .tiny, colorStyle: .primary))
                 }
             }
