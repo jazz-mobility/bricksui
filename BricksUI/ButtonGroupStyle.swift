@@ -1,5 +1,5 @@
 //
-//  ButtonGroup.swift
+//  ButtonGroupStyle.swift
 //  BricksUI
 //
 //  Copyright © 2020 by a cool group. All rights reserved.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct GroupButtonStyle: ButtonStyle {
+public struct ButtonGroupStyle: ButtonStyle {
     
     var sizesStyle: SizeStyle
     var colorStyle: Style
@@ -29,8 +29,8 @@ public struct GroupButtonStyle: ButtonStyle {
     }
 }
 
-struct GroupButtonStyle_Previews: PreviewProvider {
-    typealias bsSize = GroupButtonStyle.SizeStyle
+struct ButtonGroupStyle_Previews: PreviewProvider {
+    typealias bsSize = ButtonGroupStyle.SizeStyle
     
     static var previews: some View {
         
@@ -39,36 +39,36 @@ struct GroupButtonStyle_Previews: PreviewProvider {
             HStack(spacing: 20) {
                 
                 Button(action : {  }, label: {Text("G")})
-                    .buttonStyle(GroupButtonStyle(sizesStyle: .giant, colorStyle: .primary ))
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .giant, colorStyle: .primary ))
                 
                 Button(action : {}, label: {Text("L")})
-                    .buttonStyle(GroupButtonStyle(sizesStyle: .large, colorStyle: .basic ))
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .large, colorStyle: .basic ))
             }
         
             HStack(spacing: 20) {
                 Button(action : {}, label: {Text("M")})
-                    .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .outline ))
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .outline ))
                 
                 Button(action : {}, label: {Text("S")})
-                    .buttonStyle(GroupButtonStyle(sizesStyle: .small, colorStyle: .basic ))
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .small, colorStyle: .basic ))
             }
             
             HStack(spacing: 20) {
                 
                 Button(action : {}, label: {Text("T")})
-                    .buttonStyle(GroupButtonStyle(sizesStyle: .tiny, colorStyle: .primary ))
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .tiny, colorStyle: .primary ))
             }
             
             HStack(spacing: 20) {
                 
                 Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.large.iconScale)})
-                    .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .basic))
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .basic))
                 
                 Button(action : {}, label: {Image(systemName: "person").bsSquare(width: bsSize.large.iconScale)})
-                    .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .outline))
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .outline))
                 
                 Button(action : {}, label: {Image(systemName: "umbrella").bsSquare(width: bsSize.large.iconScale)})
-                    .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .primary))
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .primary))
             }
         }
     }
