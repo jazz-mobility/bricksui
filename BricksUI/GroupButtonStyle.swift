@@ -25,69 +25,50 @@ public struct GroupButtonStyle: ButtonStyle {
             .foregroundColor(isActive ? colorStyle.activeForeground : colorStyle.defaultForeground)
             .background(isActive ? colorStyle.activeBackground : colorStyle.defaultBackground)
             .border(colorStyle.defaultForeground, width: (colorStyle == .outline && !isActive) ? 1 : 0)
+            .opacity(configuration.isPressed ? 0.7 : 1)
     }
 }
-
-
 
 struct GroupButtonStyle_Previews: PreviewProvider {
     typealias bsSize = GroupButtonStyle.SizeStyle
     
     static var previews: some View {
         
-        VStack {
-            VStack {
-                // must apply size for icon and text in the makeGroup logic
-                HStack {
-                    Button(action : {}, label: {Text("G")})
-                        .buttonStyle(GroupButtonStyle(sizesStyle: .giant, colorStyle: .primary ))
-                    
-                    Button(action : {}, label: {Text("L")})
-                        .buttonStyle(GroupButtonStyle(sizesStyle: .large, colorStyle: .basic ))
-                    Button(action : {}, label: {Text("M")})
-                        .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .primary ))
-                    
-                    Button(action : {}, label: {Text("S")})
-                        .buttonStyle(GroupButtonStyle(sizesStyle: .small, colorStyle: .basic ))
-                    Button(action : {}, label: {Text("T")})
-                        .buttonStyle(GroupButtonStyle(sizesStyle: .tiny, colorStyle: .primary ))
-                    
-                }
+        VStack(spacing : 20) {
+            // must apply size for icon and text in the makeGroup logic
+            HStack(spacing: 20) {
+                
+                Button(action : {  }, label: {Text("G")})
+                    .buttonStyle(GroupButtonStyle(sizesStyle: .giant, colorStyle: .primary ))
+                
+                Button(action : {}, label: {Text("L")})
+                    .buttonStyle(GroupButtonStyle(sizesStyle: .large, colorStyle: .basic ))
+            }
+        
+            HStack(spacing: 20) {
+                Button(action : {}, label: {Text("M")})
+                    .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .outline ))
+                
+                Button(action : {}, label: {Text("S")})
+                    .buttonStyle(GroupButtonStyle(sizesStyle: .small, colorStyle: .basic ))
             }
             
-            
-            HStack(spacing: 2){
-                ForEach(0..<3) {_ in
-                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.giant.iconScale)})
-                        .buttonStyle(GroupButtonStyle(sizesStyle: .giant, colorStyle: .outline))
-                }
+            HStack(spacing: 20) {
+                
+                Button(action : {}, label: {Text("T")})
+                    .buttonStyle(GroupButtonStyle(sizesStyle: .tiny, colorStyle: .primary ))
             }
             
-            HStack(spacing: 2){
-                ForEach(0..<3) {_ in
-                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.large.iconScale)})
-                        .buttonStyle(GroupButtonStyle(sizesStyle: .large, colorStyle: .basic))
-                }
-            }
-            
-            HStack(spacing: 2){
-                ForEach(0..<3) {_ in
-                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.medium.iconScale)})
-                        .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .primary))
-                }
-            }
-            
-            HStack(spacing: 2){
-                ForEach(0..<3) {_ in
-                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.small.iconScale)})
-                        .buttonStyle(GroupButtonStyle(sizesStyle: .small, colorStyle: .basic))
-                }
-            }
-            HStack(spacing: 2){
-                ForEach(0..<3) {_ in
-                    Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.tiny.iconScale)})
-                        .buttonStyle(GroupButtonStyle(sizesStyle: .tiny, colorStyle: .primary))
-                }
+            HStack(spacing: 20) {
+                
+                Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.large.iconScale)})
+                    .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .basic))
+                
+                Button(action : {}, label: {Image(systemName: "person").bsSquare(width: bsSize.large.iconScale)})
+                    .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .outline))
+                
+                Button(action : {}, label: {Image(systemName: "umbrella").bsSquare(width: bsSize.large.iconScale)})
+                    .buttonStyle(GroupButtonStyle(sizesStyle: .medium, colorStyle: .primary))
             }
         }
     }
