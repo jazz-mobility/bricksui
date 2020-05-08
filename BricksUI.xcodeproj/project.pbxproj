@@ -22,10 +22,10 @@
 		64DF075924646C8700EB2879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DF075824646C8700EB2879 /* Assets.xcassets */; };
 		94812A8D2462B25C00E3D105 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94812A8C2462B25C00E3D105 /* RadioButton.swift */; };
 		94F3F6B2245D9142000BC2C5 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3F6B1245D9142000BC2C5 /* Buttons.swift */; };
-		C81C44722463EA7E0037B0B2 /* GroupButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C44712463EA7E0037B0B2 /* GroupButtonStyle.swift */; };
+		C81C44722463EA7E0037B0B2 /* ButtonGroupStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C44712463EA7E0037B0B2 /* ButtonGroupStyle.swift */; };
 		C81C44742463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C44732463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift */; };
 		C81C4478246570560037B0B2 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		C81C447A24657B1E0037B0B2 /* GroupButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C447924657B1E0037B0B2 /* GroupButtonContainer.swift */; };
+		C81C447A24657B1E0037B0B2 /* ButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C447924657B1E0037B0B2 /* ButtonGroup.swift */; };
 		C8D15B8E245CB6FC004B1843 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B8D245CB6FC004B1843 /* Images.swift */; };
 		C8D15B90245CC7FA004B1843 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
@@ -48,9 +48,9 @@
 		64DF075824646C8700EB2879 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94812A8C2462B25C00E3D105 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		94F3F6B1245D9142000BC2C5 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
-		C81C44712463EA7E0037B0B2 /* GroupButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupButtonStyle.swift; sourceTree = "<group>"; };
+		C81C44712463EA7E0037B0B2 /* ButtonGroupStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupStyle.swift; sourceTree = "<group>"; };
 		C81C44732463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupButtonStyle+Extensions.swift"; sourceTree = "<group>"; };
-		C81C447924657B1E0037B0B2 /* GroupButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupButtonContainer.swift; sourceTree = "<group>"; };
+		C81C447924657B1E0037B0B2 /* ButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroup.swift; sourceTree = "<group>"; };
 		C8D15B8D245CB6FC004B1843 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,8 +89,8 @@
 				1D34A6992448CEA900882EEE /* Typography.swift */,
 				1DB2E0F4245830DD00FB1DE6 /* Colors.swift */,
 				94F3F6B1245D9142000BC2C5 /* Buttons.swift */,
-				C81C44712463EA7E0037B0B2 /* GroupButtonStyle.swift */,
-				C81C447924657B1E0037B0B2 /* GroupButtonContainer.swift */,
+				C81C44712463EA7E0037B0B2 /* ButtonGroupStyle.swift */,
+				C81C447924657B1E0037B0B2 /* ButtonGroup.swift */,
 				94812A8C2462B25C00E3D105 /* RadioButton.swift */,
 				1DED6065245F7A4E00AD1122 /* Checkboxes.swift */,
 				1DED6063245F335600AD1122 /* Toggles.swift */,
@@ -208,7 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D34A6862445F9FC00882EEE /* AppDelegate.swift in Sources */,
-				C81C447A24657B1E0037B0B2 /* GroupButtonContainer.swift in Sources */,
+				C81C447A24657B1E0037B0B2 /* ButtonGroup.swift in Sources */,
 				C8D15B8E245CB6FC004B1843 /* Images.swift in Sources */,
 				1D34A6882445F9FC00882EEE /* SceneDelegate.swift in Sources */,
 				641DA567245E2C7C00B49043 /* TextField.swift in Sources */,
@@ -220,7 +220,7 @@
 				1D34A69A2448CEA900882EEE /* Typography.swift in Sources */,
 				C81C44742463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift in Sources */,
 				1DED6066245F7A4E00AD1122 /* Checkboxes.swift in Sources */,
-				C81C44722463EA7E0037B0B2 /* GroupButtonStyle.swift in Sources */,
+				C81C44722463EA7E0037B0B2 /* ButtonGroupStyle.swift in Sources */,
 				1D34A68A2445F9FC00882EEE /* ContentView.swift in Sources */,
 				C8D15B90245CC7FA004B1843 /* RoundedCorner.swift in Sources */,
 			);
