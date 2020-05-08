@@ -30,7 +30,7 @@ public struct GroupButtonStyle: ButtonStyle {
 
 
 
-struct GroupButton_Previews: PreviewProvider {
+struct GroupButtonStyle_Previews: PreviewProvider {
     typealias bsSize = GroupButtonStyle.SizeStyle
     
     static var previews: some View {
