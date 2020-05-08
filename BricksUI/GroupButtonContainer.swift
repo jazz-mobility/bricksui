@@ -12,7 +12,9 @@ import SwiftUI
 //NOTE: THIS FILE IS NOT FINISHED
 // WORK IN PROGRESS, PROTOTYPING THE FUNCTION'S ARCHITECTURE
 
+/// Struct to create a row of formatted buttons
 struct GroupButtonContainer: View {
+    
     var icon : Image?
     var buttonItems : Int
     var text: String = ""
@@ -20,8 +22,9 @@ struct GroupButtonContainer: View {
     var size : ButtonSize
     @State var isActive: Bool = false
     
-    
+    ///giant, large, medium, small and tiny options
     typealias ButtonSize = GroupButtonStyle.SizeStyle
+    ///primary, basic or outline options
     typealias ColorStyle = GroupButtonStyle.Style
     
     
