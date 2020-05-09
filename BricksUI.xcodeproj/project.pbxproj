@@ -18,14 +18,14 @@
 		1DED6064245F335600AD1122 /* Toggles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED6063245F335600AD1122 /* Toggles.swift */; };
 		1DED6066245F7A4E00AD1122 /* Checkboxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED6065245F7A4E00AD1122 /* Checkboxes.swift */; };
 		640CE4602465668E00CED8CE /* BricksAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 640CE45F2465668E00CED8CE /* BricksAssets.xcassets */; };
-		641DA567245E2C7C00B49043 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DA566245E2C7C00B49043 /* TextField.swift */; };
+		641DA567245E2C7C00B49043 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DA566245E2C7C00B49043 /* TextFields.swift */; };
 		64DF075924646C8700EB2879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DF075824646C8700EB2879 /* Assets.xcassets */; };
-		94812A8D2462B25C00E3D105 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94812A8C2462B25C00E3D105 /* RadioButton.swift */; };
+		94812A8D2462B25C00E3D105 /* RadioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94812A8C2462B25C00E3D105 /* RadioButtons.swift */; };
 		94F3F6B2245D9142000BC2C5 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3F6B1245D9142000BC2C5 /* Buttons.swift */; };
 		C81C44722463EA7E0037B0B2 /* ButtonGroupStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C44712463EA7E0037B0B2 /* ButtonGroupStyle.swift */; };
 		C81C44742463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C44732463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift */; };
 		C81C4478246570560037B0B2 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		C81C447A24657B1E0037B0B2 /* ButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C447924657B1E0037B0B2 /* ButtonGroup.swift */; };
+		C81C447A24657B1E0037B0B2 /* ButtonGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C447924657B1E0037B0B2 /* ButtonGroups.swift */; };
 		C8D15B8E245CB6FC004B1843 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B8D245CB6FC004B1843 /* Images.swift */; };
 		C8D15B90245CC7FA004B1843 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
@@ -44,13 +44,13 @@
 		1DED6063245F335600AD1122 /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
 		1DED6065245F7A4E00AD1122 /* Checkboxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkboxes.swift; sourceTree = "<group>"; };
 		640CE45F2465668E00CED8CE /* BricksAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BricksAssets.xcassets; sourceTree = "<group>"; };
-		641DA566245E2C7C00B49043 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		641DA566245E2C7C00B49043 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
 		64DF075824646C8700EB2879 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		94812A8C2462B25C00E3D105 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		94812A8C2462B25C00E3D105 /* RadioButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtons.swift; sourceTree = "<group>"; };
 		94F3F6B1245D9142000BC2C5 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		C81C44712463EA7E0037B0B2 /* ButtonGroupStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupStyle.swift; sourceTree = "<group>"; };
 		C81C44732463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupButtonStyle+Extensions.swift"; sourceTree = "<group>"; };
-		C81C447924657B1E0037B0B2 /* ButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroup.swift; sourceTree = "<group>"; };
+		C81C447924657B1E0037B0B2 /* ButtonGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroups.swift; sourceTree = "<group>"; };
 		C8D15B8D245CB6FC004B1843 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,11 +90,11 @@
 				1DB2E0F4245830DD00FB1DE6 /* Colors.swift */,
 				94F3F6B1245D9142000BC2C5 /* Buttons.swift */,
 				C81C44712463EA7E0037B0B2 /* ButtonGroupStyle.swift */,
-				C81C447924657B1E0037B0B2 /* ButtonGroup.swift */,
-				94812A8C2462B25C00E3D105 /* RadioButton.swift */,
+				C81C447924657B1E0037B0B2 /* ButtonGroups.swift */,
+				94812A8C2462B25C00E3D105 /* RadioButtons.swift */,
 				1DED6065245F7A4E00AD1122 /* Checkboxes.swift */,
 				1DED6063245F335600AD1122 /* Toggles.swift */,
-				641DA566245E2C7C00B49043 /* TextField.swift */,
+				641DA566245E2C7C00B49043 /* TextFields.swift */,
 				C8D15B8D245CB6FC004B1843 /* Images.swift */,
 				1D34A68B2445F9FF00882EEE /* Colors.xcassets */,
 				640CE45F2465668E00CED8CE /* BricksAssets.xcassets */,
@@ -208,14 +208,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D34A6862445F9FC00882EEE /* AppDelegate.swift in Sources */,
-				C81C447A24657B1E0037B0B2 /* ButtonGroup.swift in Sources */,
+				C81C447A24657B1E0037B0B2 /* ButtonGroups.swift in Sources */,
 				C8D15B8E245CB6FC004B1843 /* Images.swift in Sources */,
 				1D34A6882445F9FC00882EEE /* SceneDelegate.swift in Sources */,
-				641DA567245E2C7C00B49043 /* TextField.swift in Sources */,
+				641DA567245E2C7C00B49043 /* TextFields.swift in Sources */,
 				1DB2E0F5245830DD00FB1DE6 /* Colors.swift in Sources */,
 				C81C4478246570560037B0B2 /* (null) in Sources */,
 				94F3F6B2245D9142000BC2C5 /* Buttons.swift in Sources */,
-				94812A8D2462B25C00E3D105 /* RadioButton.swift in Sources */,
+				94812A8D2462B25C00E3D105 /* RadioButtons.swift in Sources */,
 				1DED6064245F335600AD1122 /* Toggles.swift in Sources */,
 				1D34A69A2448CEA900882EEE /* Typography.swift in Sources */,
 				C81C44742463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift in Sources */,
