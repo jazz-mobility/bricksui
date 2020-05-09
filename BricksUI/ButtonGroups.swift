@@ -13,7 +13,7 @@ import SwiftUI
 // WORK IN PROGRESS, PROTOTYPING THE FUNCTION'S ARCHITECTURE
 
 /// Struct to create a row of formatted buttons
-struct ButtonGroup: View {
+struct BSButtonGroup: View {
     
     var icon : Image?
     var buttonItems : Int
@@ -79,15 +79,15 @@ struct ButtonGroup_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
 
-            ButtonGroup(icon: Image(systemName: "star"), buttonItems: 5, text: "won't read me", colorStyle: .primary, size: .giant)
+            BSButtonGroup(icon: Image(systemName: "star"), buttonItems: 5, text: "won't read me", colorStyle: .primary, size: .giant)
 
-            ButtonGroup(icon: nil, buttonItems: 5, text: "L", colorStyle: .basic, size: .large)
+            BSButtonGroup(icon: nil, buttonItems: 5, text: "L", colorStyle: .basic, size: .large)
             
-            ButtonGroup(icon: Image(systemName: "person"), buttonItems: 5, text: "hi", colorStyle: .outline, size: .medium, isActive: false)
+            BSButtonGroup(icon: Image(systemName: "person"), buttonItems: 5, text: "hi", colorStyle: .outline, size: .medium, isActive: false)
 
-            ButtonGroup(icon: nil, buttonItems: 5, text: "S", colorStyle: .primary, size: .small)
+            BSButtonGroup(icon: nil, buttonItems: 5, text: "S", colorStyle: .primary, size: .small)
 
-            ButtonGroup(icon: Image(systemName: "umbrella.fill"), buttonItems: 5, text: "T", colorStyle: .basic, size: .tiny)
+            BSButtonGroup(icon: Image(systemName: "umbrella.fill"), buttonItems: 5, text: "T", colorStyle: .basic, size: .tiny)
         }
     }
 }
