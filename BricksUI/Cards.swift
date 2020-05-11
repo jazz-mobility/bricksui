@@ -34,6 +34,7 @@ struct BSCard: View {
                 .padding(.vertical, 16)
             Text(text)
                 .bsTypo(.p1)
+                .opacity(0.8)
                 .padding(.horizontal)
             if !caption.isEmpty {
                 Divider()
