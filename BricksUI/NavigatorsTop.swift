@@ -11,11 +11,10 @@ import SwiftUI
 struct BsNavigatorTop: View {
     
     var title : String
-    var subtitle: String
-    //var iconStrings : [String]
+    var subtitle: String = ""
     var leftIconString: String
     var rightIconStrings : [String]
-    var buttonCommits : [()->()]
+    var buttonCommits : [()->()] = [{}, {}, {}]
     
     var body: some View {
         
@@ -31,19 +30,20 @@ struct BsNavigatorTop: View {
                     }
                 }
                 .buttonStyle(NavButtonStyle())
-                Spacer(minLength: 0)
+                Spacer()
                 
                 VStack {
-                    Text(self.title).bsTypo(.h5, color: .black)
-                    Text(self.subtitle).bsTypo(.p2, color: .bsBasic).padding(.top, 5)
-                }.offset(x: 16, y: 0)
+                    Text(self.title).bsTypo(.h5, color: .black).offset(y: self.subtitle == "" ? 5: 0)
+                    Text(self.subtitle).bsTypo(.p2, color: .bsBasic).padding(.top, self.subtitle == "" ? 0: 5)
+                }
+                .offset(x: 23, y: 0)
                 
-                Spacer(minLength: 0)
+                Spacer()
                 
                 HStack(spacing: 22){
                     Button(action: self.buttonCommits[1]) {
                         Image(systemName: self.rightIconStrings[0])
-                        .bsSquare(width: 24)
+                            .bsSquare(width: 24)
                     }
                     Button(action: self.buttonCommits[2]) {
                         Image(systemName: self.rightIconStrings[1])
@@ -77,8 +77,9 @@ struct BsNavigatorTop_Previews: PreviewProvider {
     static var previews: some View {
         
         VStack() {
-                        
-            BsNavigatorTop(title: "BricksUI", subtitle: "A SwiftUI Design System", leftIconString: "arrow.left", rightIconStrings: ["star.fill", "star.fill"], buttonCommits: [{}, {}, {}])
+            
+            BsNavigatorTop(title: "BricksUI", subtitle: "A Cool Group", leftIconString: "arrow.left", rightIconStrings: ["star", "heart"])
+
             Spacer()
         }
         .edgesIgnoringSafeArea(.horizontal)

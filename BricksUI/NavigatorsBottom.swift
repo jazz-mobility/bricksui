@@ -14,6 +14,7 @@ struct BsNavigatorBottom : View {
     //var text : [String]? = [""]
     
     var body : some View {
+        
         GeometryReader { g in
             HStack(spacing: 0) {
                 return self.makeTabs(totalWidth: g.size.width)
