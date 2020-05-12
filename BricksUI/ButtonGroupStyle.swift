@@ -14,7 +14,6 @@ public struct ButtonGroupStyle: ButtonStyle {
     var icon: Image? = nil
     var text: String = ""
     var action: ()->() = {}
-    @State var isActive: Bool = false
     
     
     public func makeBody(configuration: Configuration) -> some View {
@@ -22,10 +21,9 @@ public struct ButtonGroupStyle: ButtonStyle {
             
             .font(.system(size: sizesStyle.fontSize, weight: .bold))
             .frame(width: sizesStyle.frameWidth, height: sizesStyle.frameWidth)
-            .foregroundColor(isActive ? colorStyle.activeForeground : colorStyle.defaultForeground)
-            .background(isActive ? colorStyle.activeBackground : colorStyle.defaultBackground)
-            .border(colorStyle.defaultForeground, width: (colorStyle == .outline && !isActive) ? 1 : 0)
-            .opacity(configuration.isPressed ? 0.7 : 1)
+            .foregroundColor(configuration.isPressed ? colorStyle.activeForeground : colorStyle.defaultForeground)
+            .background(configuration.isPressed ? colorStyle.activeBackground : colorStyle.defaultBackground)
+            .border(colorStyle.defaultForeground, width: (colorStyle == .outline && !configuration.isPressed) ? 1 : 0)
     }
 }
 

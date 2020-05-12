@@ -20,7 +20,6 @@ struct BSButtonGroup: View {
     var text: String = ""
     var colorStyle : ColorStyle
     var size : Size
-    @State var isActive: Bool = false
     
     enum Size {
         case giant, large, medium, small, tiny
@@ -57,19 +56,10 @@ struct BSButtonGroup: View {
                         }
                     }
                     ).buttonStyle(ButtonGroupStyle(sizesStyle: self.size.style, colorStyle: self.colorStyle))
-                    
                 }
-                //: Mark -The code below won't compile:
-                // Avoid this in SwiftUI
-                //            if case .active = featureState {
-                //                Text("Active view!")
-                //            } else {
-                //                Text("Disabled view")
-                //            }
-                
                 
             }.cornerRadius(self.size.style.frameWidth / 10)
-                .overlay(RoundedRectangle(cornerRadius: ((colorStyle == ColorStyle.outline) && (!isActive)) ? (self.size.style.frameWidth / 10) : 0).stroke(Color.bsActiveBasic, lineWidth:(colorStyle == ColorStyle.outline) && (!isActive) ? 1 : 0))
+                .overlay(RoundedRectangle(cornerRadius: ((colorStyle == ColorStyle.outline)) ? (self.size.style.frameWidth / 10) : 0).stroke(Color.bsActiveBasic, lineWidth:(colorStyle == ColorStyle.outline) ? 1 : 0))
         }
     }
 }
@@ -83,7 +73,7 @@ struct ButtonGroup_Previews: PreviewProvider {
 
             BSButtonGroup(icon: nil, buttonItems: 5, text: "L", colorStyle: .basic, size: .large)
             
-            BSButtonGroup(icon: Image(systemName: "person"), buttonItems: 5, text: "hi", colorStyle: .outline, size: .medium, isActive: false)
+            BSButtonGroup(icon: Image(systemName: "person"), buttonItems: 5, text: "hi", colorStyle: .outline, size: .medium)
 
             BSButtonGroup(icon: nil, buttonItems: 5, text: "S", colorStyle: .primary, size: .small)
 
