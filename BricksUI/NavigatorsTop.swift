@@ -7,22 +7,8 @@
 
 import SwiftUI
 
-struct Home: View {
-    
-    var body : some View {
-        
-        VStack() {
-            
-            BsNavigator(title: "Title", subtitle: "Secondary title", iconStrings: ["arrow.left", "star.fill", "star.fill"], buttonCommits: [{}, {}, {}])
-            
-            Spacer()
-        }
-        .edgesIgnoringSafeArea(.horizontal)
-        .edgesIgnoringSafeArea(.top)
-    }
-}
 
-struct BsNavigator: View {
+struct BsNavigatorTop: View {
     
     var title : String
     var subtitle: String
@@ -38,8 +24,7 @@ struct BsNavigator: View {
                 ) {
                     HStack(spacing: 0) {
                         Image(systemName: self.iconStrings[0])
-                            .resizable()
-                            .frame(width: 24, height: 24)
+                            .bsSquare(width: 24)
                             .padding(.horizontal, 4)
                     }
                 }
@@ -56,13 +41,11 @@ struct BsNavigator: View {
                 HStack(spacing: 22){
                     Button(action: self.buttonCommits[1]) {
                         Image(systemName: self.iconStrings[1])
-                            .resizable()
-                            .frame(width: 24, height: 24)
+                        .bsSquare(width: 24)
                     }
                     Button(action: self.buttonCommits[2]) {
                         Image(systemName: self.iconStrings[2])
-                            .resizable()
-                            .frame(width: 24, height: 24)
+                            .bsSquare(width: 24)
                     }
                 }
                 .buttonStyle(NavButtonStyle())
@@ -88,10 +71,27 @@ struct NavButtonStyle: ButtonStyle {
     }
 }
 
-struct BsNavigator_Previews: PreviewProvider {
+//Previewing Views Below
+
+struct Home_TopNav: View {
+    
+    var body : some View {
+        
+        VStack() {
+            
+            BsNavigatorTop(title: "BricksUI", subtitle: "A SwiftUI Design System", iconStrings: ["arrow.left", "star.fill", "star.fill"], buttonCommits: [{}, {}, {}])
+            
+            Spacer()
+        }
+        .edgesIgnoringSafeArea(.horizontal)
+        .edgesIgnoringSafeArea(.top)
+    }
+}
+
+struct BsNavigatorTop_Previews: PreviewProvider {
     static var previews: some View {
         
-        Home()
+        Home_TopNav()
     }
 }
 
