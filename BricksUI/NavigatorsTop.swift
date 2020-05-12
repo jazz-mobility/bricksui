@@ -27,7 +27,7 @@ struct BsNavigatorTop: View {
                         Image(systemName: self.leftIconString)
                             .bsSquare(width: 24)
                             .padding(.horizontal, 4)
-                    }
+                    }.foregroundColor(.black)
                 }
                 .buttonStyle(NavButtonStyle())
                 Spacer()
