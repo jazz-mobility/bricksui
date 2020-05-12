@@ -50,7 +50,7 @@ struct Home_BottomNav: View {
     var body : some View {
         
         VStack {
-            Spacer() ; ZStack {Color.bsPrimary.opacity(0.3)}
+            ZStack {Color.bsPrimary.opacity(0.3)}
             
             BsNavigatorBottom(index: 0, icons: ["house.fill", "magnifyingglass", "heart.fill", "person.fill"])
         }
