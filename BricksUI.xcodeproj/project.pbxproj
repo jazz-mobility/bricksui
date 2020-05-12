@@ -27,7 +27,8 @@
 		C81C44742463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C44732463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift */; };
 		C81C4478246570560037B0B2 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C81C447A24657B1E0037B0B2 /* ButtonGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C447924657B1E0037B0B2 /* ButtonGroups.swift */; };
-		C82DD87E246896080027E572 /* NavigationBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD87D246896080027E572 /* NavigationBars.swift */; };
+		C82DD87E246896080027E572 /* NavigatorsTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD87D246896080027E572 /* NavigatorsTop.swift */; };
+		C82DD88A246ABA840027E572 /* NavigatorsBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82DD889246ABA840027E572 /* NavigatorsBottom.swift */; };
 		C8D15B8E245CB6FC004B1843 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B8D245CB6FC004B1843 /* Images.swift */; };
 		C8D15B90245CC7FA004B1843 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +55,8 @@
 		C81C44712463EA7E0037B0B2 /* ButtonGroupStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupStyle.swift; sourceTree = "<group>"; };
 		C81C44732463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupButtonStyle+Extensions.swift"; sourceTree = "<group>"; };
 		C81C447924657B1E0037B0B2 /* ButtonGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroups.swift; sourceTree = "<group>"; };
-		C82DD87D246896080027E572 /* NavigationBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBars.swift; sourceTree = "<group>"; };
+		C82DD87D246896080027E572 /* NavigatorsTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorsTop.swift; sourceTree = "<group>"; };
+		C82DD889246ABA840027E572 /* NavigatorsBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorsBottom.swift; sourceTree = "<group>"; };
 		C8D15B8D245CB6FC004B1843 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C8D15B8F245CC7FA004B1843 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,9 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				1D34A6992448CEA900882EEE /* Typography.swift */,
-				94F3F6B1245D9142000BC2C5 /* Buttons.swift */,
-				641DA566245E2C7C00B49043 /* TextField.swift */,
-				641DA568246028B100B49043 /* Selection.swift */,
 				1DB2E0F4245830DD00FB1DE6 /* Colors.swift */,
 				94F3F6B1245D9142000BC2C5 /* Buttons.swift */,
 				C81C44712463EA7E0037B0B2 /* ButtonGroupStyle.swift */,
@@ -102,7 +101,8 @@
 				1DED6065245F7A4E00AD1122 /* Checkboxes.swift */,
 				1DED6063245F335600AD1122 /* Toggles.swift */,
 				641DA566245E2C7C00B49043 /* TextFields.swift */,
-				C82DD87D246896080027E572 /* NavigationBars.swift */,
+				C82DD87D246896080027E572 /* NavigatorsTop.swift */,
+				C82DD889246ABA840027E572 /* NavigatorsBottom.swift */,
 				C8D15B8D245CB6FC004B1843 /* Images.swift */,
 				94E32C0B24692F9100332100 /* Cards.swift */,
 				1D34A68B2445F9FF00882EEE /* Colors.xcassets */,
@@ -216,7 +216,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				641DA569246028B100B49043 /* Selection.swift in Sources */,
 				1D34A6862445F9FC00882EEE /* AppDelegate.swift in Sources */,
 				C81C447A24657B1E0037B0B2 /* ButtonGroups.swift in Sources */,
 				C8D15B8E245CB6FC004B1843 /* Images.swift in Sources */,
@@ -226,6 +225,7 @@
 				1DB2E0F5245830DD00FB1DE6 /* Colors.swift in Sources */,
 				C81C4478246570560037B0B2 /* (null) in Sources */,
 				94F3F6B2245D9142000BC2C5 /* Buttons.swift in Sources */,
+				C82DD88A246ABA840027E572 /* NavigatorsBottom.swift in Sources */,
 				94812A8D2462B25C00E3D105 /* RadioButtons.swift in Sources */,
 				1DED6064245F335600AD1122 /* Toggles.swift in Sources */,
 				1D34A69A2448CEA900882EEE /* Typography.swift in Sources */,
@@ -233,7 +233,7 @@
 				1DED6066245F7A4E00AD1122 /* Checkboxes.swift in Sources */,
 				C81C44722463EA7E0037B0B2 /* ButtonGroupStyle.swift in Sources */,
 				1D34A68A2445F9FC00882EEE /* ContentView.swift in Sources */,
-				C82DD87E246896080027E572 /* NavigationBars.swift in Sources */,
+				C82DD87E246896080027E572 /* NavigatorsTop.swift in Sources */,
 				C8D15B90245CC7FA004B1843 /* RoundedCorner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
