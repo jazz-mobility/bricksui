@@ -43,24 +43,14 @@ struct BsNavigatorBottom : View {
     }
 }
 
-//Previewing Views Below
 
-struct Home_BottomNav: View {
-    
-    var body : some View {
-        
+struct BsNavigatorBottom_Previews: PreviewProvider {
+    static var previews: some View {
         VStack {
-            Spacer() ; ZStack {Color.bsPrimary.opacity(0.3)}
+            ZStack {Color.bsPrimary.opacity(0.3)}
             
             BsNavigatorBottom(index: 0, icons: ["house.fill", "magnifyingglass", "heart.fill", "person.fill"])
         }
         .edgesIgnoringSafeArea(.all)
-    }
-}
-
-struct BsNavigatorBottom_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        Home_BottomNav()
     }
 }
