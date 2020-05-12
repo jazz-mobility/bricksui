@@ -9,11 +9,16 @@ import SwiftUI
 
 // MARK: - Custom Button Styles
 
-struct BSFillButtonStyle: ButtonStyle {
+struct BSButtonStyle: ButtonStyle {
     var color: Color
+    var style: BSButton.Style
     
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
-        FillButton(color: color, configuration: configuration)
+        switch style {
+        case .fill: return AnyView(FillButton(color: color, configuration: configuration))
+        case .outline: return AnyView(OutlineButton(color: color, configuration: configuration))
+        case .ghost: return AnyView(GhostButton(color: color, configuration: configuration))
+        }
     }
     
     struct FillButton: View {
@@ -30,14 +35,6 @@ struct BSFillButtonStyle: ButtonStyle {
                 .cornerRadius(4)
                 .opacity(configuration.isPressed ? 0.7 : 1)
         }
-    }
-}
-
-struct BSOutlineButtonStyle: ButtonStyle {
-    var color: Color
-    
-    func makeBody(configuration: ButtonStyle.Configuration) -> some View {
-        OutlineButton(color: color, configuration: configuration)
     }
     
     struct OutlineButton: View {
@@ -59,14 +56,6 @@ struct BSOutlineButtonStyle: ButtonStyle {
                 .opacity(configuration.isPressed ? 0.7 : 1)
         }
     }
-}
-
-struct BSGhostButtonStyle: ButtonStyle {
-    var color: Color
-    
-    func makeBody(configuration: ButtonStyle.Configuration) -> some View {
-        GhostButton(color: color, configuration: configuration)
-    }
     
     struct GhostButton: View {
         var color: Color
@@ -85,21 +74,12 @@ struct BSGhostButtonStyle: ButtonStyle {
     }
 }
 
-
 // MARK: - Usage
 
 extension Button {
     /// Changes the appearance of the button
     func style(_ style: BSButton.Style, color: Color) -> some View {
-        Group {
-            if style == .fill {
-                self.buttonStyle(BSFillButtonStyle(color: color))
-            } else if style == .outline {
-                self.buttonStyle(BSOutlineButtonStyle(color: color))
-            } else {
-                self.buttonStyle(BSGhostButtonStyle(color: color))
-            }
-        }
+        self.buttonStyle(BSButtonStyle(color: color, style: style))
     }
 }
 
