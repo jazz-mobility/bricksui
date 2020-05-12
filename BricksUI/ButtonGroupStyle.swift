@@ -33,7 +33,7 @@ struct ButtonGroupStyle_Previews: PreviewProvider {
     static var previews: some View {
         
         VStack(spacing : 20) {
-            // must apply size for icon and text in the makeGroup logic
+            
             HStack(spacing: 20) {
                 
                 Button(action : {  }, label: {Text("G")})

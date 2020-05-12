@@ -14,6 +14,7 @@ struct BsNavigatorBottom : View {
     //var text : [String]? = [""]
     
     var body : some View {
+        
         GeometryReader { g in
             HStack(spacing: 0) {
                 return self.makeTabs(totalWidth: g.size.width)
@@ -29,14 +30,14 @@ struct BsNavigatorBottom : View {
                     VStack {
                         Rectangle().frame(height: 4).foregroundColor(self.index == i ? Color.bsPrimary : Color.clear)
                         Image(systemName: self.icons[i])
-                            .bsSquare(width: self.index == i ? 24 : 22)
+                            .bsSquare(width: self.index == i ? 24 : 21)
                             .foregroundColor(self.index == i ? Color.bsPrimary : Color.bsFontDisabled)
                             .padding(.bottom, 24)
                             .padding(.top, 10)
                     }
                     .background(Color.bsBackground)
                     .frame(width: totalWidth / CGFloat(self.icons.count))
-                    .animation(.interactiveSpring())
+                    .animation(.easeOut(duration: 0.35))
                 })
             }
         }
@@ -47,7 +48,7 @@ struct BsNavigatorBottom : View {
 struct BsNavigatorBottom_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            ZStack {Color.bsPrimary.opacity(0.3)}
+            ZStack {Color.bsPrimary.opacity(0.4)}
             
             BsNavigatorBottom(index: 0, icons: ["house.fill", "magnifyingglass", "heart.fill", "person.fill"])
         }

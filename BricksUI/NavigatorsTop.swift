@@ -11,9 +11,10 @@ import SwiftUI
 struct BsNavigatorTop: View {
     
     var title : String
-    var subtitle: String
-    var iconStrings : [String]
-    var buttonCommits : [()->()]
+    var subtitle: String = ""
+    var leftIconString: String
+    var rightIconStrings : [String]
+    var buttonCommits : [()->()] = [{}, {}, {}]
     
     var body: some View {
         
@@ -23,7 +24,7 @@ struct BsNavigatorTop: View {
                     self.buttonCommits[0]
                 ) {
                     HStack(spacing: 0) {
-                        Image(systemName: self.iconStrings[0])
+                        Image(systemName: self.leftIconString)
                             .bsSquare(width: 24)
                             .padding(.horizontal, 4)
                     }
@@ -32,19 +33,20 @@ struct BsNavigatorTop: View {
                 Spacer()
                 
                 VStack {
-                    Text(self.title).bsTypo(.h5, color: .black)
-                    Text(self.subtitle).bsTypo(.p2, color: .bsBasic)
-                }.offset(x: 16, y: 0)
+                    Text(self.title).bsTypo(.h5, color: .black).offset(y: self.subtitle == "" ? 5: 0)
+                    Text(self.subtitle).bsTypo(.p2, color: .bsBasic).padding(.top, self.subtitle == "" ? 0: 5)
+                }
+                .offset(x: 23, y: 0)
                 
-                Spacer(minLength: 0)
+                Spacer()
                 
                 HStack(spacing: 22){
                     Button(action: self.buttonCommits[1]) {
-                        Image(systemName: self.iconStrings[1])
-                        .bsSquare(width: 24)
+                        Image(systemName: self.rightIconStrings[0])
+                            .bsSquare(width: 24)
                     }
                     Button(action: self.buttonCommits[2]) {
-                        Image(systemName: self.iconStrings[2])
+                        Image(systemName: self.rightIconStrings[1])
                             .bsSquare(width: 24)
                     }
                 }
@@ -76,8 +78,8 @@ struct BsNavigatorTop_Previews: PreviewProvider {
         
         VStack() {
             
-            BsNavigatorTop(title: "BricksUI", subtitle: "A SwiftUI Design System", iconStrings: ["arrow.left", "star.fill", "star.fill"], buttonCommits: [{}, {}, {}])
-            
+            BsNavigatorTop(title: "BricksUI", subtitle: "A Cool Group", leftIconString: "arrow.left", rightIconStrings: ["star", "heart"])
+
             Spacer()
         }
         .edgesIgnoringSafeArea(.horizontal)

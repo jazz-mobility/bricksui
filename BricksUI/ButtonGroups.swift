@@ -9,9 +9,6 @@ import Foundation
 import SwiftUI
 
 
-//NOTE: THIS FILE IS NOT FINISHED
-// WORK IN PROGRESS, PROTOTYPING THE FUNCTION'S ARCHITECTURE
-
 /// Struct to create a row of formatted buttons
 struct BSButtonGroup: View {
     
@@ -36,9 +33,6 @@ struct BSButtonGroup: View {
         
     }
     
-    ///giant, large, medium, small and tiny options
-   // typealias ButtonSize = ButtonGroupStyle.SizeStyle
-    ///primary, basic or outline options
     typealias ColorStyle = ButtonGroupStyle.Style
     
     
