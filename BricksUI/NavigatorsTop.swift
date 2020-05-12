@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct BsNavigatorTop: View {
+struct BSNavigatorTop: View {
     
     var title : String
     var subtitle: String = ""
@@ -73,12 +73,12 @@ struct NavButtonStyle: ButtonStyle {
     }
 }
 
-struct BsNavigatorTop_Previews: PreviewProvider {
+struct BSNavigatorTop_Previews: PreviewProvider {
     static var previews: some View {
         
         VStack() {
             
-            BsNavigatorTop(title: "BricksUI", subtitle: "A Cool Group", leftIconString: "arrow.left", rightIconStrings: ["star", "heart"])
+            BSNavigatorTop(title: "BricksUI", subtitle: "A Cool Group", leftIconString: "arrow.left", rightIconStrings: ["star", "heart"])
 
             Spacer()
         }

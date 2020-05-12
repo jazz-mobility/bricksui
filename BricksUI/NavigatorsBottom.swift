@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BsNavigatorBottom : View {
+struct BSNavigatorBottom : View {
     
     @State var index : Int
     var icons: [String]
@@ -45,12 +45,12 @@ struct BsNavigatorBottom : View {
 }
 
 
-struct BsNavigatorBottom_Previews: PreviewProvider {
+struct BSNavigatorBottom_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             ZStack {Color.bsPrimary.opacity(0.4)}
             
-            BsNavigatorBottom(index: 0, icons: ["house.fill", "magnifyingglass", "heart.fill", "person.fill"])
+            BSNavigatorBottom(index: 0, icons: ["house.fill", "magnifyingglass", "heart.fill", "person.fill"])
         }
         .edgesIgnoringSafeArea(.all)
     }
