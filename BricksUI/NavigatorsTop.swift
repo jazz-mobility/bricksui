@@ -71,11 +71,8 @@ struct NavButtonStyle: ButtonStyle {
     }
 }
 
-//Previewing Views Below
-
-struct Home_TopNav: View {
-    
-    var body : some View {
+struct BsNavigatorTop_Previews: PreviewProvider {
+    static var previews: some View {
         
         VStack() {
             
@@ -85,13 +82,6 @@ struct Home_TopNav: View {
         }
         .edgesIgnoringSafeArea(.horizontal)
         .edgesIgnoringSafeArea(.top)
-    }
-}
-
-struct BsNavigatorTop_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        Home_TopNav()
     }
 }
 
