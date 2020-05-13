@@ -98,9 +98,13 @@ struct BSButton: View {
     
     var body: some View {
         Button(action: action, label: {
-            HStack(spacing: textAndImage ? 12 : 0) {
-                Text(text ?? "")
-                image
+            HStack() {
+                Spacer()
+                HStack(spacing: textAndImage ? 12 : 0) {
+                    Text(text ?? "")
+                    image
+                }
+                Spacer()
             }
         }).style(style, color: color)
     }
