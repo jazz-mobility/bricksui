@@ -119,19 +119,19 @@ public struct Input_Previews: PreviewProvider {
     public static var previews: some View {
         VStack(spacing: 40) {
             
-            HStack(spacing: 20) {
+            HStack(spacing: 10) {
                 BSButton(text: "Fill", style: .fill, action: { print("click") })
                 BSButton(text: "Outline", style: .outline, action: { print("click") })
                 BSButton(text: "Ghost", style: .ghost, action: { print("click") })
             }
             
-            HStack(spacing: 20) {
+            HStack(spacing: 10) {
                 BSButton(text: "Danger", color: .bsDanger, action: { print("click") })
                 BSButton(text: "Warning", color: .bsWarning, action: { print("click") })
                 BSButton(text: "Success", color: .bsSuccess, action: { print("click") })
             }
             
-            HStack(spacing: 20) {
+            HStack(spacing: 10) {
                 BSButton(text: "Disabled", style: .fill, action: { print("click") })
                     .disabled(true)
                 BSButton(text: "Disabled", style: .outline, action: { print("click") })
@@ -140,7 +140,7 @@ public struct Input_Previews: PreviewProvider {
                     .disabled(true)
             }
             
-            HStack(spacing: 20) {
+            HStack(spacing: 10) {
                 BSButton(text: "Text", action: { print("click") })
                 BSButton(text: "Text", image: cloudImg, action: { print("click") })
                 BSButton(image: cloudImg, action: { print("click") })
