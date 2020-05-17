@@ -11,48 +11,48 @@ extension Color {
     
     // MARK: Basic Colors
     
-    static let bsBackground = Color("background")
-    static let bsBasic = Color("basic")
-    static let bsPrimary = Color("primary")
+    static let brBackground = Color("background")
+    static let brBasic = Color("basic")
+    static let brPrimary = Color("primary")
     
     // MARK: Font Colors
     
     /// Standard Font Color
-    static let bsFontStd = Color("font_std")
+    static let brFontStd = Color("font_std")
     /// Hint Font Color
-    static let bsFontHint = Color("font_hint")
+    static let brFontHint = Color("font_hint")
     /// Disabled Font Color
-    static let bsFontDisabled = Color("font_disabled")
+    static let brFontDisabled = Color("font_disabled")
     /// Button Font Color
-    static let bsFontBtn = Color("font_button")
+    static let brFontBtn = Color("font_button")
     
     // MARK: Semantic Colors
     
-    static let bsDanger = Color("danger")
-    static let bsInfo = Color("info")
-    static let bsSuccess = Color("success")
-    static let bsWarning = Color("warning")
+    static let brDanger = Color("danger")
+    static let brInfo = Color("info")
+    static let brSuccess = Color("success")
+    static let brWarning = Color("warning")
     
     // MARK: State Colors
     
     /// Active State Color - Primary Style
-    static let bsActivePrimary = Color("activePrimary")
+    static let brActivePrimary = Color("activePrimary")
     /// Active State Color - Basic Style
-    static let bsActiveBasic = Color("activeBasic")
+    static let brActiveBasic = Color("activeBasic")
 }
 
 struct Color_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             Text("Hello, World!")
-                .foregroundColor(.bsFontStd)
-                .background(Color.bsBackground)
+                .foregroundColor(.brFontStd)
+                .background(Color.brBackground)
                 .environment(\.colorScheme, .dark)
                 .padding()
             
             Text("Hello, World!")
-                .foregroundColor(.bsActivePrimary)
-                .background(Color.bsActiveBasic)
+                .foregroundColor(.brActivePrimary)
+                .background(Color.brActiveBasic)
                 .environment(\.colorScheme, .dark)
         }
     }

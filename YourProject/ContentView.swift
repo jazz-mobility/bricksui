@@ -9,7 +9,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Welcome to BricksUI").bsTypo(.h2, color: .bsPrimary)
+            Text("Welcome to BricksUI").brTypo(.h2, color: .brPrimary)
         }
     }
 }

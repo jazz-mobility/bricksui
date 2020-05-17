@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-public struct BSCheckbox: View {
+public struct BRCheckbox: View {
     
     enum Style {
         case defaultStyle, disabled, success, warning, danger, info
@@ -18,8 +18,8 @@ public struct BSCheckbox: View {
     var style: Style
     
     struct ColoredCheckboxStyle: ToggleStyle {
-        var onColor = Color.bsPrimary
-        var offColor = Color.bsFontDisabled
+        var onColor = Color.brPrimary
+        var offColor = Color.brFontDisabled
         
         func makeBody(configuration: Self.Configuration) -> some View {
             return HStack {
@@ -48,29 +48,29 @@ public struct BSCheckbox: View {
     
     fileprivate func defaultStyle() -> some View {
         Toggle("", isOn: $checkboxState)
-            .toggleStyle(ColoredCheckboxStyle(onColor: .bsPrimary, offColor: .bsFontDisabled))
+            .toggleStyle(ColoredCheckboxStyle(onColor: .brPrimary, offColor: .brFontDisabled))
     }
     
     fileprivate func success() -> some View {
             Toggle("", isOn: $checkboxState)
-            .toggleStyle(ColoredCheckboxStyle(onColor: .bsSuccess, offColor: .bsFontDisabled))
+            .toggleStyle(ColoredCheckboxStyle(onColor: .brSuccess, offColor: .brFontDisabled))
     }
     
     fileprivate func info() -> some View {
         Toggle("", isOn: $checkboxState)
-        .toggleStyle(ColoredCheckboxStyle(onColor: .bsInfo, offColor: .bsFontDisabled))
+        .toggleStyle(ColoredCheckboxStyle(onColor: .brInfo, offColor: .brFontDisabled))
     }
     
     
     fileprivate func warning() -> some View {
         Toggle("", isOn: $checkboxState)
-        .toggleStyle(ColoredCheckboxStyle(onColor: .bsWarning, offColor: .bsFontDisabled))
+        .toggleStyle(ColoredCheckboxStyle(onColor: .brWarning, offColor: .brFontDisabled))
     }
     
     
     fileprivate func danger() -> some View {
         Toggle("", isOn: $checkboxState)
-        .toggleStyle(ColoredCheckboxStyle(onColor: .bsDanger, offColor: .bsFontDisabled))
+        .toggleStyle(ColoredCheckboxStyle(onColor: .brDanger, offColor: .brFontDisabled))
     }
 }
 
@@ -78,11 +78,11 @@ public struct BSCheckbox: View {
 struct Checkboxes_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 10){
-            BSCheckbox(checkboxState: true, style: .defaultStyle)
-            BSCheckbox(checkboxState: true, style: .success)
-            BSCheckbox(checkboxState: true, style: .info)
-            BSCheckbox(checkboxState: true, style: .warning)
-            BSCheckbox(checkboxState: true, style: .danger)
+            BRCheckbox(checkboxState: true, style: .defaultStyle)
+            BRCheckbox(checkboxState: true, style: .success)
+            BRCheckbox(checkboxState: true, style: .info)
+            BRCheckbox(checkboxState: true, style: .warning)
+            BRCheckbox(checkboxState: true, style: .danger)
         }
     }
 }

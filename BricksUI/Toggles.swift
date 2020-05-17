@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct BSToggle: View {
+public struct BRToggle: View {
     
     enum Style {
         case defaultStyle, disabled, success, warning, danger, info
@@ -17,8 +17,8 @@ public struct BSToggle: View {
     var style: Style
     
     struct ColoredToggleStyle: ToggleStyle {
-        var onColor = Color.bsPrimary
-        var offColor = Color.bsDanger
+        var onColor = Color.brPrimary
+        var offColor = Color.brDanger
         var thumbColor = Color.white
         
         func makeBody(configuration: Self.Configuration) -> some View {
@@ -63,8 +63,8 @@ public struct BSToggle: View {
         Toggle("", isOn: $toggleState)
             .toggleStyle(
                 ColoredToggleStyle(
-                    onColor: .bsPrimary,
-                    offColor: Color.bsPrimary.opacity(0.1),
+                    onColor: .brPrimary,
+                    offColor: Color.brPrimary.opacity(0.1),
                     thumbColor: .white))
     }
     
@@ -72,8 +72,8 @@ public struct BSToggle: View {
         Toggle("", isOn: $toggleState)
             .toggleStyle(
                 ColoredToggleStyle(
-                    onColor: .bsSuccess,
-                    offColor: Color.bsSuccess.opacity(0.1),
+                    onColor: .brSuccess,
+                    offColor: Color.brSuccess.opacity(0.1),
                     thumbColor: .white))
     }
     
@@ -81,8 +81,8 @@ public struct BSToggle: View {
         Toggle("", isOn: $toggleState)
             .toggleStyle(
                 ColoredToggleStyle(
-                    onColor: .bsInfo,
-                    offColor: Color.bsInfo.opacity(0.1),
+                    onColor: .brInfo,
+                    offColor: Color.brInfo.opacity(0.1),
                     thumbColor: .white))
     }
     
@@ -91,8 +91,8 @@ public struct BSToggle: View {
         Toggle("", isOn: $toggleState)
             .toggleStyle(
                 ColoredToggleStyle(
-                    onColor: .bsWarning,
-                    offColor: Color.bsWarning.opacity(0.1),
+                    onColor: .brWarning,
+                    offColor: Color.brWarning.opacity(0.1),
                     thumbColor: .white))
     }
     
@@ -101,8 +101,8 @@ public struct BSToggle: View {
         Toggle("", isOn: $toggleState)
             .toggleStyle(
                 ColoredToggleStyle(
-                    onColor: .bsDanger,
-                    offColor: Color.bsDanger.opacity(0.1),
+                    onColor: .brDanger,
+                    offColor: Color.brDanger.opacity(0.1),
                     thumbColor: .white))
     }
 }
@@ -110,11 +110,11 @@ public struct BSToggle: View {
 struct Toggles_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            BSToggle(style: .defaultStyle)
-            BSToggle(style: .success)
-            BSToggle(style: .info)
-            BSToggle(style: .warning)
-            BSToggle(style: .danger)
+            BRToggle(style: .defaultStyle)
+            BRToggle(style: .success)
+            BRToggle(style: .info)
+            BRToggle(style: .warning)
+            BRToggle(style: .danger)
         }
     }
 }

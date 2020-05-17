@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct BSNavigatorTop: View {
+struct BRNavigatorTop: View {
     
     var title : String
     var subtitle: String = ""
@@ -25,7 +25,7 @@ struct BSNavigatorTop: View {
                 ) {
                     HStack(spacing: 0) {
                         Image(systemName: self.leftIconString)
-                            .bsSquare(width: 24)
+                            .brSquare(width: 24)
                             .padding(.horizontal, 4)
                     }.foregroundColor(.black)
                 }
@@ -33,8 +33,8 @@ struct BSNavigatorTop: View {
                 Spacer()
                 
                 VStack {
-                    Text(self.title).bsTypo(.h5, color: .black).offset(y: self.subtitle == "" ? 5: 0)
-                    Text(self.subtitle).bsTypo(.p2, color: .bsBasic).padding(.top, self.subtitle == "" ? 0: 5)
+                    Text(self.title).brTypo(.h5, color: .black).offset(y: self.subtitle == "" ? 5: 0)
+                    Text(self.subtitle).brTypo(.p2, color: .brBasic).padding(.top, self.subtitle == "" ? 0: 5)
                 }
                 .offset(x: 23, y: 0)
                 
@@ -43,11 +43,11 @@ struct BSNavigatorTop: View {
                 HStack(spacing: 22){
                     Button(action: self.buttonCommits[1]) {
                         Image(systemName: self.rightIconStrings[0])
-                            .bsSquare(width: 24)
+                            .brSquare(width: 24)
                     }
                     Button(action: self.buttonCommits[2]) {
                         Image(systemName: self.rightIconStrings[1])
-                            .bsSquare(width: 24)
+                            .brSquare(width: 24)
                     }
                 }
                 .buttonStyle(NavButtonStyle())
@@ -57,9 +57,9 @@ struct BSNavigatorTop: View {
         .padding(.vertical, 16)
         .padding(.horizontal, 16)
         .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-        .background(Color.bsBackground)
+        .background(Color.brBackground)
         .clipped()
-        .shadow(color: Color.bsBasic, radius: 3, x: 0, y: 0)
+        .shadow(color: Color.brBasic, radius: 3, x: 0, y: 0)
         .animation(.default)
     }
     
@@ -69,16 +69,16 @@ struct NavButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-            .foregroundColor(configuration.isPressed ? Color.bsPrimary: Color.bsBasic)
+            .foregroundColor(configuration.isPressed ? Color.brPrimary: Color.brBasic)
     }
 }
 
-struct BSNavigatorTop_Previews: PreviewProvider {
+struct BRNavigatorTop_Previews: PreviewProvider {
     static var previews: some View {
         
         VStack() {
             
-            BSNavigatorTop(title: "BricksUI", subtitle: "A Cool Group", leftIconString: "arrow.left", rightIconStrings: ["star", "heart"])
+            BRNavigatorTop(title: "BricksUI", subtitle: "A Cool Group", leftIconString: "arrow.left", rightIconStrings: ["star", "heart"])
 
             Spacer()
         }

@@ -9,9 +9,9 @@ import SwiftUI
 
 // MARK: - Custom Button Styles
 
-struct BSButtonStyle: ButtonStyle {
+struct BRButtonStyle: ButtonStyle {
     var color: Color
-    var style: BSButton.Style
+    var style: BRButton.Style
     
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
         switch style {
@@ -27,11 +27,11 @@ struct BSButtonStyle: ButtonStyle {
         @Environment(\.isEnabled) private var isEnabled: Bool
         var body: some View {
             configuration.label
-                .bsTypo(.s1)
-                .foregroundColor(isEnabled ? .white : .bsFontDisabled)
+                .brTypo(.s1)
+                .foregroundColor(isEnabled ? .white : .brFontDisabled)
                 .padding()
                 .frame(minHeight: 56)
-                .background(isEnabled ? color : Color.bsBasic.opacity(0.2))
+                .background(isEnabled ? color : Color.brBasic.opacity(0.2))
                 .cornerRadius(4)
                 .opacity(configuration.isPressed ? 0.7 : 1)
         }
@@ -43,15 +43,15 @@ struct BSButtonStyle: ButtonStyle {
         @Environment(\.isEnabled) private var isEnabled: Bool
         var body: some View {
             configuration.label
-                .bsTypo(.s1)
-                .foregroundColor(isEnabled ? color : .bsFontDisabled)
+                .brTypo(.s1)
+                .foregroundColor(isEnabled ? color : .brFontDisabled)
                 .padding()
                 .frame(minHeight: 56)
-                .background(isEnabled ? color.opacity(0.2) : Color.bsBasic.opacity(0.15))
+                .background(isEnabled ? color.opacity(0.2) : Color.brBasic.opacity(0.15))
                 .cornerRadius(4)
                 .overlay(
                     RoundedRectangle(cornerRadius: 4)
-                        .stroke(isEnabled ? color : Color.bsBasic.opacity(0.5), lineWidth: 1)
+                        .stroke(isEnabled ? color : Color.brBasic.opacity(0.5), lineWidth: 1)
                 )
                 .opacity(configuration.isPressed ? 0.7 : 1)
         }
@@ -63,8 +63,8 @@ struct BSButtonStyle: ButtonStyle {
         @Environment(\.isEnabled) private var isEnabled: Bool
         var body: some View {
             configuration.label
-                .bsTypo(.s1)
-                .foregroundColor(isEnabled ? color : .bsFontDisabled)
+                .brTypo(.s1)
+                .foregroundColor(isEnabled ? color : .brFontDisabled)
                 .padding()
                 .frame(minHeight: 56)
                 .background(Color.white)
@@ -78,12 +78,12 @@ struct BSButtonStyle: ButtonStyle {
 
 extension Button {
     /// Changes the appearance of the button
-    func style(_ style: BSButton.Style, color: Color) -> some View {
-        self.buttonStyle(BSButtonStyle(color: color, style: style))
+    func style(_ style: BRButton.Style, color: Color) -> some View {
+        self.buttonStyle(BRButtonStyle(color: color, style: style))
     }
 }
 
-struct BSButton: View {
+struct BRButton: View {
     
     enum Style {
         case fill, outline, ghost
@@ -92,7 +92,7 @@ struct BSButton: View {
     var text: String?
     var image: Image?
     var style: Style = .fill
-    var color: Color = .bsPrimary
+    var color: Color = .brPrimary
     var action: () -> Void
     var textAndImage: Bool { text != nil && image != nil }
     
@@ -119,31 +119,31 @@ public struct Input_Previews: PreviewProvider {
     public static var previews: some View {
         VStack(spacing: 40) {
             
-            HStack(spacing: 10) {
-                BSButton(text: "Fill", style: .fill, action: { print("click") })
-                BSButton(text: "Outline", style: .outline, action: { print("click") })
-                BSButton(text: "Ghost", style: .ghost, action: { print("click") })
+            HStack(spacing: 20) {
+                BRButton(text: "Fill", style: .fill, action: { print("click") })
+                BRButton(text: "Outline", style: .outline, action: { print("click") })
+                BRButton(text: "Ghost", style: .ghost, action: { print("click") })
             }
             
-            HStack(spacing: 10) {
-                BSButton(text: "Danger", color: .bsDanger, action: { print("click") })
-                BSButton(text: "Warning", color: .bsWarning, action: { print("click") })
-                BSButton(text: "Success", color: .bsSuccess, action: { print("click") })
+            HStack(spacing: 20) {
+                BRButton(text: "Danger", color: .brDanger, action: { print("click") })
+                BRButton(text: "Warning", color: .brWarning, action: { print("click") })
+                BRButton(text: "Success", color: .brSuccess, action: { print("click") })
             }
             
-            HStack(spacing: 10) {
-                BSButton(text: "Disabled", style: .fill, action: { print("click") })
+            HStack(spacing: 20) {
+                BRButton(text: "Disabled", style: .fill, action: { print("click") })
                     .disabled(true)
-                BSButton(text: "Disabled", style: .outline, action: { print("click") })
+                BRButton(text: "Disabled", style: .outline, action: { print("click") })
                     .disabled(true)
-                BSButton(text: "Disabled", style: .ghost, action: { print("click") })
+                BRButton(text: "Disabled", style: .ghost, action: { print("click") })
                     .disabled(true)
             }
             
-            HStack(spacing: 10) {
-                BSButton(text: "Text", action: { print("click") })
-                BSButton(text: "Text", image: cloudImg, action: { print("click") })
-                BSButton(image: cloudImg, action: { print("click") })
+            HStack(spacing: 20) {
+                BRButton(text: "Text", action: { print("click") })
+                BRButton(text: "Text", image: cloudImg, action: { print("click") })
+                BRButton(image: cloudImg, action: { print("click") })
             }
             
             Button(action: { print("click") }, label: { Text("Very Custom") })

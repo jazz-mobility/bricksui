@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct BSCard: View {
+struct BRCard: View {
     var image: Image? = nil
     var title: String
     var subtitle: String = ""
@@ -21,26 +21,26 @@ struct BSCard: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             Text(title)
-                .bsTypo(.h6)
+                .brTypo(.h6)
                 .padding(.horizontal)
                 .padding(.top, 14)
                 .padding(.bottom, 6)
             if !subtitle.isEmpty {
                 Text(subtitle)
-                    .bsTypo(.s2)
+                    .brTypo(.s2)
                     .padding(.horizontal)
             }
             Divider()
                 .padding(.vertical, 16)
             Text(text)
-                .bsTypo(.p1)
+                .brTypo(.p1)
                 .opacity(0.8)
                 .padding(.horizontal)
             if !caption.isEmpty {
                 Divider()
                     .padding(.vertical, 16)
                 Text(caption)
-                    .bsTypo(.c2)
+                    .brTypo(.c2)
                     .padding(.horizontal)
             }
         }
@@ -53,10 +53,10 @@ struct Cards_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            BSCard(image: img, title: "Title", subtitle: "Subtitle", text: text, caption: "Caption")
-            BSCard(image: img, title: "Title", subtitle: "Subtitle", text: text)
-            BSCard(title: "Title", subtitle: "Subtitle", text: text)
-            BSCard(title: "Title", text: text)
+            BRCard(image: img, title: "Title", subtitle: "Subtitle", text: text, caption: "Caption")
+            BRCard(image: img, title: "Title", subtitle: "Subtitle", text: text)
+            BRCard(title: "Title", subtitle: "Subtitle", text: text)
+            BRCard(title: "Title", text: text)
         }
         .previewLayout(.fixed(width: 300, height: 330))
     }

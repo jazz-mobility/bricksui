@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BSNavigatorBottom : View {
+struct BRNavigatorBottom : View {
     
     @State var index : Int
     var icons: [String]
@@ -28,14 +28,14 @@ struct BSNavigatorBottom : View {
                 
                 Button(action: {self.index = i}, label: {
                     VStack {
-                        Rectangle().frame(height: 4).foregroundColor(self.index == i ? Color.bsPrimary : Color.clear)
+                        Rectangle().frame(height: 4).foregroundColor(self.index == i ? Color.brPrimary : Color.clear)
                         Image(systemName: self.icons[i])
-                            .bsSquare(width: self.index == i ? 24 : 21)
-                            .foregroundColor(self.index == i ? Color.bsPrimary : Color.bsFontDisabled)
+                            .brSquare(width: self.index == i ? 24 : 21)
+                            .foregroundColor(self.index == i ? Color.brPrimary : Color.brFontDisabled)
                             .padding(.bottom, 24)
                             .padding(.top, 10)
                     }
-                    .background(Color.bsBackground)
+                    .background(Color.brBackground)
                     .frame(width: totalWidth / CGFloat(self.icons.count))
                     .animation(.easeOut(duration: 0.35))
                 })
@@ -45,12 +45,12 @@ struct BSNavigatorBottom : View {
 }
 
 
-struct BSNavigatorBottom_Previews: PreviewProvider {
+struct BRNavigatorBottom_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            ZStack {Color.bsPrimary.opacity(0.4)}
+            ZStack {Color.brPrimary.opacity(0.4)}
             
-            BSNavigatorBottom(index: 0, icons: ["house.fill", "magnifyingglass", "heart.fill", "person.fill"])
+            BRNavigatorBottom(index: 0, icons: ["house.fill", "magnifyingglass", "heart.fill", "person.fill"])
         }
         .edgesIgnoringSafeArea(.all)
     }

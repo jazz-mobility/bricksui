@@ -28,7 +28,7 @@ public struct ButtonGroupStyle: ButtonStyle {
 }
 
 struct ButtonGroupStyle_Previews: PreviewProvider {
-    typealias bsSize = ButtonGroupStyle.SizeStyle
+    typealias brSize = ButtonGroupStyle.SizeStyle
     
     static var previews: some View {
         
@@ -59,13 +59,13 @@ struct ButtonGroupStyle_Previews: PreviewProvider {
             
             HStack(spacing: 20) {
                 
-                Button(action : {}, label: {Image(systemName: "star.fill").bsSquare(width: bsSize.large.iconScale)})
+                Button(action : {}, label: {Image(systemName: "star.fill").brSquare(width: brSize.large.iconScale)})
                     .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .basic))
                 
-                Button(action : {}, label: {Image(systemName: "person").bsSquare(width: bsSize.large.iconScale)})
+                Button(action : {}, label: {Image(systemName: "person").brSquare(width: brSize.large.iconScale)})
                     .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .outline))
                 
-                Button(action : {}, label: {Image(systemName: "umbrella").bsSquare(width: bsSize.large.iconScale)})
+                Button(action : {}, label: {Image(systemName: "umbrella").brSquare(width: brSize.large.iconScale)})
                     .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .primary))
             }
         }

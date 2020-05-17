@@ -12,7 +12,7 @@ extension Image {
     //MARK: Avatars
     
     ///Turn image into a circular avatar
-    func bsAvatarCircle() -> some View {
+    func brAvatarCircle() -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
@@ -23,7 +23,7 @@ extension Image {
     }
     
     ///Turn image into a rectangular avatar
-    func bsAvatarSquare() -> some View {
+    func brAvatarSquare() -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
@@ -33,7 +33,7 @@ extension Image {
         
     }
     ///Turn image into a rounded rectangle avatar
-    func bsAvatarRounded() -> some View {
+    func brAvatarRounded() -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
@@ -46,7 +46,7 @@ extension Image {
     //MARK: Styled Images
     
     ///Modify image to fit a circular format
-    func bsCircle(width: CGFloat) -> some View {
+    func brCircle(width: CGFloat) -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
@@ -55,7 +55,7 @@ extension Image {
     }
     
     ///Modify image to fit a square format
-    func bsSquare(width: CGFloat) -> some View {
+    func brSquare(width: CGFloat) -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
@@ -63,7 +63,7 @@ extension Image {
     }
     
     ///Modify image to fit a rounded corners square format
-    func bsRounded(width: CGFloat) -> some View {
+    func brRounded(width: CGFloat) -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
@@ -71,7 +71,7 @@ extension Image {
             .clipShape(RoundedRectangle(cornerRadius: width/10.0))
     }
     ///Modify image to have upper rounded corners in a square format
-    func bsTopRounded(imageWidth: CGFloat) -> some View {
+    func brTopRounded(imageWidth: CGFloat) -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
@@ -80,7 +80,7 @@ extension Image {
     }
     
     ///Modify image to have lower rounded corners in a square format
-    func bsBottomRounded(imageWidth: CGFloat) -> some View {
+    func brBottomRounded(imageWidth: CGFloat) -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
@@ -89,7 +89,7 @@ extension Image {
     }
     
     ///Modify image to have left-side rounded corners in a square format
-    func bsLeftRounded(imageWidth: CGFloat) -> some View {
+    func brLeftRounded(imageWidth: CGFloat) -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
@@ -100,7 +100,7 @@ extension Image {
     }
     
     ///Modify image to have right-side rounded corners in a square format
-    func bsRightRounded(imageWidth: CGFloat) -> some View {
+    func brRightRounded(imageWidth: CGFloat) -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
@@ -117,35 +117,35 @@ struct Images_Previews_Previews: PreviewProvider {
         VStack {
             HStack {
                 Image("bricks_logo")
-                    .bsAvatarCircle()
+                    .brAvatarCircle()
                 Image("bricks_logo")
-                    .bsAvatarSquare()
+                    .brAvatarSquare()
                 Image("bricks_logo")
-                    .bsAvatarRounded()
+                    .brAvatarRounded()
                 
             }.padding()
             
             HStack(spacing: 20) {
                 Image("bricks_logo")
-                    .bsCircle(width: 90)
+                    .brCircle(width: 90)
                 Image("bricks_logo")
-                    .bsSquare(width: 90)
+                    .brSquare(width: 90)
                 Image("bricks_logo")
-                    .bsRounded(width: 90)
+                    .brRounded(width: 90)
             }.padding()
             
             HStack(spacing: 20) {
                 Image("bricks_logo")
-                    .bsTopRounded(imageWidth: 120)
+                    .brTopRounded(imageWidth: 120)
                 Image("bricks_logo")
-                    .bsBottomRounded(imageWidth: 120)
+                    .brBottomRounded(imageWidth: 120)
             }.padding()
             
             HStack(spacing: 20) {
                 Image("bricks_logo")
-                    .bsLeftRounded(imageWidth: 120)
+                    .brLeftRounded(imageWidth: 120)
                 Image("bricks_logo")
-                    .bsRightRounded(imageWidth: 120)
+                    .brRightRounded(imageWidth: 120)
             }.padding()
         }
     }

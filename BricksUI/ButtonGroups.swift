@@ -10,7 +10,7 @@ import SwiftUI
 
 
 /// Struct to create a row of formatted buttons
-struct BSButtonGroup: View {
+struct BRButtonGroup: View {
     
     var icon : Image?
     var buttonItems : Int
@@ -43,7 +43,7 @@ struct BSButtonGroup: View {
                     Button(action: {}, label: {
                         Group {
                             if self.icon != nil {
-                                self.icon!.bsSquare(width: self.size.style.iconScale)
+                                self.icon!.brSquare(width: self.size.style.iconScale)
                             } else {
                                 Text(self.text)
                             }
@@ -53,7 +53,7 @@ struct BSButtonGroup: View {
                 }
                 
             }.cornerRadius(self.size.style.frameWidth / 10)
-                .overlay(RoundedRectangle(cornerRadius: ((colorStyle == ColorStyle.outline)) ? (self.size.style.frameWidth / 10) : 0).stroke(Color.bsActiveBasic, lineWidth:(colorStyle == ColorStyle.outline) ? 1 : 0))
+                .overlay(RoundedRectangle(cornerRadius: ((colorStyle == ColorStyle.outline)) ? (self.size.style.frameWidth / 10) : 0).stroke(Color.brActiveBasic, lineWidth:(colorStyle == ColorStyle.outline) ? 1 : 0))
         }
     }
 }
@@ -63,15 +63,15 @@ struct ButtonGroup_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
 
-            BSButtonGroup(icon: Image(systemName: "star"), buttonItems: 5, text: "won't read me", colorStyle: .primary, size: .giant)
+            BRButtonGroup(icon: Image(systemName: "star"), buttonItems: 5, text: "won't read me", colorStyle: .primary, size: .giant)
 
-            BSButtonGroup(icon: nil, buttonItems: 5, text: "L", colorStyle: .basic, size: .large)
+            BRButtonGroup(icon: nil, buttonItems: 5, text: "L", colorStyle: .basic, size: .large)
             
-            BSButtonGroup(icon: Image(systemName: "person"), buttonItems: 5, text: "hi", colorStyle: .outline, size: .medium)
+            BRButtonGroup(icon: Image(systemName: "person"), buttonItems: 5, text: "hi", colorStyle: .outline, size: .medium)
 
-            BSButtonGroup(icon: nil, buttonItems: 5, text: "S", colorStyle: .primary, size: .small)
+            BRButtonGroup(icon: nil, buttonItems: 5, text: "S", colorStyle: .primary, size: .small)
 
-            BSButtonGroup(icon: Image(systemName: "umbrella.fill"), buttonItems: 5, text: "T", colorStyle: .basic, size: .tiny)
+            BRButtonGroup(icon: Image(systemName: "umbrella.fill"), buttonItems: 5, text: "T", colorStyle: .basic, size: .tiny)
         }
     }
 }

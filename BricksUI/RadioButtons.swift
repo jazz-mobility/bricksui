@@ -7,24 +7,24 @@
 
 import SwiftUI
 
-public struct BSRadioButton: View {
+public struct BRRadioButton: View {
     var isChecked: Bool
     var color: Color?
     var text: String = ""
     
-    private var colorToUse: Color? { isEnabled ? color : .bsFontDisabled }
+    private var colorToUse: Color? { isEnabled ? color : .brFontDisabled }
     @Environment(\.isEnabled) private var isEnabled: Bool
     
     public var body: some View {
         HStack(spacing: text.isEmpty ? 0 : 6) {
-            isChecked ? AnyView(CheckedButton(color: colorToUse ?? .bsPrimary)) : AnyView(UncheckedButton(color: colorToUse ?? .bsBasic))
+            isChecked ? AnyView(CheckedButton(color: colorToUse ?? .brPrimary)) : AnyView(UncheckedButton(color: colorToUse ?? .brBasic))
             Text(text)
         }
     }
 }
 
 private struct CheckedButton: View {
-    var color: Color = .bsPrimary
+    var color: Color = .brPrimary
     
     var body: some View {
         ZStack {
@@ -42,7 +42,7 @@ private struct CheckedButton: View {
 }
 
 private struct UncheckedButton: View {
-    var color: Color = .bsBasic
+    var color: Color = .brBasic
     
     var body: some View {
         ZStack {
@@ -64,15 +64,15 @@ struct RadioButton_Previews: PreviewProvider {
     
     static var previews: some View {
         VStack(alignment: .leading, spacing: 12) {
-            BSRadioButton(isChecked: true)
-            BSRadioButton(isChecked: false)
-            BSRadioButton(isChecked: true).disabled(true)
-            BSRadioButton(isChecked: false).disabled(true)
-            BSRadioButton(isChecked: false, color: .bsDanger)
-            BSRadioButton(isChecked: false, color: .bsWarning)
-            BSRadioButton(isChecked: false, color: .bsSuccess)
-            BSRadioButton(isChecked: true, text: "Text")
-            BSRadioButton(isChecked: true, color: .bsWarning, text: "Text and custom color")
+            BRRadioButton(isChecked: true)
+            BRRadioButton(isChecked: false)
+            BRRadioButton(isChecked: true).disabled(true)
+            BRRadioButton(isChecked: false).disabled(true)
+            BRRadioButton(isChecked: false, color: .brDanger)
+            BRRadioButton(isChecked: false, color: .brWarning)
+            BRRadioButton(isChecked: false, color: .brSuccess)
+            BRRadioButton(isChecked: true, text: "Text")
+            BRRadioButton(isChecked: true, color: .brWarning, text: "Text and custom color")
         }
     }
 }

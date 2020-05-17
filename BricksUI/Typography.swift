@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct BSTypography: ViewModifier {
+public struct BRTypography: ViewModifier {
     
     enum Style {
         
@@ -60,14 +60,14 @@ public struct BSTypography: ViewModifier {
 }
 
 extension View {
-    func bsTypo(_ style: BSTypography.Style) -> some View {
+    func brTypo(_ style: BRTypography.Style) -> some View {
         self
-            .modifier(BSTypography(style: style))
+            .modifier(BRTypography(style: style))
     }
     
-    func bsTypo(_ style: BSTypography.Style, color: Color) -> some View {
+    func brTypo(_ style: BRTypography.Style, color: Color) -> some View {
         self
-            .modifier(BSTypography(style: style))
+            .modifier(BRTypography(style: style))
             .foregroundColor(color)
     }
 }
@@ -77,26 +77,26 @@ struct Typography_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 10) {
             Group {
-                Text("Typography h1").bsTypo(.h1, color: .blue)
-                Text("Typography h1").bsTypo(.h1, color: .green)
-                Text("Typography h1").bsTypo(.h1, color: .pink)
+                Text("Typography h1").brTypo(.h1, color: .blue)
+                Text("Typography h1").brTypo(.h1, color: .green)
+                Text("Typography h1").brTypo(.h1, color: .pink)
             
-                Text("Typography h1").bsTypo(.h1)
-                Text("Typography h2").bsTypo(.h2)
-                Text("Typography h3").bsTypo(.h3)
-                Text("Typography h4").bsTypo(.h4)
-                Text("Typography h5").bsTypo(.h5)
-                Text("Typography h6").bsTypo(.h6)
+                Text("Typography h1").brTypo(.h1)
+                Text("Typography h2").brTypo(.h2)
+                Text("Typography h3").brTypo(.h3)
+                Text("Typography h4").brTypo(.h4)
+                Text("Typography h5").brTypo(.h5)
+                Text("Typography h6").brTypo(.h6)
             }
             Group {
-                Text("Typography h1").bsTypo(.s1)
-                Text("Typography h2").bsTypo(.s2)
+                Text("Typography h1").brTypo(.s1)
+                Text("Typography h2").brTypo(.s2)
                 
-                Text("Typography p1").bsTypo(.p1)
-                Text("Typography p2").bsTypo(.p2)
+                Text("Typography p1").brTypo(.p1)
+                Text("Typography p2").brTypo(.p2)
                 
-                Text("Typography c1").bsTypo(.c1)
-                Text("Typography c2").bsTypo(.c2)
+                Text("Typography c1").brTypo(.c1)
+                Text("Typography c2").brTypo(.c2)
             }
         }
     }
