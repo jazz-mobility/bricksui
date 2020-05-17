@@ -119,19 +119,19 @@ public struct Input_Previews: PreviewProvider {
     public static var previews: some View {
         VStack(spacing: 40) {
             
-            HStack(spacing: 20) {
+            HStack(spacing: 5) {
                 BRButton(text: "Fill", style: .fill, action: { print("click") })
                 BRButton(text: "Outline", style: .outline, action: { print("click") })
                 BRButton(text: "Ghost", style: .ghost, action: { print("click") })
             }
             
-            HStack(spacing: 20) {
+            HStack(spacing: 5) {
                 BRButton(text: "Danger", color: .brDanger, action: { print("click") })
                 BRButton(text: "Warning", color: .brWarning, action: { print("click") })
                 BRButton(text: "Success", color: .brSuccess, action: { print("click") })
             }
             
-            HStack(spacing: 20) {
+            HStack(spacing: 5) {
                 BRButton(text: "Disabled", style: .fill, action: { print("click") })
                     .disabled(true)
                 BRButton(text: "Disabled", style: .outline, action: { print("click") })
@@ -140,7 +140,7 @@ public struct Input_Previews: PreviewProvider {
                     .disabled(true)
             }
             
-            HStack(spacing: 20) {
+            HStack(spacing: 5) {
                 BRButton(text: "Text", action: { print("click") })
                 BRButton(text: "Text", image: cloudImg, action: { print("click") })
                 BRButton(image: cloudImg, action: { print("click") })
@@ -149,5 +149,6 @@ public struct Input_Previews: PreviewProvider {
             Button(action: { print("click") }, label: { Text("Very Custom") })
                 .style(.outline, color: .black)
         }
+    .padding(10)
     }
 }
