@@ -146,8 +146,8 @@ public struct Input_Previews: PreviewProvider {
                 BRButton(image: cloudImg, action: { print("click") })
             }
             
-            Button(action: { print("click") }, label: { Text("Very Custom") })
-                .style(.outline, color: .black)
+            Button(action: { print("click") }, label: { Text("Custom") })
+                .style(.outline, color: .brFontBtn)
         }
     .padding(10)
     }

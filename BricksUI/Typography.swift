@@ -77,9 +77,9 @@ struct Typography_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 10) {
             Group {
-                Text("Typography h1").brTypo(.h1, color: .blue)
-                Text("Typography h1").brTypo(.h1, color: .green)
-                Text("Typography h1").brTypo(.h1, color: .pink)
+                Text("Typography h1").brTypo(.h1, color: .brPrimary)
+                Text("Typography h1").brTypo(.h1, color: .brSuccess)
+                Text("Typography h1").brTypo(.h1, color: .brDanger)
             
                 Text("Typography h1").brTypo(.h1)
                 Text("Typography h2").brTypo(.h2)

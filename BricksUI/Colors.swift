@@ -43,17 +43,26 @@ extension Color {
 
 struct Color_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
-            Text("Hello, World!")
-                .foregroundColor(.brFontStd)
-                .background(Color.brBackground)
-                .environment(\.colorScheme, .dark)
-                .padding()
-            
+        VStack(alignment: .center, spacing: 10) {
+            HStack{
+                Rectangle().size(CGSize(width: 50, height: 50))
+                    .foregroundColor(.brBasic)
+                Rectangle().size(CGSize(width: 50, height: 50))
+                    .foregroundColor(.brPrimary)
+                Rectangle().size(CGSize(width: 50, height: 50))
+                    .foregroundColor(.brSuccess)
+                Rectangle().size(CGSize(width: 50, height: 50))
+                .foregroundColor(.brInfo)
+                Rectangle().size(CGSize(width: 50, height: 50))
+                .foregroundColor(.brWarning)
+                Rectangle().size(CGSize(width: 50, height: 50))
+                .foregroundColor(.brDanger)
+            }
             Text("Hello, World!")
                 .foregroundColor(.brActivePrimary)
                 .background(Color.brActiveBasic)
                 .environment(\.colorScheme, .dark)
         }
+    .padding()
     }
 }

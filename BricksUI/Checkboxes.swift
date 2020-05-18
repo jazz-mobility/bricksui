@@ -11,7 +11,7 @@ import SwiftUI
 public struct BRCheckbox: View {
     
     enum Style {
-        case defaultStyle, disabled, success, warning, danger, info
+        case defaultStyle, primary, disabled, success, warning, danger, info
     }
     
     @State var checkboxState: Bool = true
@@ -38,6 +38,7 @@ public struct BRCheckbox: View {
     public var body: some View {
         switch style {
         case .success: return AnyView(success())
+        case .primary: return AnyView(primary())
         case .warning: return AnyView(warning())
         case .danger: return AnyView(danger())
         case .info: return AnyView(info())
@@ -47,6 +48,11 @@ public struct BRCheckbox: View {
     
     
     fileprivate func defaultStyle() -> some View {
+        Toggle("", isOn: $checkboxState)
+            .toggleStyle(ColoredCheckboxStyle(onColor: .brBasic, offColor: .brFontDisabled))
+    }
+    
+    fileprivate func primary() -> some View {
         Toggle("", isOn: $checkboxState)
             .toggleStyle(ColoredCheckboxStyle(onColor: .brPrimary, offColor: .brFontDisabled))
     }
@@ -79,6 +85,7 @@ struct Checkboxes_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 10){
             BRCheckbox(checkboxState: true, style: .defaultStyle)
+            BRCheckbox(checkboxState: true, style: .primary)
             BRCheckbox(checkboxState: true, style: .success)
             BRCheckbox(checkboxState: true, style: .info)
             BRCheckbox(checkboxState: true, style: .warning)

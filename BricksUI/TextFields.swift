@@ -10,7 +10,7 @@ import SwiftUI
 public struct BRTextField: View {
     
     enum Style {
-        case defaultStyle, disabled, success, warning, danger, info
+        case defaultStyle, primary, disabled, success, warning, danger, info
     }
     
     var style: Style
@@ -67,6 +67,24 @@ public struct BRTextField: View {
         .foregroundColor(Color.brBasic.opacity(self.focused ? 0 : 0.1)))
         .overlay(RoundedRectangle(cornerRadius: 5)
         .stroke(self.focused ? Color.brPrimary : Color.brBasic.opacity(0.4), lineWidth: 1))
+    }
+    
+    fileprivate func primary() -> some View {
+        HStack {
+            ZStack(alignment: .leading) {
+                if input.isEmpty { Text(placeholder).foregroundColor(.brPrimary) }
+                TextField("", text: $input, onEditingChanged: { editingChanged in
+                    self.focused = editingChanged
+                    print(editingChanged ? "TextField focused" : "TextField focus removed")
+                }, onCommit: commit).foregroundColor(.brFontStd)
+            }
+             icon.imageScale(.large).foregroundColor(.brPrimary)
+        }
+        .padding()
+        .background(RoundedRectangle(cornerRadius: 5)
+        .foregroundColor(Color.brBasic.opacity(self.focused ? 0 : 0.1)))
+        .overlay(RoundedRectangle(cornerRadius: 5)
+        .stroke(Color.brPrimary, lineWidth: 1))
     }
     
     fileprivate func success() -> some View {
@@ -145,6 +163,7 @@ public struct BRTextField: View {
     
     public var body: some View {
         switch style {
+        case .primary: return AnyView(primary())
         case .success: return AnyView(success())
         case .warning: return AnyView(warning())
         case .danger: return AnyView(danger())
@@ -161,6 +180,7 @@ struct TextField_Previews: PreviewProvider {
         VStack(spacing: 20) {
             BRTextField("Thats a default Textfield", onCommit: {print("party")})
             BRTextField("Thats a default Textfield + Icon", icon: Image(systemName: "star.fill"), onCommit: {print("party")})
+            BRTextField("Primary", style: .primary, icon: Image(systemName: "star.fill"))
             BRTextField("Success", style: .success, icon: Image(systemName: "star.fill"))
             BRTextField("Warning", style: .warning, icon: Image(systemName: "star.fill"))
             BRTextField("Danger", style: .danger, icon: Image(systemName: "star.fill"))

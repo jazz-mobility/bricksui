@@ -10,7 +10,7 @@ import SwiftUI
 public struct BRToggle: View {
     
     enum Style {
-        case defaultStyle, disabled, success, warning, danger, info
+        case defaultStyle, primary, disabled, success, warning, danger, info
     }
     
     @State var toggleState: Bool = true
@@ -50,6 +50,7 @@ public struct BRToggle: View {
     
     public var body: some View {
         switch style {
+        case .primary: return AnyView(primary())
         case .success: return AnyView(success())
         case .warning: return AnyView(warning())
         case .danger: return AnyView(danger())
@@ -60,6 +61,15 @@ public struct BRToggle: View {
     
     
     fileprivate func defaultStyle() -> some View {
+        Toggle("", isOn: $toggleState)
+            .toggleStyle(
+                ColoredToggleStyle(
+                    onColor: .brBasic,
+                    offColor: Color.brBasic.opacity(0.1),
+                    thumbColor: .white))
+    }
+    
+    fileprivate func primary() -> some View {
         Toggle("", isOn: $toggleState)
             .toggleStyle(
                 ColoredToggleStyle(
@@ -111,6 +121,7 @@ struct Toggles_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             BRToggle(style: .defaultStyle)
+            BRToggle(style: .primary)
             BRToggle(style: .success)
             BRToggle(style: .info)
             BRToggle(style: .warning)
