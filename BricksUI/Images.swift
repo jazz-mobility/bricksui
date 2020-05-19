@@ -71,41 +71,41 @@ extension Image {
             .clipShape(RoundedRectangle(cornerRadius: width/10.0))
     }
     ///Modify image to have upper rounded corners in a square format
-    func brTopRounded(imageWidth: CGFloat) -> some View {
+    func brTopRounded(width: CGFloat) -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: imageWidth, height: imageWidth)
-            .clipShape(RoundedCorner(radius: imageWidth/10.0, corners: [.topLeft, .topRight]))
+            .frame(width: width, height: width)
+            .clipShape(RoundedCorner(radius: width/10.0, corners: [.topLeft, .topRight]))
     }
     
     ///Modify image to have lower rounded corners in a square format
-    func brBottomRounded(imageWidth: CGFloat) -> some View {
+    func brBottomRounded(width: CGFloat) -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: imageWidth, height: imageWidth)
-            .clipShape(RoundedCorner(radius: imageWidth/10.0, corners: [.bottomLeft, .bottomRight]))
+            .frame(width: width, height: width)
+            .clipShape(RoundedCorner(radius: width/10.0, corners: [.bottomLeft, .bottomRight]))
     }
     
     ///Modify image to have left-side rounded corners in a square format
-    func brLeftRounded(imageWidth: CGFloat) -> some View {
+    func brLeftRounded(width: CGFloat) -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: imageWidth, height: imageWidth)
-            .clipShape(RoundedCorner(radius: imageWidth/10.0, corners: [.bottomLeft, .topLeft]))
+            .frame(width: width, height: width)
+            .clipShape(RoundedCorner(radius: width/10.0, corners: [.bottomLeft, .topLeft]))
         
             
     }
     
     ///Modify image to have right-side rounded corners in a square format
-    func brRightRounded(imageWidth: CGFloat) -> some View {
+    func brRightRounded(width: CGFloat) -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: imageWidth, height: imageWidth)
-            .clipShape(RoundedCorner(radius: imageWidth/10.0, corners: [.bottomRight, .topRight]))
+            .frame(width: width, height: width)
+            .clipShape(RoundedCorner(radius: width/10.0, corners: [.bottomRight, .topRight]))
     }
     
     
@@ -136,16 +136,16 @@ struct Images_Previews_Previews: PreviewProvider {
             
             HStack(spacing: 20) {
                 Image("bricks_logo")
-                    .brTopRounded(imageWidth: 120)
+                    .brTopRounded(width: 120)
                 Image("bricks_logo")
-                    .brBottomRounded(imageWidth: 120)
+                    .brBottomRounded(width: 120)
             }.padding()
             
             HStack(spacing: 20) {
                 Image("bricks_logo")
-                    .brLeftRounded(imageWidth: 120)
+                    .brLeftRounded(width: 120)
                 Image("bricks_logo")
-                    .brRightRounded(imageWidth: 120)
+                    .brRightRounded(width: 120)
             }.padding()
         }
     }
