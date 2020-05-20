@@ -27,9 +27,9 @@ struct BRNavigatorTop: View {
                         Image(systemName: self.leftIconString)
                             .brSquare(width: 24)
                             .padding(.horizontal, 4)
-                    }.foregroundColor(.black)
+                    }
                 }
-                .buttonStyle(NavButtonStyle())
+                .buttonStyle(LeftNavButtonStyle())
                 Spacer()
                 
                 VStack {
@@ -50,7 +50,7 @@ struct BRNavigatorTop: View {
                             .brSquare(width: 24)
                     }
                 }
-                .buttonStyle(NavButtonStyle())
+                .buttonStyle(RightNavButtonStyle())
                 .padding(.horizontal, 4)
             }
         }
@@ -65,13 +65,23 @@ struct BRNavigatorTop: View {
     
 }
 
-struct NavButtonStyle: ButtonStyle {
+struct RightNavButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .foregroundColor(configuration.isPressed ? Color.brPrimary: Color.brBasic)
     }
 }
+
+struct LeftNavButtonStyle: ButtonStyle {
+    
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .foregroundColor(configuration.isPressed ? Color.brPrimary: Color.black)
+    }
+}
+
+
 
 struct BRNavigatorTop_Previews: PreviewProvider {
     static var previews: some View {
