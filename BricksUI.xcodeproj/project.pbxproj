@@ -17,8 +17,13 @@
 		1DB2E0F5245830DD00FB1DE6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB2E0F4245830DD00FB1DE6 /* Colors.swift */; };
 		1DED6064245F335600AD1122 /* Toggles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED6063245F335600AD1122 /* Toggles.swift */; };
 		1DED6066245F7A4E00AD1122 /* Checkboxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED6065245F7A4E00AD1122 /* Checkboxes.swift */; };
+		6408C774247688820015FA15 /* WorkshopAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6404CBC7247685FC00114A30 /* WorkshopAssets.xcassets */; };
+		6408C776247688E40015FA15 /* BuildingsViewFinished.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408C775247688E40015FA15 /* BuildingsViewFinished.swift */; };
+		6408C7782476894D0015FA15 /* BuildingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408C7772476894D0015FA15 /* BuildingsView.swift */; };
 		640CE4602465668E00CED8CE /* BricksAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 640CE45F2465668E00CED8CE /* BricksAssets.xcassets */; };
 		641DA567245E2C7C00B49043 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DA566245E2C7C00B49043 /* TextFields.swift */; };
+		6472E3512475A79C00358A95 /* LoginViewFinished.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472E3502475A79C00358A95 /* LoginViewFinished.swift */; };
+		6472E3532475A8A100358A95 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472E3522475A8A100358A95 /* LoginView.swift */; };
 		64DF075924646C8700EB2879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DF075824646C8700EB2879 /* Assets.xcassets */; };
 		94812A8D2462B25C00E3D105 /* RadioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94812A8C2462B25C00E3D105 /* RadioButtons.swift */; };
 		94E32C0C24692F9100332100 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E32C0B24692F9100332100 /* Cards.swift */; };
@@ -46,8 +51,13 @@
 		1DB2E0F4245830DD00FB1DE6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1DED6063245F335600AD1122 /* Toggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggles.swift; sourceTree = "<group>"; };
 		1DED6065245F7A4E00AD1122 /* Checkboxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkboxes.swift; sourceTree = "<group>"; };
+		6404CBC7247685FC00114A30 /* WorkshopAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WorkshopAssets.xcassets; sourceTree = "<group>"; };
+		6408C775247688E40015FA15 /* BuildingsViewFinished.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingsViewFinished.swift; sourceTree = "<group>"; };
+		6408C7772476894D0015FA15 /* BuildingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsView.swift; sourceTree = "<group>"; };
 		640CE45F2465668E00CED8CE /* BricksAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BricksAssets.xcassets; sourceTree = "<group>"; };
 		641DA566245E2C7C00B49043 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
+		6472E3502475A79C00358A95 /* LoginViewFinished.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewFinished.swift; sourceTree = "<group>"; };
+		6472E3522475A8A100358A95 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		64DF075824646C8700EB2879 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94812A8C2462B25C00E3D105 /* RadioButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtons.swift; sourceTree = "<group>"; };
 		94E32C0B24692F9100332100 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
@@ -75,6 +85,7 @@
 		1D34A6792445F9FC00882EEE = {
 			isa = PBXGroup;
 			children = (
+				6404CBC4247685AB00114A30 /* Workshop */,
 				64873907246466500092ED5D /* YourProject */,
 				1D34A6842445F9FC00882EEE /* BricksUI */,
 				1D34A6832445F9FC00882EEE /* Products */,
@@ -118,6 +129,18 @@
 				1D34A68E2445F9FF00882EEE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6404CBC4247685AB00114A30 /* Workshop */ = {
+			isa = PBXGroup;
+			children = (
+				6472E3522475A8A100358A95 /* LoginView.swift */,
+				6472E3502475A79C00358A95 /* LoginViewFinished.swift */,
+				6408C7772476894D0015FA15 /* BuildingsView.swift */,
+				6408C775247688E40015FA15 /* BuildingsViewFinished.swift */,
+				6404CBC7247685FC00114A30 /* WorkshopAssets.xcassets */,
+			);
+			path = Workshop;
 			sourceTree = "<group>";
 		};
 		64873907246466500092ED5D /* YourProject */ = {
@@ -206,6 +229,7 @@
 				640CE4602465668E00CED8CE /* BricksAssets.xcassets in Resources */,
 				64DF075924646C8700EB2879 /* Assets.xcassets in Resources */,
 				1D34A68C2445F9FF00882EEE /* Colors.xcassets in Resources */,
+				6408C774247688820015FA15 /* WorkshopAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,15 +250,19 @@
 				C81C4478246570560037B0B2 /* (null) in Sources */,
 				94F3F6B2245D9142000BC2C5 /* Buttons.swift in Sources */,
 				C82DD88A246ABA840027E572 /* NavigatorsBottom.swift in Sources */,
+				6408C7782476894D0015FA15 /* BuildingsView.swift in Sources */,
 				94812A8D2462B25C00E3D105 /* RadioButtons.swift in Sources */,
 				1DED6064245F335600AD1122 /* Toggles.swift in Sources */,
+				6408C776247688E40015FA15 /* BuildingsViewFinished.swift in Sources */,
 				1D34A69A2448CEA900882EEE /* Typography.swift in Sources */,
 				C81C44742463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift in Sources */,
 				1DED6066245F7A4E00AD1122 /* Checkboxes.swift in Sources */,
 				C81C44722463EA7E0037B0B2 /* ButtonGroupStyle.swift in Sources */,
 				1D34A68A2445F9FC00882EEE /* ContentView.swift in Sources */,
 				C82DD87E246896080027E572 /* NavigatorsTop.swift in Sources */,
+				6472E3512475A79C00358A95 /* LoginViewFinished.swift in Sources */,
 				C8D15B90245CC7FA004B1843 /* RoundedCorner.swift in Sources */,
+				6472E3532475A8A100358A95 /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
