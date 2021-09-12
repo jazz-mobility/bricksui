@@ -12,7 +12,7 @@ import SwiftUI
 struct BRButtonStyle: ButtonStyle {
     var color: Color
     var style: BRButton.Style
-    
+
     func makeBody(configuration: ButtonStyle.Configuration) -> some View {
         switch style {
         case .fill: return AnyView(FillButton(color: color, configuration: configuration))
@@ -20,7 +20,7 @@ struct BRButtonStyle: ButtonStyle {
         case .ghost: return AnyView(GhostButton(color: color, configuration: configuration))
         }
     }
-    
+
     struct FillButton: View {
         var color: Color
         let configuration: ButtonStyle.Configuration
@@ -36,7 +36,7 @@ struct BRButtonStyle: ButtonStyle {
                 .opacity(configuration.isPressed ? 0.7 : 1)
         }
     }
-    
+
     struct OutlineButton: View {
         var color: Color
         let configuration: ButtonStyle.Configuration
@@ -56,7 +56,7 @@ struct BRButtonStyle: ButtonStyle {
                 .opacity(configuration.isPressed ? 0.7 : 1)
         }
     }
-    
+
     struct GhostButton: View {
         var color: Color
         let configuration: ButtonStyle.Configuration
@@ -79,26 +79,25 @@ struct BRButtonStyle: ButtonStyle {
 extension Button {
     /// Changes the appearance of the button
     func style(_ style: BRButton.Style, color: Color) -> some View {
-        self.buttonStyle(BRButtonStyle(color: color, style: style))
+        buttonStyle(BRButtonStyle(color: color, style: style))
     }
 }
 
 struct BRButton: View {
-    
     enum Style {
         case fill, outline, ghost
     }
-    
+
     var text: String?
     var image: Image?
     var style: Style = .fill
     var color: Color = .brPrimary
     var action: () -> Void
     var textAndImage: Bool { text != nil && image != nil }
-    
+
     var body: some View {
         Button(action: action, label: {
-            HStack() {
+            HStack {
                 Spacer()
                 HStack(spacing: textAndImage ? 12 : 0) {
                     Text(text ?? "")
@@ -110,27 +109,25 @@ struct BRButton: View {
     }
 }
 
-
 // MARK: - Preview
 
 public struct Input_Previews: PreviewProvider {
     static let cloudImg = Image(systemName: "cloud.sun")
-    
+
     public static var previews: some View {
         VStack(spacing: 40) {
-            
             HStack(spacing: 5) {
                 BRButton(text: "Fill", style: .fill, action: { print("click") })
                 BRButton(text: "Outline", style: .outline, action: { print("click") })
                 BRButton(text: "Ghost", style: .ghost, action: { print("click") })
             }
-            
+
             HStack(spacing: 5) {
                 BRButton(text: "Danger", color: .brDanger, action: { print("click") })
                 BRButton(text: "Warning", color: .brWarning, action: { print("click") })
                 BRButton(text: "Success", color: .brSuccess, action: { print("click") })
             }
-            
+
             HStack(spacing: 5) {
                 BRButton(text: "Disabled", style: .fill, action: { print("click") })
                     .disabled(true)
@@ -139,16 +136,16 @@ public struct Input_Previews: PreviewProvider {
                 BRButton(text: "Disabled", style: .ghost, action: { print("click") })
                     .disabled(true)
             }
-            
+
             HStack(spacing: 5) {
                 BRButton(text: "Text", action: { print("click") })
                 BRButton(text: "Text", image: cloudImg, action: { print("click") })
                 BRButton(image: cloudImg, action: { print("click") })
             }
-            
+
             Button(action: { print("click") }, label: { Text("Custom") })
                 .style(.outline, color: .brFontBtn)
         }
-    .padding(10)
+        .padding(10)
     }
 }

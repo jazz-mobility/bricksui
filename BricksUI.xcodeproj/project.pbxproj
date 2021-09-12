@@ -28,6 +28,7 @@
 		94812A8D2462B25C00E3D105 /* RadioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94812A8C2462B25C00E3D105 /* RadioButtons.swift */; };
 		94E32C0C24692F9100332100 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E32C0B24692F9100332100 /* Cards.swift */; };
 		94F3F6B2245D9142000BC2C5 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3F6B1245D9142000BC2C5 /* Buttons.swift */; };
+		BBCF5C7A26EE958000CC86EE /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCF5C7926EE958000CC86EE /* ImageGridView.swift */; };
 		C81C44722463EA7E0037B0B2 /* ButtonGroupStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C44712463EA7E0037B0B2 /* ButtonGroupStyle.swift */; };
 		C81C44742463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C44732463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift */; };
 		C81C4478246570560037B0B2 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -62,6 +63,7 @@
 		94812A8C2462B25C00E3D105 /* RadioButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtons.swift; sourceTree = "<group>"; };
 		94E32C0B24692F9100332100 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		94F3F6B1245D9142000BC2C5 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		BBCF5C7926EE958000CC86EE /* ImageGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
 		C81C44712463EA7E0037B0B2 /* ButtonGroupStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupStyle.swift; sourceTree = "<group>"; };
 		C81C44732463ECC30037B0B2 /* GroupButtonStyle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GroupButtonStyle+Extensions.swift"; sourceTree = "<group>"; };
 		C81C447924657B1E0037B0B2 /* ButtonGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroups.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		1D34A6842445F9FC00882EEE /* BricksUI */ = {
 			isa = PBXGroup;
 			children = (
+				BBCF5C7926EE958000CC86EE /* ImageGridView.swift */,
 				1D34A6992448CEA900882EEE /* Typography.swift */,
 				1DB2E0F4245830DD00FB1DE6 /* Colors.swift */,
 				94F3F6B1245D9142000BC2C5 /* Buttons.swift */,
@@ -250,6 +253,7 @@
 				C81C4478246570560037B0B2 /* (null) in Sources */,
 				94F3F6B2245D9142000BC2C5 /* Buttons.swift in Sources */,
 				C82DD88A246ABA840027E572 /* NavigatorsBottom.swift in Sources */,
+				BBCF5C7A26EE958000CC86EE /* ImageGridView.swift in Sources */,
 				6408C7782476894D0015FA15 /* BuildingsView.swift in Sources */,
 				94812A8D2462B25C00E3D105 /* RadioButtons.swift in Sources */,
 				1DED6064245F335600AD1122 /* Toggles.swift in Sources */,
@@ -403,7 +407,7 @@
 				DEVELOPMENT_TEAM = 64NY4V9RTQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = YourProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,7 +428,7 @@
 				DEVELOPMENT_TEAM = 64NY4V9RTQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = YourProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

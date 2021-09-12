@@ -8,24 +8,22 @@
 import SwiftUI
 
 public struct BRTypography: ViewModifier {
-    
     enum Style {
-        
         /// Titles
         case h1, h2, h3, h4, h5, h6
-        
+
         /// Subtitles
         case s1, s2
-        
+
         /// Paragraphs
         case p1, p2
-        
+
         /// Captions
         case c1, c2
     }
-    
+
     var style: Style
-    
+
     public func body(content: Content) -> some View {
         switch style {
         case .h1: return content
@@ -40,17 +38,17 @@ public struct BRTypography: ViewModifier {
             .font(.system(size: 22, weight: .bold))
         case .h6: return content
             .font(.system(size: 18, weight: .bold))
-            
+
         case .s1: return content
             .font(.system(size: 15, weight: .semibold))
         case .s2: return content
             .font(.system(size: 13, weight: .semibold))
-            
+
         case .p1: return content
             .font(.system(size: 15, weight: .regular))
         case .p2: return content
             .font(.system(size: 13, weight: .regular))
-            
+
         case .c1: return content
             .font(.system(size: 12, weight: .regular))
         case .c2: return content
@@ -61,17 +59,14 @@ public struct BRTypography: ViewModifier {
 
 extension View {
     func brTypo(_ style: BRTypography.Style) -> some View {
-        self
-            .modifier(BRTypography(style: style))
+        modifier(BRTypography(style: style))
     }
-    
+
     func brTypo(_ style: BRTypography.Style, color: Color) -> some View {
-        self
-            .modifier(BRTypography(style: style))
+        modifier(BRTypography(style: style))
             .foregroundColor(color)
     }
 }
-
 
 struct Typography_Previews: PreviewProvider {
     static var previews: some View {
@@ -80,7 +75,7 @@ struct Typography_Previews: PreviewProvider {
                 Text("Typography h1").brTypo(.h1, color: .brPrimary)
                 Text("Typography h1").brTypo(.h1, color: .brSuccess)
                 Text("Typography h1").brTypo(.h1, color: .brDanger)
-            
+
                 Text("Typography h1").brTypo(.h1)
                 Text("Typography h2").brTypo(.h2)
                 Text("Typography h3").brTypo(.h3)
@@ -91,10 +86,10 @@ struct Typography_Previews: PreviewProvider {
             Group {
                 Text("Typography h1").brTypo(.s1)
                 Text("Typography h2").brTypo(.s2)
-                
+
                 Text("Typography p1").brTypo(.p1)
                 Text("Typography p2").brTypo(.p2)
-                
+
                 Text("Typography c1").brTypo(.c1)
                 Text("Typography c2").brTypo(.c2)
             }

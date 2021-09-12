@@ -11,10 +11,10 @@ public struct BRRadioButton: View {
     var isChecked: Bool
     var color: Color?
     var text: String = ""
-    
+
     private var colorToUse: Color? { isEnabled ? color : .brFontDisabled }
     @Environment(\.isEnabled) private var isEnabled: Bool
-    
+
     public var body: some View {
         HStack(spacing: text.isEmpty ? 0 : 6) {
             isChecked ? AnyView(CheckedButton(color: colorToUse ?? .brPrimary)) : AnyView(UncheckedButton(color: colorToUse ?? .brBasic))
@@ -25,7 +25,7 @@ public struct BRRadioButton: View {
 
 private struct CheckedButton: View {
     var color: Color = .brPrimary
-    
+
     var body: some View {
         ZStack {
             Circle()
@@ -43,7 +43,7 @@ private struct CheckedButton: View {
 
 private struct UncheckedButton: View {
     var color: Color = .brBasic
-    
+
     var body: some View {
         ZStack {
             Circle()
@@ -59,9 +59,7 @@ private struct UncheckedButton: View {
     }
 }
 
-
 struct RadioButton_Previews: PreviewProvider {
-    
     static var previews: some View {
         VStack(alignment: .leading, spacing: 12) {
             BRRadioButton(isChecked: true)

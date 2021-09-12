@@ -7,17 +7,14 @@
 
 import SwiftUI
 
-
 struct BRNavigatorTop: View {
-    
-    var title : String
+    var title: String
     var subtitle: String = ""
     var leftIconString: String
-    var rightIconStrings : [String]
-    var buttonCommits : [()->()] = [{}, {}, {}]
-    
+    var rightIconStrings: [String]
+    var buttonCommits: [() -> Void] = [{}, {}, {}]
+
     var body: some View {
-        
         HStack {
             Group {
                 Button(action:
@@ -31,16 +28,16 @@ struct BRNavigatorTop: View {
                 }
                 .buttonStyle(LeftNavButtonStyle())
                 Spacer()
-                
+
                 VStack {
-                    Text(self.title).brTypo(.h5, color: .black).offset(y: self.subtitle == "" ? 5: 0)
-                    Text(self.subtitle).brTypo(.p2, color: .brBasic).padding(.top, self.subtitle == "" ? 0: 5)
+                    Text(self.title).brTypo(.h5, color: .black).offset(y: self.subtitle == "" ? 5 : 0)
+                    Text(self.subtitle).brTypo(.p2, color: .brBasic).padding(.top, self.subtitle == "" ? 0 : 5)
                 }
                 .offset(x: 23, y: 0)
-                
+
                 Spacer()
-                
-                HStack(spacing: 22){
+
+                HStack(spacing: 22) {
                     Button(action: self.buttonCommits[1]) {
                         Image(systemName: self.rightIconStrings[0])
                             .brSquare(width: 24)
@@ -62,32 +59,25 @@ struct BRNavigatorTop: View {
         .shadow(color: Color.brBasic, radius: 3, x: 0, y: 0)
         .animation(.default)
     }
-    
 }
 
 struct RightNavButtonStyle: ButtonStyle {
-    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-            .foregroundColor(configuration.isPressed ? Color.brPrimary: Color.brBasic)
+            .foregroundColor(configuration.isPressed ? Color.brPrimary : Color.brBasic)
     }
 }
 
 struct LeftNavButtonStyle: ButtonStyle {
-    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-            .foregroundColor(configuration.isPressed ? Color.brPrimary: Color.black)
+            .foregroundColor(configuration.isPressed ? Color.brPrimary : Color.black)
     }
 }
 
-
-
 struct BRNavigatorTop_Previews: PreviewProvider {
     static var previews: some View {
-        
-        VStack() {
-            
+        VStack {
             BRNavigatorTop(title: "BricksUI", subtitle: "A Cool Group", leftIconString: "arrow.left", rightIconStrings: ["star", "heart"])
 
             Spacer()
@@ -96,4 +86,3 @@ struct BRNavigatorTop_Previews: PreviewProvider {
         .edgesIgnoringSafeArea(.top)
     }
 }
-

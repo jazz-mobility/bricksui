@@ -8,17 +8,15 @@
 import SwiftUI
 
 public struct ButtonGroupStyle: ButtonStyle {
-    
     var sizesStyle: SizeStyle
     var colorStyle: Style
     var icon: Image? = nil
     var text: String = ""
-    var action: ()->() = {}
-    
-    
+    var action: () -> Void = {}
+
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            
+
             .font(.system(size: sizesStyle.fontSize, weight: .bold))
             .frame(width: sizesStyle.frameWidth, height: sizesStyle.frameWidth)
             .foregroundColor(configuration.isPressed ? colorStyle.activeForeground : colorStyle.defaultForeground)
@@ -29,43 +27,38 @@ public struct ButtonGroupStyle: ButtonStyle {
 
 struct ButtonGroupStyle_Previews: PreviewProvider {
     typealias brSize = ButtonGroupStyle.SizeStyle
-    
+
     static var previews: some View {
-        
-        VStack(spacing : 20) {
-            
+        VStack(spacing: 20) {
             HStack(spacing: 20) {
-                
-                Button(action : {  }, label: {Text("G")})
-                    .buttonStyle(ButtonGroupStyle(sizesStyle: .giant, colorStyle: .primary ))
-                
-                Button(action : {}, label: {Text("L")})
-                    .buttonStyle(ButtonGroupStyle(sizesStyle: .large, colorStyle: .basic ))
+                Button(action: {}, label: { Text("G") })
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .giant, colorStyle: .primary))
+
+                Button(action: {}, label: { Text("L") })
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .large, colorStyle: .basic))
             }
-        
+
             HStack(spacing: 20) {
-                Button(action : {}, label: {Text("M")})
-                    .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .outline ))
-                
-                Button(action : {}, label: {Text("S")})
-                    .buttonStyle(ButtonGroupStyle(sizesStyle: .small, colorStyle: .basic ))
-            }
-            
-            HStack(spacing: 20) {
-                
-                Button(action : {}, label: {Text("T")})
-                    .buttonStyle(ButtonGroupStyle(sizesStyle: .tiny, colorStyle: .primary ))
-            }
-            
-            HStack(spacing: 20) {
-                
-                Button(action : {}, label: {Image(systemName: "star.fill").brSquare(width: brSize.large.iconScale)})
-                    .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .basic))
-                
-                Button(action : {}, label: {Image(systemName: "person").brSquare(width: brSize.large.iconScale)})
+                Button(action: {}, label: { Text("M") })
                     .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .outline))
-                
-                Button(action : {}, label: {Image(systemName: "umbrella").brSquare(width: brSize.large.iconScale)})
+
+                Button(action: {}, label: { Text("S") })
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .small, colorStyle: .basic))
+            }
+
+            HStack(spacing: 20) {
+                Button(action: {}, label: { Text("T") })
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .tiny, colorStyle: .primary))
+            }
+
+            HStack(spacing: 20) {
+                Button(action: {}, label: { Image(systemName: "star.fill").brSquare(width: brSize.large.iconScale) })
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .basic))
+
+                Button(action: {}, label: { Image(systemName: "person").brSquare(width: brSize.large.iconScale) })
+                    .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .outline))
+
+                Button(action: {}, label: { Image(systemName: "umbrella").brSquare(width: brSize.large.iconScale) })
                     .buttonStyle(ButtonGroupStyle(sizesStyle: .medium, colorStyle: .primary))
             }
         }

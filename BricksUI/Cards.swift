@@ -14,7 +14,7 @@ struct BRCard: View {
     var subtitle: String = ""
     var text: String
     var caption: String = ""
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             image?
@@ -50,7 +50,7 @@ struct BRCard: View {
 struct Cards_Previews: PreviewProvider {
     static let img = Image("bricks_banner")
     static let text = "A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases. Originally, nebula was a name for any diffuse astronomical object, including galaxies beyond the Milky Way."
-    
+
     static var previews: some View {
         Group {
             BRCard(image: img, title: "Title", subtitle: "Subtitle", text: text, caption: "Caption")

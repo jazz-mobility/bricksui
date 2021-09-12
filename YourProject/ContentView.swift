@@ -3,14 +3,22 @@
 //  BricksUI
 //
 
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Welcome to BricksUI").brTypo(.h2, color: .brPrimary)
-        }
+        ImageGridView(symbols: [
+            "keyboard",
+            "hifispeaker.fill",
+            "printer.fill",
+            "tv.fill",
+            "desktopcomputer",
+            "headphones",
+            "tv.music.note",
+            "mic",
+            "plus.bubble",
+            "video",
+        ])
     }
 }
 

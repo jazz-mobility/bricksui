@@ -8,48 +8,47 @@
 import SwiftUI
 
 public struct BRTextField: View {
-    
     enum Style {
         case defaultStyle, primary, disabled, success, warning, danger, info
     }
-    
+
     var style: Style
     var placeholder: String
-    var icon: Image? = nil
-    var commit: ()->() = { }
+    var icon: Image?
+    var commit: () -> Void = {}
     @State private var focused: Bool = false
     @State var input: String = ""
-    
+
     // MARK: Inits
-    
-    init(_ placeholder: String, onCommit: @escaping ()->() = { }) {
+
+    init(_ placeholder: String, onCommit: @escaping () -> Void = {}) {
         self.placeholder = placeholder
-        self.style = .defaultStyle
-        self.commit = onCommit
+        style = .defaultStyle
+        commit = onCommit
     }
-    
-    init(_ placeholder: String, style: Style, onCommit: @escaping ()->() = { }) {
-        self.placeholder = placeholder
-        self.style = style
-        self.commit = onCommit
-    }
-    
-    init(_ placeholder: String, icon: Image, onCommit: @escaping ()->() = { }) {
-        self.placeholder = placeholder
-        self.icon = icon
-        self.style = .defaultStyle
-        self.commit = onCommit
-    }
-    
-    init(_ placeholder: String, style: Style, icon: Image, onCommit: @escaping ()->() = { }) {
+
+    init(_ placeholder: String, style: Style, onCommit: @escaping () -> Void = {}) {
         self.placeholder = placeholder
         self.style = style
-        self.icon = icon
-        self.commit = onCommit
+        commit = onCommit
     }
-    
-    // MARK:  Function declarations
-    
+
+    init(_ placeholder: String, icon: Image, onCommit: @escaping () -> Void = {}) {
+        self.placeholder = placeholder
+        self.icon = icon
+        style = .defaultStyle
+        commit = onCommit
+    }
+
+    init(_ placeholder: String, style: Style, icon: Image, onCommit: @escaping () -> Void = {}) {
+        self.placeholder = placeholder
+        self.style = style
+        self.icon = icon
+        commit = onCommit
+    }
+
+    // MARK: Function declarations
+
     fileprivate func defaultStyle() -> some View {
         HStack {
             ZStack(alignment: .leading) {
@@ -64,11 +63,11 @@ public struct BRTextField: View {
         }
         .padding()
         .background(RoundedRectangle(cornerRadius: 5)
-        .foregroundColor(Color.brBasic.opacity(self.focused ? 0 : 0.1)))
+            .foregroundColor(Color.brBasic.opacity(focused ? 0 : 0.1)))
         .overlay(RoundedRectangle(cornerRadius: 5)
-        .stroke(self.focused ? Color.brPrimary : Color.brBasic.opacity(0.4), lineWidth: 1))
+            .stroke(focused ? Color.brPrimary : Color.brBasic.opacity(0.4), lineWidth: 1))
     }
-    
+
     fileprivate func primary() -> some View {
         HStack {
             ZStack(alignment: .leading) {
@@ -78,15 +77,15 @@ public struct BRTextField: View {
                     print(editingChanged ? "TextField focused" : "TextField focus removed")
                 }, onCommit: commit).foregroundColor(.brFontStd)
             }
-             icon.imageScale(.large).foregroundColor(.brPrimary)
+            icon.imageScale(.large).foregroundColor(.brPrimary)
         }
         .padding()
         .background(RoundedRectangle(cornerRadius: 5)
-        .foregroundColor(Color.brBasic.opacity(self.focused ? 0 : 0.1)))
+            .foregroundColor(Color.brBasic.opacity(focused ? 0 : 0.1)))
         .overlay(RoundedRectangle(cornerRadius: 5)
-        .stroke(Color.brPrimary, lineWidth: 1))
+            .stroke(Color.brPrimary, lineWidth: 1))
     }
-    
+
     fileprivate func success() -> some View {
         HStack {
             ZStack(alignment: .leading) {
@@ -100,11 +99,11 @@ public struct BRTextField: View {
         }
         .padding()
         .background(RoundedRectangle(cornerRadius: 5)
-        .foregroundColor(Color.brBasic.opacity(self.focused ? 0 : 0.1)))
+            .foregroundColor(Color.brBasic.opacity(focused ? 0 : 0.1)))
         .overlay(RoundedRectangle(cornerRadius: 5)
-        .stroke(Color.brSuccess, lineWidth: 1))
+            .stroke(Color.brSuccess, lineWidth: 1))
     }
-    
+
     fileprivate func warning() -> some View {
         HStack {
             ZStack(alignment: .leading) {
@@ -118,11 +117,11 @@ public struct BRTextField: View {
         }
         .padding()
         .background(RoundedRectangle(cornerRadius: 5)
-        .foregroundColor(Color.brBasic.opacity(self.focused ? 0 : 0.1)))
+            .foregroundColor(Color.brBasic.opacity(focused ? 0 : 0.1)))
         .overlay(RoundedRectangle(cornerRadius: 5)
-        .stroke(Color.brWarning, lineWidth: 1))
+            .stroke(Color.brWarning, lineWidth: 1))
     }
-    
+
     fileprivate func danger() -> some View {
         HStack {
             ZStack(alignment: .leading) {
@@ -136,11 +135,11 @@ public struct BRTextField: View {
         }
         .padding()
         .background(RoundedRectangle(cornerRadius: 5)
-        .foregroundColor(Color.brBasic.opacity(self.focused ? 0 : 0.1)))
+            .foregroundColor(Color.brBasic.opacity(focused ? 0 : 0.1)))
         .overlay(RoundedRectangle(cornerRadius: 5)
-        .stroke(Color.brDanger, lineWidth: 1))
+            .stroke(Color.brDanger, lineWidth: 1))
     }
-    
+
     fileprivate func info() -> some View {
         HStack {
             ZStack(alignment: .leading) {
@@ -154,13 +153,13 @@ public struct BRTextField: View {
         }
         .padding()
         .background(RoundedRectangle(cornerRadius: 5)
-        .foregroundColor(Color.brBasic.opacity(self.focused ? 0 : 0.1)))
+            .foregroundColor(Color.brBasic.opacity(focused ? 0 : 0.1)))
         .overlay(RoundedRectangle(cornerRadius: 5)
-        .stroke(Color.brInfo, lineWidth: 1))
+            .stroke(Color.brInfo, lineWidth: 1))
     }
-    
-    // MARK:  Body
-    
+
+    // MARK: Body
+
     public var body: some View {
         switch style {
         case .primary: return AnyView(primary())
@@ -178,8 +177,8 @@ public struct BRTextField: View {
 struct TextField_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 20) {
-            BRTextField("Thats a default Textfield", onCommit: {print("party")})
-            BRTextField("Thats a default Textfield + Icon", icon: Image(systemName: "star.fill"), onCommit: {print("party")})
+            BRTextField("Thats a default Textfield", onCommit: { print("party") })
+            BRTextField("Thats a default Textfield + Icon", icon: Image(systemName: "star.fill"), onCommit: { print("party") })
             BRTextField("Primary", style: .primary, icon: Image(systemName: "star.fill"))
             BRTextField("Success", style: .success, icon: Image(systemName: "star.fill"))
             BRTextField("Warning", style: .warning, icon: Image(systemName: "star.fill"))
